@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giỏ hàng - Asclepius</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="navigation">
+    <div class="site-name">Asclepius</div>
+    <div class="items">
+      <a href="../About/about.html" class="page">Giới thiệu</a>
+      <a href="../Product_Details/details.html" class="page">Shop</a>
+      <a href="../Article/article.html" class="page">Tin tức</a>
+      <a href="../Cart/cart.html" class="page">Giỏ hàng</a>
+      <div class="button2">
+        <a href="../Landing-scape/landing.html" class="button3">Trang chủ</a>
+      </div>
+    </div>
+  </div>
+
+
+  <main>
+    <h1>Giỏ hàng của bạn</h1>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Sản phẩm</th>
+          <th>Số lượng</th>
+          <th>Đơn giá</th>
+          <th>Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body">
+        </tbody>
+    </table>
+    <div class="total">Tổng cộng: <span id="total">0đ</span></div>
+    <button class="checkout-btn">Tiến hành thanh toán</button>
+    <button class="checkout-btn" id="delete-selected">Xóa các sản phẩm đã chọn</button>
+  </main>
+
+  <div class="navigation-footer">
+  <div class="items2">
+    <div class="topic">Về công ty</div>
+    <div class="page2">Giới thiệu</div>
+    <div class="page2">Sản phẩm</div>
+    <div class="page2">Shopping</div>
+  </div>
+  <div class="items3">
+    <div class="topic">Liên hệ</div>
+    <div class="page2">Email: asclp@gmail.com</div>
+    <div class="page2">Hotline: 1900 1337</div>
+    <div class="page2">Facebook: asclepius.vn</div>
+  </div>
+
+  <div class="site-name2">Asclepius</div>
+  <div class="social-icons">
+    <div class="buttons-icon">
+      <a href = 'https://www.facebook.com/dang.hoang.long.236264' target = '_blank'>
+        <img class="icon" src="icon0cart.svg" alt = 'Facebook'/>
+      </a>
+    </div>
+    <div class="buttons-icon">
+      <a href = 'https://x.com/longkunnz?s=21' target = '_blank'>
+        <img class="icon2" src="icon1cart.jpg" alt = 'X'/>
+      </a>
+    </div>
+    <div class="buttons-icon">
+      <a href = 'http://www.youtube.com/@LongKunnz' target = '_blank'>
+        <img class="icon3" src="icon2cart.svg" alt = 'Youtube'/>
+      </a>
+    </div>
+    <div class="buttons-icon">
+      <a href = 'https://www.instagram.com/kunn.dhl?igsh=eXFtaHZveHlvY3dm&utm_source=qr' target = '_blank'>
+        <img class="icon4" src="icon3cart.svg" alt = 'Instagram'/>
+      </a>
+    </div>
+  </div>
+  <div class="divider"></div>
+</div>
+
+  <script>
+    // Hàm định dạng tiền tệ
+    function formatCurrency(number) {
+      return number.toLocaleString('vi-VN') + 'đ';
+    }
+
+    // Hàm cập nhật tổng tiền
+    function updateTotal() {
+      let total = 0;
+      document.querySelectorAll('.item-checkbox:checked').forEach(cb => {
+        const row = cb.closest('tr');
+        // Lấy giá trị từ data-attributes để đảm bảo đúng kiểu số
+        const price = parseFloat(row.querySelector('.subtotal').dataset.price);
+        const qty = parseInt(row.querySelector('.subtotal').dataset.qty);
+        total += price * qty;
+      });
+      document.getElementById('total').textContent = formatCurrency(total);
+    }
+
+    // Hàm thêm nút xóa riêng lẻ cho từng sản phẩm
+    function addDeleteButtons() {
+      document.querySelectorAll('#cart-body tr').forEach((row, index) => {
+        // Chỉ thêm nút xóa nếu chưa có và hàng không phải là hàng trống
+        if (!row.querySelector('.delete-btn') && !row.classList.contains('empty-cart-row')) {
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Xóa';
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.addEventListener('click', () => {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                // Lấy chỉ mục từ dataset của checkbox để đảm bảo đúng sản phẩm
+                const rowIndex = parseInt(row.querySelector('.item-checkbox').dataset.index);
+                cart.splice(rowIndex, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                refreshCartDisplay(); // Làm mới toàn bộ giỏ hàng
+            });
+            const tdProduct = row.querySelector('td:nth-child(2)'); // Ô chứa tên sản phẩm
+            tdProduct.appendChild(deleteBtn);
+        }
+      });
+    }
+
+    // Hàm hiển thị (render) giỏ hàng
+    function refreshCartDisplay() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const tbody = document.getElementById('cart-body');
+      tbody.innerHTML = ''; // Xóa nội dung cũ
+
+      if (cart.length === 0) {
+        const emptyRow = document.createElement('tr');
+        emptyRow.classList.add('empty-cart-row');
+        emptyRow.innerHTML = `<td colspan="5" style="text-align: center; padding: 40px;">Giỏ hàng của bạn đang trống.</td>`;
+        tbody.appendChild(emptyRow);
+      } else {
+        cart.forEach((item, index) => {
+          const row = document.createElement('tr');
+          // Làm sạch giá để đảm bảo là số
+          const priceValue = parseFloat(item.price.replace('$', '').replace(',', ''));
+          const subtotalValue = priceValue * item.quantity;
+
+          row.innerHTML = `
+            <td><input type="checkbox" class="item-checkbox" data-index="${index}" /></td>
+            <td>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <img src="${item.image || 'placeholder.png'}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;" />
+                <span>${item.name}</span>
+              </div>
+            </td>
+            <td>${item.quantity}</td>
+            <td>${formatCurrency(priceValue)}</td>
+            <td class="subtotal" data-price="${priceValue}" data-qty="${item.quantity}">${formatCurrency(subtotalValue)}</td>
+          `;
+          tbody.appendChild(row);
+        });
+      }
+
+      // Gắn sự kiện cho các checkbox sau khi render lại
+      document.querySelectorAll('.item-checkbox').forEach(cb => {
+        cb.addEventListener('change', updateTotal);
+      });
+
+      // Thêm nút xóa riêng lẻ sau khi render
+      addDeleteButtons();
+      // Cập nhật tổng tiền ban đầu
+      updateTotal();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      refreshCartDisplay(); // Hiển thị giỏ hàng khi trang tải
+
+      // Xử lý nút "Xóa các sản phẩm đã chọn"
+      document.getElementById('delete-selected').addEventListener('click', () => {
+        const checkboxes = document.querySelectorAll('.item-checkbox:checked');
+        if (checkboxes.length === 0) {
+            alert('Vui lòng chọn sản phẩm để xóa.');
+            return;
+        }
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        // Lấy các chỉ mục đã chọn và sắp xếp giảm dần để xóa không làm ảnh hưởng đến index
+        const indexesToDelete = Array.from(checkboxes).map(cb => parseInt(cb.dataset.index)).sort((a, b) => b - a);
+
+        indexesToDelete.forEach(index => {
+            if (index >= 0 && index < cart.length) {
+                cart.splice(index, 1);
+            }
+        });
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        refreshCartDisplay(); // Làm mới hiển thị giỏ hàng
+      });
+    });
+  </script>
+</body>
+</html>

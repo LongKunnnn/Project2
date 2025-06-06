@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  
+  
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Giới thiệu</title>
+</head>
+
+<script>
+  function handleSubmit() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const emailAddress = document.getElementById('emailAddress').value;
+    const yourMessage = document.getElementById('yourMessage').value;
+
+    if (firstName && lastName && emailAddress && yourMessage) {
+      alert('Yêu cầu hỗ trợ thành công!');
+      // Xóa nội dung các trường sau khi gửi thành công
+      document.getElementById('firstName').value = '';
+      document.getElementById('lastName').value = '';
+      document.getElementById('emailAddress').value = '';
+      document.getElementById('yourMessage').value = '';
+    } else {
+      alert('Vui lòng điền đầy đủ tất cả các thông tin!');
+    }
+  }
+</script>
+
+<body>
+  <div class="about">
+    <img class="image" src="image0about.png" />
+    <div class="copy">
+      <div class="about2">About</div>
+      <div class="subheading-for-description-or-instructions">
+        Chúng tôi là ai?
+      </div>
+      <div class="paragraph">
+        <h4>Asclepius – Tinh Túy Từ Thiên Nhiên, Vị Ngon Của Sự An Tâm</h4>
+        <br>
+        <br>
+        Ra đời từ khát khao mang đến nguồn thực phẩm sạch,
+        tự nhiên và an toàn tuyệt đối, Asclepius không chỉ
+        là nơi bạn tìm thấy những loại trái cây ngon nhất
+        mà còn là nơi bạn cảm nhận được sự chỉn chu, sang
+        trọng và đẳng cấp trong từng chi tiết.
+        <br>
+        Chúng tôi hợp tác với những nông trại hữu cơ chọn lọc,
+        nơi mỗi quả chín được chăm sóc bằng cả tâm huyết và
+        trách nhiệm. Từ quá trình gieo trồng, thu hoạch cho
+        đến đóng gói và giao hàng, mọi công đoạn đều được kiểm
+        soát chặt chẽ để đảm bảo sự nguyên bản và an toàn tuyệt
+        đối cho sức khỏe người dùng.
+      </div>
+    </div>
+    <div class="navigation">
+      <div class="items">
+        <a href="../About/about.html" class="page">Giới thiệu</a>
+        <a href="../Product_Details/details.html" class="page">Shop</a>
+        <a href="../Article/article.html" class="page">Tin tức</a>
+        <a href="../Cart/cart.html" class="page">Giỏ hàng</a>
+        <div class="button">
+          <a href="../Landing-scape/landing.html" class="button2">Trang chủ</a>
+        </div>
+      </div>
+      <div class="site-name"><h2>Asclepius</h2></div>
+    </div>
+    <div class="navigation-footer">
+      <div class="items2">
+        <div class="topic">Về công ty</div>
+        <div class="page2">Giới thiệu</div>
+        <div class="page2">Sản phẩm</div>
+        <div class="page2">Shopping</div>
+      </div>
+      <div class="items3">
+        <div class="topic">Liên hệ</div>
+        <div class="page2">Email: asclp@gmail.com</div>
+        <div class="page2">Hotline: 1900 1337</div>
+        <div class="page2">Facebook: asclepius.vn</div>
+      </div>
+      
+      <div class="site-name2">Asclepius</div>
+      <div class="social-icons">
+        <div class="buttons-icon">
+          <a href = 'https://www.facebook.com/dang.hoang.long.236264' target = '_blank'>
+            <img class = 'icon' src = 'icon0about.svg' alt = 'Facebook'/>
+          </a>
+        </div>
+        <div class="buttons-icon">
+          <a href = 'https://x.com/longkunnz?s=21' target = '_blank'>
+            <img class="icon2" src="icon1about.jpg" alt = 'X'/>
+          </a>
+        </div>
+        <div class="buttons-icon">
+          <a href = 'http://www.youtube.com/@LongKunnz' target = '_blank'>
+            <img class = 'icon3' src = 'icon2about.svg' alt = 'Youtube'/>
+          </a>
+          
+        </div>
+        <div class="buttons-icon">
+          <a href = 'https://www.instagram.com/kunn.dhl?igsh=eXFtaHZveHlvY3dm&utm_source=qr' target = '_blank'>
+            <img class="icon4" src="icon3about.svg" alt = 'Instagram'/>
+          </a>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </div>
+    <div class="form">
+      <div class="input">
+        <div class="first-name">Họ</div>
+        <div class="field">
+          <input type="text" id="firstName" name="firstName" placeholder="Họ" class="label" />
+        </div>
+      </div>
+      <div class="input2">
+        <div class="last-name">Tên</div>
+        <div class="field">
+          <input type="text" id="lastName" name="lastName" placeholder="Tên" class="label" />
+        </div>
+      </div>
+      <div class="input3">
+        <div class="email-address">Email</div>
+        <div class="field">
+          <input type="email" id="emailAddress" name="emailAddress" placeholder="youremail@gmail.com" class="label" />
+        </div>
+      </div>
+      <div class="input4">
+        <div class="your-message">Yêu cầu hỗ trợ</div>
+        <div class="field">
+          <textarea id="yourMessage" name="yourMessage" placeholder="Nhập nội dung" class="label" style="width: 100%; height: 100%; resize: none;"></textarea>
+        </div>
+      </div>
+      <div class="button3" onclick="handleSubmit()">
+        <div class="submit">Gửi</div>
+      </div>
+    </div>
+    <div class="heading">
+      <div class="contact-me">Liên hệ</div>
+    </div>
+  </div>
+  
+</body>
+</html>
