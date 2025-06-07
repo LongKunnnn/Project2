@@ -1,3 +1,28 @@
+a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
 .product-detail-page,
 .product-detail-page * {
   box-sizing: border-box;
@@ -23,14 +48,14 @@
 .copy {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-start;
   justify-content: center;
   width: 35.76%;
   position: absolute;
   right: 5.56%;
   left: 58.68%;
-  top: 164px;
+  top: 250px;
 }
 .product-name {
   color: #000000;
@@ -128,7 +153,7 @@
   position: absolute;
   right: 51.04%;
   left: 5.56%;
-  top: 164px;
+  top: 250px;
   overflow: hidden;
   object-fit: cover;
 }
@@ -192,12 +217,12 @@
   justify-content: flex-start;
 }
 .site-name {
-  color: #000000;
+   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 60px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 60px;
+  line-height: 150%;
+  font-weight: 500;
   position: absolute;
   left: 80px;
   top: 67px;
@@ -276,13 +301,13 @@
 .site-name2 {
   color: #000000;
   text-align: left;
-  font-family: var(--subheading-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--subheading-font-size, 24px);
-  line-height: var(--subheading-line-height, 150%);
-  font-weight: var(--subheading-font-weight, 400);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 60px;
+  line-height: 150%;
+  font-weight: 500;
   position: absolute;
   left: 80px;
-  top: 52px;
+  top: 37px;
   display: flex;
   align-items: center;
   justify-content: flex-start;

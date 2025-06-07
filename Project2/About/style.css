@@ -1,3 +1,28 @@
+a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
 .about,
 .about * {
   box-sizing: border-box;
@@ -207,13 +232,13 @@
 .site-name2 {
   color: #000000;
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 60px;
   line-height: 150%;
-  font-weight: 400;
+  font-weight: 500;
   position: absolute;
   left: 80px;
-  top: 52px;
+  top: 37px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
