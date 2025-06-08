@@ -29,7 +29,7 @@ a,
 }
 .product-detail-page {
   background: #ffffff;
-  height: 2115px;
+  height: 2400px;
   position: relative;
   overflow: hidden;
 }
@@ -42,7 +42,7 @@ a,
   font-weight: 600;
   position: absolute;
   left: 80px;
-  top: 857px;
+  top: 957px;
   width: 625px;
 }
 .copy {
@@ -55,7 +55,7 @@ a,
   position: absolute;
   right: 5.56%;
   left: 58.68%;
-  top: 250px;
+  top: 275px;
 }
 .product-name {
   color: #000000;
@@ -115,11 +115,10 @@ a,
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
+
 .add-to-cart {
   color: #ffffff;
   text-align: left;
@@ -153,7 +152,7 @@ a,
   position: absolute;
   right: 51.04%;
   left: 5.56%;
-  top: 250px;
+  top: 275px;
   overflow: hidden;
   object-fit: cover;
 }
@@ -386,12 +385,13 @@ a,
   width: 1282px;
   position: absolute;
   left: 80px;
-  top: 937px;
+  top: 1090px;
 }
 .card {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 34px;
+  left: 185px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
