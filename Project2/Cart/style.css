@@ -153,6 +153,7 @@ button.delete-btn {
   margin-left: 10px; /* Khoảng cách với tên sản phẩm */
   font-family: "Inter-Medium", sans-serif; /* Font style */
   vertical-align: middle; /* Căn giữa theo chiều dọc với text */
+  margin-top: 10px;
 }
 button.delete-btn:hover {
     background-color: #e04333; /* Màu hover tối hơn */

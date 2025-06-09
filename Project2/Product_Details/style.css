@@ -70,10 +70,10 @@ a,
 .subheading {
   color: #828282;
   text-align: left;
-  font-family: var(--subheading-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--subheading-font-size, 24px);
-  line-height: var(--subheading-line-height, 150%);
-  font-weight: var(--subheading-font-weight, 400);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -122,10 +122,10 @@ a,
 .add-to-cart {
   color: #ffffff;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -134,10 +134,10 @@ a,
 .text-box-for-additional-details-or-fine-print {
   color: #828282;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -178,10 +178,10 @@ a,
 .page {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -198,18 +198,15 @@ a,
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .button3 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -252,10 +249,10 @@ a,
 .topic {
   color: #000000;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -265,10 +262,10 @@ a,
 .page2 {
   color: #454545;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -278,7 +275,7 @@ a,
 .items3 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -289,7 +286,7 @@ a,
 .items4 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -314,7 +311,7 @@ a,
 .social-icons {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xs, 8px);
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
@@ -431,10 +428,10 @@ a,
 .description-of-first-product {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -444,20 +441,20 @@ a,
 ._10-99 {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
 }
 .description-of-second-product {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -467,10 +464,10 @@ a,
 .description-of-third-product {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -480,10 +477,10 @@ a,
 .description-of-fourth-product {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -493,10 +490,10 @@ a,
 .description-of-fifth-product {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -506,10 +503,10 @@ a,
 .description-of-sixth-product {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;

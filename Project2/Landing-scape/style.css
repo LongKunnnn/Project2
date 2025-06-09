@@ -77,9 +77,9 @@ a,
   background: #ffffff;
   border-radius: 12px;
   border-style: solid;
-  border-color: var(--var-color-border, #e6e6e6);
+  border-color:#e6e6e6;
   border-width: 1px;
-  padding: var(--spacing-sm, 32px);
+  padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -131,10 +131,10 @@ a,
 .name {
   color: #000000;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family:  "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -143,10 +143,10 @@ a,
 .description {
   color: #828282;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -165,7 +165,7 @@ a,
 .items {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -176,10 +176,10 @@ a,
 .topic {
   color: #000000;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -189,10 +189,10 @@ a,
 .page {
   color: #454545;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -202,7 +202,7 @@ a,
 .items2 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -213,7 +213,7 @@ a,
 .items3 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -238,7 +238,7 @@ a,
 .social-icons {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xs, 8px);
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
@@ -310,7 +310,7 @@ a,
 .items4 {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-m, 48px);
+  gap: 48px;
   align-items: center;
   justify-content: flex-end;
   position: absolute;
@@ -320,10 +320,10 @@ a,
 .page2 {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -340,18 +340,15 @@ a,
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .button2 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -516,7 +513,7 @@ a,
 .copy2 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs, 8px);
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -549,7 +546,7 @@ a,
 .copy3 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs, 8px);
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -672,10 +669,7 @@ a,
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .button4 {
   color: #ffffff;
@@ -700,10 +694,7 @@ a,
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .secondary-button {
   color: #000000;
@@ -747,10 +738,7 @@ a,
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .button7 {
   background: #e6e6e6;
@@ -763,13 +751,10 @@ a,
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .secondary-button2 {
-  color: var(--var-color-text, rgba(0, 0, 0, 0.9));
+  color: rgba(0, 0, 0, 0.9);
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
   font-size: 24px;
@@ -816,10 +801,10 @@ a,
 .subheading-that-sets-up-context-shares-more-info-about-the-website-or-generally-gets-people-psyched-to-keep-scrolling {
   color: rgba(0, 0, 0, 0.75);
   text-align: left;
-  font-family: var(--subheading-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--subheading-font-size, 24px);
-  line-height: var(--subheading-line-height, 150%);
-  font-weight: var(--subheading-font-weight, 400);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
   position: relative;
   align-self: stretch;
   display: flex;
