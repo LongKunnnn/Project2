@@ -490,3 +490,159 @@ a,
   position: relative;
   align-self: stretch;
 }
+
+/* ---------- Responsive MOBILE (≤768px) ---------- */
+@media (max-width: 768px) {
+  .about {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 24px;
+    overflow: visible;
+  }
+
+  .image {
+    position: static;
+    display: block;
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+    margin: 0 auto 24px auto;
+    right: unset; left: unset; top: unset;
+  }
+
+  .copy {
+    position: static;
+    width: 90vw;
+    min-width: unset;
+    max-width: 100%;
+    margin: 24px auto 0 auto;
+    gap: 16px;
+  }
+
+  .about2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+  .subheading-for-description-or-instructions {
+    font-size: 18px;
+  }
+  .paragraph {
+    font-size: 16px;
+  }
+
+  .navigation {
+    height: auto;
+    min-height: 100px;
+    position: static;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .items {
+    position: static;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    margin-top: 12px;
+    right: unset; left: unset;
+  }
+  .page {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .button {
+    padding: 10px 16px;
+  }
+  .button2 {
+    font-size: 14px;
+  }
+  .site-name {
+    font-size: 32px;
+    top: 12px;
+    left: 20px;
+    position: static;
+    margin-bottom: 8px;
+  }
+
+  .navigation-footer {
+    position: static;
+    width: 100vw;
+    padding: 24px 0;
+    height: auto;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .items2, .items3, .items4 {
+    position: static;
+    width: 90vw;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+    min-width: unset;
+    right: unset;
+    left: unset;
+    top: unset;
+  }
+  .site-name2 {
+    position: static;
+    margin-top: 8px;
+    font-size: 28px;
+  }
+  .social-icons {
+    position: static;
+    margin: 8px 0 0 0;
+    left: unset;
+    top: unset;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .form {
+    position: static;
+    width: 92vw;
+    min-width: unset;
+    max-width: 99vw;
+    flex-direction: column;
+    gap: 14px;
+    margin: 24px auto auto auto;
+  }
+  .input, .input2, .input3, .input4 {
+    width: 100%;
+    min-width: unset;
+    max-width: 100vw;
+    height: fit-content;
+  }
+  .field input.label, .field textarea.label {
+    font-size: 15px;
+    height: 42px;
+    min-height: 32px;
+    padding: 10px 10px;
+  }
+  .input4 .field textarea.label {
+    height: 80px!important;
+  }
+  .button3 {
+    width: 96%;
+    margin: 0 auto;
+    padding: 12px 0;
+  }
+  .submit {
+    font-size: 17px;
+  }
+  .heading {
+    position: static;
+    width: 90vw;
+    margin: 24px auto 6px auto;
+  }
+  .contact-me {
+    font-size: 22px;
+  }
+}
