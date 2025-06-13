@@ -1,27 +1,27 @@
 a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
    }
 .article,
 .article * {
@@ -36,11 +36,11 @@ a,
 .related-articles-or-posts {
   color: #000000;
   text-align: left;
-  font-family: var(--heading-font-family, "Inter-SemiBold", sans-serif);
-  font-size: var(--heading-font-size, 40px);
-  line-height: var(--heading-line-height, 110%);
-  font-weight: var(--heading-font-weight, 600);
-  position: absolute;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 40px;
+  line-height: 110%;
+  font-weight: 600;
+  position: relative;
   left: 80px;
   top: 2663px;
   width: 625px;
@@ -48,10 +48,10 @@ a,
 .paragraph {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: absolute;
   right: 20.76%;
   left: 20.76%;
@@ -61,7 +61,7 @@ a,
 .images {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  gap: 122px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
@@ -81,10 +81,10 @@ a,
 .paragraph2 {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: absolute;
   right: 20.76%;
   left: 20.76%;
@@ -105,7 +105,7 @@ a,
 .article-title {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-start;
   justify-content: center;
   width: 50.9%;
@@ -117,20 +117,20 @@ a,
 .article-or-post-title {
   color: #000000;
   text-align: left;
-  font-family: var(--title-font-family, "Inter-Bold", sans-serif);
-  font-size: var(--title-font-size, 64px);
-  letter-spacing: var(--title-letter-spacing, -0.02em);
-  font-weight: var(--title-font-weight, 700);
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 64px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
   position: relative;
   align-self: stretch;
 }
 .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading {
   color: rgba(0, 0, 0, 0.75);
-  text-align: left;
-  font-family: var(--subheading-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--subheading-font-size, 24px);
-  line-height: var(--subheading-line-height, 150%);
-  font-weight: var(--subheading-font-weight, 400);
+  text-align: center;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 400;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -149,7 +149,7 @@ a,
 .items {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-m, 48px);
+  gap: 48px;
   align-items: center;
   justify-content: flex-end;
   position: absolute;
@@ -159,10 +159,10 @@ a,
 .page {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -179,18 +179,15 @@ a,
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 .button2 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   display: flex;
   align-items: center;
@@ -222,7 +219,7 @@ a,
 .items2 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -233,10 +230,10 @@ a,
 .topic {
   color: #000000;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -246,10 +243,10 @@ a,
 .page2 {
   color: #454545;
   text-align: left;
-  font-family: var(--small-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--small-text-font-size, 16px);
-  line-height: var(--small-text-line-height, 150%);
-  font-weight: var(--small-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;
@@ -259,7 +256,7 @@ a,
 .items3 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -270,7 +267,7 @@ a,
 .items4 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -295,7 +292,7 @@ a,
 .social-icons {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xs, 8px);
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
@@ -358,11 +355,11 @@ a,
 .cards {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-sm, 32px);
+  gap: 135px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  left: 81px;
+  left: 210px;
   top: 2755px;
 }
 .card {
@@ -398,20 +395,20 @@ a,
 .title {
   color: #000000;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
 }
 .author {
   color: #828282;
   text-align: left;
-  font-family: var(--body-text-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--body-text-font-size, 20px);
-  line-height: var(--body-text-line-height, 150%);
-  font-weight: var(--body-text-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
   position: relative;
   align-self: stretch;
   display: flex;

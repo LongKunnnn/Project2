@@ -179,6 +179,7 @@
     cart.push({ name: productName, price: productPrice, quantity: parseInt(qtyInput1.value), image: productImage });
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`Đã thêm "${productName}" vào giỏ hàng`);
+    qtyInput1.value = 1;
   });
 
   // ----- CÁC SẢN PHẨM .card -----
@@ -209,6 +210,7 @@
       cart.push({ name, price, quantity: parseInt(qtyInput.value), image });
       localStorage.setItem('cart', JSON.stringify(cart));
       alert(`Đã thêm "${name}" vào giỏ hàng`);
+      qtyInput.value = 1;
     });
   });
 </script>
