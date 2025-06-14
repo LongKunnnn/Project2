@@ -1,28 +1,31 @@
+/* Reset mặc định cho các thẻ HTML */
 a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+
+    -webkit-font-smoothing: antialiased;
+}
+/* Xóa dấu đầu dòng danh sách */
+menu, ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout chính của trang giới thiệu */
 .about,
 .about * {
   box-sizing: border-box;
@@ -33,6 +36,8 @@ a,
   position: relative;
   overflow: hidden;
 }
+
+/* Ảnh minh họa bên phải */
 .image {
   background: linear-gradient(to left, #f7f7f7, #f7f7f7);
   border-radius: 8px;
@@ -44,10 +49,12 @@ a,
   overflow: hidden;
   object-fit: cover;
 }
+
+/* Phần văn bản giới thiệu bên trái ảnh */
 .copy {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-start;
   justify-content: flex-start;
   width: 624px;
@@ -55,6 +62,8 @@ a,
   left: 80px;
   top: 244px;
 }
+
+/* Tiêu đề 'About' */
 .about2 {
   color: #000000;
   text-align: left;
@@ -65,6 +74,8 @@ a,
   position: relative;
   align-self: stretch;
 }
+
+/* Phần phụ đề bên dưới tiêu đề */
 .subheading-for-description-or-instructions {
   color: #828282;
   text-align: left;
@@ -78,6 +89,8 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Đoạn mô tả nội dung chính */
 .paragraph {
   color: #000000;
   text-align: left;
@@ -88,25 +101,31 @@ a,
   position: relative;
   align-self: stretch;
 }
+
+/* Thanh điều hướng phía trên cùng */
 .navigation {
   background: #ffffff;
   height: 164px;
-  position: absolute;
+  position: fixed;
   right: 0px;
   left: 0px;
   top: 0px;
-  overflow: hidden;
+  z-index: 1000;
 }
+
+/* Các liên kết trang trong navigation */
 .items {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-m, 48px);
+  gap: 48px;
   align-items: center;
   justify-content: flex-end;
   position: absolute;
   right: 80px;
   top: 56px;
 }
+
+/* Style cho từng liên kết trang */
 .page {
   color: #000000;
   text-align: left;
@@ -119,6 +138,8 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Nút trang chủ màu đen */
 .button {
   background: #000000;
   border-radius: 8px;
@@ -130,11 +151,10 @@ a,
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
+
+/* Text trong nút 'Trang chủ' */
 .button2 {
   color: #ffffff;
   text-align: left;
@@ -147,6 +167,8 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Tên thương hiệu bên trái thanh navigation */
 .site-name {
   color: #000000;
   text-align: left;
@@ -161,6 +183,8 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Phần footer cuối trang */
 .navigation-footer {
   background: #ffffff;
   height: 264px;
@@ -170,10 +194,12 @@ a,
   bottom: 0px;
   overflow: hidden;
 }
+
+/* Cột 'Về công ty' */
 .items2 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -181,6 +207,8 @@ a,
   right: 517px;
   top: 48px;
 }
+
+/* Tên đề mục như 'Về công ty', 'Liên hệ' */
 .topic {
   color: #000000;
   text-align: left;
@@ -194,6 +222,8 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Các dòng thông tin phụ */
 .page2 {
   color: #454545;
   text-align: left;
@@ -207,10 +237,12 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Cột 'Liên hệ' */
 .items3 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -218,10 +250,12 @@ a,
   right: 298px;
   top: 48px;
 }
+
+/* Dự phòng cho cột thứ 3 nếu cần */
 .items4 {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-end;
   justify-content: center;
   width: 187px;
@@ -229,6 +263,8 @@ a,
   right: 80px;
   top: 48px;
 }
+
+/* Tên thương hiệu ở footer */
 .site-name2 {
   color: #000000;
   text-align: left;
@@ -243,16 +279,20 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Nhóm icons mạng xã hội */
 .social-icons {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xs, 8px);
+  gap: 8px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
   left: 80px;
   top: 176px;
 }
+
+/* Nút chứa mỗi icon */
 .buttons-icon {
   border-radius: 4px;
   padding: 8px;
@@ -261,6 +301,8 @@ a,
   height: 40px;
   position: relative;
 }
+
+/* Kích thước các icons mạng xã hội */ 
 .icon {
   width: 24px;
   height: 24px;
@@ -293,6 +335,8 @@ a,
   top: 8px;
   overflow: visible;
 }
+
+/* Đường kẻ phân cách */
 .divider {
   margin-top: -1px;
   border-style: solid;
@@ -306,11 +350,13 @@ a,
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
 }
+
+/* Layout của form 'Liên hệ' */
 .form {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-sm, 32px);
-  row-gap: var(--spacing-s, 24px);
+  gap: 32px;
+  row-gap: 24px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -321,6 +367,8 @@ a,
   left: 5.56%;
   top: 925px;
 }
+
+/* Cấu trúc từng ô input */
 .input {
   display: flex;
   flex-direction: column;
@@ -332,6 +380,44 @@ a,
   height: 80px;
   position: relative;
 }
+
+.input2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 297px;
+  height: 80px;
+  position: relative;
+}
+
+.input3 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 626px;
+  height: 80px;
+  position: relative;
+}
+
+.input4 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 626px;
+  height: 194px;
+  position: relative;
+}
+
+/* Cấu trúc từng ô input */
 .first-name {
   color: #000000;
   text-align: left;
@@ -342,6 +428,41 @@ a,
   position: relative;
   align-self: stretch;
 }
+
+.last-name {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+
+.email-address {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+
+.your-message {
+  color: #000000;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+
+/* Hộp nhập dữ liệu */
 .field {
   background: #ffffff;
   border-radius: 8px;
@@ -356,16 +477,14 @@ a,
   justify-content: flex-start;
   align-self: stretch;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
+/* Style cho input và textarea */
 .field input.label,
 .field textarea.label {
   width: 100%;
-  padding: 12px 16px; /* Padding trực tiếp trên input/textarea */
+  padding: 12px 16px;
   border: none;
   background: none;
   color: #828282;
@@ -378,69 +497,7 @@ a,
   height: 60px; /* Chiều cao cố định cho input */
 }
 
-.input2 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 297px;
-  height: 80px;
-  position: relative;
-}
-.last-name {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-}
-.input3 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 626px;
-  height: 80px;
-  position: relative;
-}
-.email-address {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-}
-.input4 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 626px;
-  height: 194px;
-  position: relative;
-}
-.your-message {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-}
+/* Nút gửi form */
 .button3 {
   background: #000000;
   border-radius: 8px;
@@ -452,11 +509,10 @@ a,
   justify-content: center;
   flex: 1;
   position: relative;
-  box-shadow: var(
-    --button-shadow-box-shadow,
-    0px 1px 2px 0px rgba(0, 0, 0, 0.05)
-  );
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
+
+/* Text trong nút gửi */
 .submit {
   color: #ffffff;
   text-align: left;
@@ -469,10 +525,12 @@ a,
   align-items: center;
   justify-content: flex-start;
 }
+
+/* Tiêu đề 'Liên hệ' */
 .heading {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-s, 24px);
+  gap: 24px;
   align-items: flex-start;
   justify-content: flex-start;
   width: 624px;
@@ -493,6 +551,7 @@ a,
 
 /* ---------- Responsive MOBILE (≤768px) ---------- */
 @media (max-width: 768px) {
+  /* Tự động giới hạn chiều cao và hiển thị đẹp trên mobile */
   .about {
     height: auto;
     min-height: 100vh;
