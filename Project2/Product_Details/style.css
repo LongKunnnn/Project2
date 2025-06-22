@@ -158,12 +158,12 @@ menu, ol, ul {
 }
 .navigation {
   background: #ffffff;
-  height: 164px;
-  position: absolute;
+  height: 174px;
+  position: fixed;
   right: 0px;
   left: 0px;
   top: 0px;
-  overflow: hidden;
+  z-index: 1000;
 }
 .items {
   display: flex;

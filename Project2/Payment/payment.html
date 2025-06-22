@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanh toán - Asclepius</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="navigation">
+    <a href="../Landing-scape/landing.html" class="site-name"><h2>Asclepius</h2></a>
+    <div class="items">
+      <a href="../About/about.html" class="page">Giới thiệu</a>
+      <a href="../Product_Details/details.html" class="page">Shop</a>
+      <a href="../Article/article.html" class="page">Tin tức</a>
+      <a href="../Cart/cart.html" class="page">Giỏ hàng</a>
+      <div class="button2">
+        <a href="../Landing-scape/landing.html" class="button3">Trang chủ</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <h1>Thanh toán đơn hàng</h1>
+    
+    <div class="payment-summary">
+        <h2>Thông tin đơn hàng</h2>
+        <div id="order-details">
+            <!-- Chi tiết sản phẩm và tổng tiền sẽ được hiển thị ở đây -->
+        </div>
+        <div class="total-payment">Tổng cộng: <span id="payment-total">0đ</span></div>
+    </div>
+
+    <div class="payment-options">
+      <h2>Chọn phương thức thanh toán</h2>
+      <div class="payment-method-card" id="cod-payment">
+        <h3>Thanh toán khi nhận hàng (COD)</h3>
+        <p>Thanh toán bằng tiền mặt khi nhận hàng tại nhà.</p>
+        <button class="checkout-btn" id="confirm-cod">Xác nhận đặt hàng COD</button>
+      </div>
+
+      <div class="payment-method-card" id="qr-payment">
+        <h3>Thanh toán bằng QR Code</h3>
+        <p>Sử dụng ứng dụng ngân hàng quét mã QR để thanh toán.</p>
+        <div class="qr-code-area" style="display: none;">
+          <img src="qrcode.jfif" alt="Mã QR thanh toán" class="qr-image" />
+          <p>Quét mã QR để hoàn tất thanh toán.</p>
+          <button class="checkout-btn" id="confirm-qr-paid">Đã thanh toán thành công trên app</button>
+        </div>
+        <button class="checkout-btn" id="show-qr-btn">Hiển thị QR Code</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Cấu trúc footer mới -->
+  <div class="navigation-footer">
+    <div class="footer-brand">
+      <a href="../Landing-scape/landing.html" class="site-name2"><h2>Asclepius</h2></a>
+    </div>
+
+    <div class="footer-columns-and-social">
+      <div class="footer-info-columns">
+        <div class="items2">
+          <div class="topic">Về công ty</div>
+          <div class="page2">Giới thiệu</div>
+          <div class="page2">Sản phẩm</div>
+          <div class="page2">Shopping</div>
+        </div>
+        <div class="items3">
+          <div class="topic">Liên hệ</div>
+          <div class="page2">Email: asclp@gmail.com</div>
+          <div class="page2">Hotline: 1900 1337</div>
+          <div class="page2">Facebook: asclepius.vn</div>
+        </div>
+      </div>
+      <div class="social-icons">
+        <div class="buttons-icon">
+          <a href = 'https://www.facebook.com/dang.hoang.long.236264' target = '_blank'>
+            <img class="icon" src="icon0pay.svg" alt = 'Facebook'/>
+          </a>
+        </div>
+        <div class="buttons-icon">
+          <a href = 'https://x.com/longkunnz?s=21' target = '_blank'>
+            <img class="icon2" src="icon1pay.jpg" alt = 'X'/>
+          </a>
+        </div>
+        <div class="buttons-icon">
+          <a href = 'http://www.youtube.com/@LongKunnz' target = '_blank'>
+            <img class="icon3" src="icon2pay.svg" alt = 'Youtube'/>
+          </a>
+        </div>
+        <div class="buttons-icon">
+          <a href = 'https://www.instagram.com/kunn.dhl?igsh=eXFtaHZveHlvY3dm&utm_source=qr' target = '_blank'>
+            <img class="icon4" src="icon3pay.svg" alt = 'Instagram'/>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </div>
+
+  <script>
+    // Hàm định dạng tiền tệ
+    function formatCurrency(number) {
+      // Đảm bảo number là một số
+      const num = parseFloat(number);
+      if (isNaN(num)) {
+          return '0đ'; // Trả về 0đ nếu không phải số hợp lệ
+      }
+      return num.toLocaleString('vi-VN') + 'đ';
+    }
+
+    // Modal cho thông báo
+    function showMessageBox(message) {
+        const modalOverlay = document.createElement('div');
+        modalOverlay.classList.add('modal-overlay');
+
+        const modalContent = document.createElement('div');
+        modalContent.classList.add('modal-content');
+        modalContent.innerHTML = `
+            <p>${message}</p>
+            <button class="modal-close-btn">Đóng</button>
+        `;
+
+        modalOverlay.appendChild(modalContent);
+        document.body.appendChild(modalOverlay);
+
+        modalContent.querySelector('.modal-close-btn').addEventListener('click', () => {
+            document.body.removeChild(modalOverlay);
+            window.location.href = '../Landing-scape/landing.html'; // Chuyển về trang chủ sau khi đóng thông báo
+        });
+
+        // Cho phép đóng modal khi click ra ngoài
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                document.body.removeChild(modalOverlay);
+                window.location.href = '../Landing-scape/landing.html'; // Chuyển về trang chủ sau khi đóng thông báo
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const totalAmount = localStorage.getItem('totalAmountForPayment');
+      const selectedItems = JSON.parse(localStorage.getItem('selectedForPayment')) || [];
+      const paymentTotalSpan = document.getElementById('payment-total');
+      const orderDetailsDiv = document.getElementById('order-details');
+
+      // Hiển thị tổng tiền
+      if (totalAmount) {
+        paymentTotalSpan.textContent = totalAmount;
+      } else {
+        paymentTotalSpan.textContent = '0đ';
+      }
+
+      // Hiển thị chi tiết đơn hàng
+      if (selectedItems.length > 0) {
+          let orderHtml = '<ul class="order-item-list">';
+          selectedItems.forEach(item => {
+              orderHtml += `
+                  <li>
+                      <div class="order-item-info">
+                          <img src="${item.image || 'https://placehold.co/50x50/F0F0F0/808080?text=Sản+phẩm'}" alt="${item.name}" class="order-item-image">
+                          <span>${item.name} x ${item.quantity}</span>
+                      </div>
+                      <span class="order-item-price">${formatCurrency(item.price * item.quantity)}</span>
+                  </li>
+              `;
+          });
+          orderHtml += '</ul>';
+          orderDetailsDiv.innerHTML = orderHtml;
+      } else {
+          orderDetailsDiv.innerHTML = '<p>Không có sản phẩm nào được chọn để thanh toán.</p>';
+      }
+
+      // Xử lý nút Thanh toán khi nhận hàng (COD)
+      document.getElementById('confirm-cod').addEventListener('click', () => {
+        showMessageBox('Đơn hàng của bạn đã được xác nhận thành công! Chúng tôi sẽ giao hàng sớm nhất.');
+        // Xóa giỏ hàng sau khi đặt hàng thành công
+        localStorage.removeItem('cart');
+        localStorage.removeItem('selectedForPayment');
+        localStorage.removeItem('totalAmountForPayment');
+      });
+
+      // Xử lý nút Hiển thị QR Code
+      document.getElementById('show-qr-btn').addEventListener('click', () => {
+        const qrCodeArea = document.querySelector('.qr-code-area');
+        qrCodeArea.style.display = 'flex'; // Hiển thị QR code
+        document.getElementById('show-qr-btn').style.display = 'none'; // Ẩn nút "Hiển thị QR Code"
+      });
+
+      // Xử lý nút Đã thanh toán thành công trên app (QR)
+      document.getElementById('confirm-qr-paid').addEventListener('click', () => {
+        showMessageBox('Thanh toán thành công! Đơn hàng của bạn đã được xác nhận.');
+        // Xóa giỏ hàng sau khi đặt hàng thành công
+        localStorage.removeItem('cart');
+        localStorage.removeItem('selectedForPayment');
+        localStorage.removeItem('totalAmountForPayment');
+      });
+    });
+  </script>
+</body>
+</html>

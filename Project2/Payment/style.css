@@ -1,0 +1,560 @@
+/* ======================================= */
+/* ====== Styles for Payment Page ======== */
+/* ======================================= */
+
+/* Reset CSS */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    background: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Common Body Styles (similar to style.css) */
+body {
+  font-family: "Inter-Regular", sans-serif; /* Hoặc font-family mặc định của bạn */
+  background: #ffffff; /* Màu nền trang */
+  margin: 0;
+  padding: 0;
+  color: #000000; /* Màu chữ chính */
+}
+
+/* Main content styling for payment page */
+main {
+  max-width: 1000px; /* Bề rộng tối đa của nội dung chính */
+  margin: 100px auto 60px auto; /* Margin trên để tránh header, căn giữa */
+  padding: 20px; /* Padding tổng thể */
+  padding-top: 80px; /* Padding top lớn hơn để tránh nội dung bị che */
+}
+
+/* Page Title (similar to style.css) */
+h1 {
+  text-align: left; /* Căn trái */
+  margin-bottom: 40px; /* Khoảng cách dưới */
+  color: #000000; /* Màu chữ */
+  font-family: "Inter-SemiBold", sans-serif; /* Font style tương tự details.html */
+  font-size: 32px; /* Kích thước tương tự tiêu đề */
+  line-height: 150%;
+  font-weight: 600;
+  padding-left: 80px; /* Thụt lề giống các phần khác trên details.html */
+}
+
+/* Checkout Button (reused from style.css) */
+.checkout-btn {
+  display: block; /* Hiển thị dạng block */
+  background-color: #000000; /* Màu nút chính */
+  color: #fff; /* Màu chữ trắng */
+  padding: 14px 28px; /* Padding nút */
+  border: none; /* Không viền */
+  border-radius: 8px; /* Bo góc */
+  font-weight: 500; /* Font weight */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ dạng bàn tay */
+  margin: 30px auto 0; /* Căn giữa ngang và khoảng cách trên */
+  max-width: 250px; /* Bề rộng tối đa */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Shadow nút */
+}
+.checkout-btn:hover {
+  background-color: #333333; /* Màu hover tối hơn */
+}
+
+/* ======================================= */
+/* ====== Styles for Header & Footer (similar to style.css) ===== */
+/* ======================================= */
+
+/* Navigation Header */
+.navigation {
+  background: #ffffff; /* Màu nền trắng */
+  height: 80px; /* Chiều cao cố định */
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  display: flex; /* Dùng flexbox để căn chỉnh các mục */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Đẩy các mục ra hai phía */
+  padding: 0 80px; /* Padding hai bên */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Shadow nhẹ dưới header */
+  z-index: 1000; /* Đảm bảo header nằm trên cùng */
+}
+
+.navigation .items {
+  display: flex; /* Dùng flexbox cho các mục điều hướng */
+  gap: 40px; /* Khoảng cách giữa các mục */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navigation .page {
+  color: #000000; /* Màu chữ đen */
+  text-align: right;
+  font-family: "Inter-SemiBold", sans-serif; /* Font style */
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 600;
+  text-decoration: none; /* Bỏ gạch chân */
+  transition: color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.navigation .page:hover {
+  color: #555555; /* Màu chữ khi hover */
+}
+
+.navigation .button2 {
+  background: #000000; /* Màu nền nút */
+  border-radius: 8px; /* Bo góc */
+  padding: 12px 24px; /* Padding nút */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Shadow nút */
+  transition: background-color 0.3s ease; /* Hiệu ứng hover */
+}
+
+.navigation .button2:hover {
+  background-color: #333333; /* Màu nền khi hover */
+}
+
+.navigation .button3 {
+  color: #ffffff; /* Màu chữ trắng */
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif; /* Font style */
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  text-decoration: none; /* Bỏ gạch chân */
+}
+
+.navigation .site-name {
+  color: #000000; /* Màu chữ đen */
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif; /* Font style đậm */
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 700;
+  white-space: nowrap; /* Ngăn không cho chữ xuống dòng */
+}
+
+/* Navigation Footer */
+.navigation-footer {
+  background: #ffffff; /* Màu nền trắng */
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Đảm bảo các phần tử chính xếp chồng lên nhau */
+  align-items: flex-start; /* Căn trái toàn bộ nội dung footer */
+  padding: 80px; /* Padding toàn bộ footer */
+  box-sizing: border-box;
+  margin-top: 60px;
+}
+
+.navigation-footer .footer-brand {
+    width: 100%; /* Đảm bảo thương hiệu chiếm toàn bộ chiều rộng */
+    margin-bottom: 20px; /* Khoảng cách dưới phần thương hiệu */
+    text-align: left;
+}
+
+.navigation-footer .site-name2 {
+  color: #000000;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 700;
+  white-space: nowrap;
+  /* flex-grow đã được xóa để không đẩy các phần khác */
+}
+
+.navigation-footer .footer-columns-and-social {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các cột và social icons xuống dòng */
+    justify-content: space-between; /* Đẩy các cột sang trái, social icons sang phải */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của footer */
+    align-items: flex-start; /* Căn đầu các mục con */
+}
+
+.navigation-footer .footer-info-columns {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các cột thông tin xuống dòng nếu không đủ chỗ */
+    gap: 80px; /* Khoảng cách giữa "Về công ty" và "Liên hệ" */
+    margin-bottom: 20px; /* Khoảng cách dưới các cột thông tin */
+}
+
+.navigation-footer .items2,
+.navigation-footer .items3 {
+  display: flex;
+  flex-direction: column; /* Các mục xếp dọc */
+  gap: 16px; /* Khoảng cách giữa các mục */
+  align-items: flex-start; /* Căn trái các mục */
+  justify-content: flex-start;
+  min-width: 150px; /* Chiều rộng tối thiểu */
+}
+
+.navigation-footer .topic {
+  color: #000000;
+  text-align: left; /* Căn trái chủ đề */
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.navigation-footer .page2 {
+  color: #828282;
+  text-align: left; /* Căn trái các trang con */
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navigation-footer .social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto; /* Đẩy các biểu tượng mạng xã hội sang phải */
+  margin-bottom: 20px;
+}
+
+.navigation-footer .divider {
+  background: #e0e0e0;
+  width: 100%;
+  height: 1px;
+  margin-top: 40px;
+}
+
+.buttons-icon {
+  border-radius: 4px;
+  padding: 8px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.icon2 {
+  width: 24px;     
+  height: 24px;
+  object-fit: contain; 
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ======================================= */
+/* ====== Specific Styles for Payment Page ======== */
+/* ======================================= */
+
+.payment-summary {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    padding: 30px;
+    margin: 0 80px 40px; /* Khoảng cách dưới */
+}
+
+.payment-summary h2 {
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.payment-summary .total-payment {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #000;
+    font-family: "Inter-Bold", sans-serif;
+}
+
+.order-item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    color: #454545;
+}
+
+.order-item-list li:last-child {
+    border-bottom: none;
+}
+
+.order-item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Khoảng cách giữa ảnh và tên */
+}
+
+.order-item-image {
+    width: 50px; /* Kích thước ảnh sản phẩm */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.order-item-price {
+    font-weight: 500;
+    color: #000;
+}
+
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 80px;
+}
+
+.payment-options h2 {
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.payment-method-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn trái nội dung */
+    gap: 15px;
+}
+
+.payment-method-card h3 {
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.payment-method-card p {
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 16px;
+    color: #454545;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.payment-method-card .checkout-btn {
+    margin: 0; /* Override center margin */
+    align-self: flex-start; /* Đảm bảo nút căn trái */
+}
+
+.qr-code-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px; /* Giới hạn chiều rộng QR area */
+    margin: 10px auto; /* Căn giữa */
+}
+
+.qr-image {
+    width: 180px; /* Kích thước ảnh QR */
+    height: 180px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.qr-code-area p {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: fadeInScale 0.3s ease-out;
+    position: relative;
+    font-family: "Inter-Regular", sans-serif;
+    color: #000;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.modal-close-btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.modal-close-btn:hover {
+    background-color: #333333;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  h1 {
+      padding-left: 20px;
+  }
+  .payment-summary, .payment-options {
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 20px; /* Giảm padding */
+  }
+  .payment-options {
+      gap: 20px; /* Giảm khoảng cách giữa các thẻ thanh toán */
+  }
+  .payment-method-card {
+      padding: 20px; /* Giảm padding thẻ */
+  }
+  .qr-code-area {
+      max-width: 250px; /* Giảm kích thước QR area trên mobile */
+  }
+  .qr-image {
+      width: 150px;
+      height: 150px;
+  }
+  .navigation {
+      padding: 0 20px; /* Giảm padding header */
+  }
+  .navigation .items {
+      gap: 20px; /* Giảm khoảng cách giữa các mục nav */
+  }
+  .navigation .page {
+      font-size: 16px; /* Giảm font size nav */
+  }
+  .navigation .button2 {
+      padding: 8px 16px; /* Giảm padding nút nav */
+  }
+  .navigation-footer {
+      padding: 40px 20px; /* Giảm padding footer */
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  .navigation-footer .footer-columns-and-social {
+      flex-direction: column; /* Xếp chồng các cột và social trên màn hình nhỏ */
+      gap: 20px;
+      align-items: flex-start; /* Căn trái */
+  }
+  .navigation-footer .footer-info-columns {
+      flex-direction: column; /* Xếp chồng các cột thông tin */
+      gap: 20px;
+  }
+  .navigation-footer .social-icons {
+      margin-left: 0; /* Xóa auto-margin để căn trái */
+      justify-content: flex-start; /* Đảm bảo icons căn trái */
+  }
+  .navigation-footer .items2,
+  .navigation-footer .items3 {
+      width: 100%;
+      align-items: flex-start;
+      margin-bottom: 0;
+  }
+  .modal-content {
+      padding: 30px 20px;
+      width: 95%;
+  }
+}
+
+/* Cho màn hình rất nhỏ */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    .payment-summary h2, .payment-options h2 {
+        font-size: 20px;
+    }
+    .payment-summary .total-payment {
+        font-size: 20px;
+    }
+    .payment-method-card h3 {
+        font-size: 18px;
+    }
+    .payment-method-card p {
+        font-size: 14px;
+    }
+    .checkout-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .modal-content p {
+        font-size: 16px;
+    }
+    .modal-close-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

@@ -8,806 +8,785 @@ h3,
 h4,
 h5,
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    background: none;
+    box-sizing: border-box; /* Đảm bảo padding và border được tính vào tổng chiều rộng và chiều cao của phần tử */
+    margin: 0; /* Đặt lại margin mặc định về 0 */
+    padding: 0; /* Đặt lại padding mặc định về 0 */
+    border: none; /* Xóa border mặc định */
+    text-decoration: none; /* Xóa các trang trí văn bản như gạch chân khỏi liên kết */
+    background: none; /* Xóa nền mặc định */
 
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* Cải thiện hiển thị font chữ trên macOS/iOS */
 }
 
 menu, ol, ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none; /* Xóa dấu đầu dòng/số khỏi danh sách */
+    margin: 0; /* Đặt lại margin mặc định cho danh sách về 0 */
+    padding: 0; /* Đặt lại padding mặc định cho danh sách về 0 */
 }
 .landing-page,
 .landing-page * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Đảm bảo padding và border được tính vào tổng chiều rộng và chiều cao cho tất cả các phần tử bên trong .landing-page */
   
 }
 .landing-page {
-  background: #ffffff;
-  height: 4811px;
-  position: relative;
-  overflow: hidden;
+  background: #ffffff; /* Đặt màu nền là màu trắng */
+  height: 4811px; /* Đặt chiều cao cố định cho trang đích */
+  position: relative; /* Đặt ngữ cảnh định vị cho các phần tử con được định vị tuyệt đối */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
 }
 .site-name {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 60px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  left: 80px;
-  top: 67px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 60px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 67px; /* Đặt vị trí bên trên */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 
 .section-heading {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 48px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-  position: absolute;
-  top: 3857px;
-  left: 100px;
-  width: 625px;
-  text-align: left;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Đặt họ font chữ là Inter-SemiBold, với sans-serif là font dự phòng */
+  font-size: 48px; /* Đặt kích thước font chữ */
+  letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các ký tự */
+  font-weight: 600; /* Đặt độ đậm font chữ là semi-bold */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  top: 3857px; /* Đặt vị trí bên trên */
+  left: 100px; /* Đặt vị trí bên trái */
+  width: 625px; /* Đặt chiều rộng cố định */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
 }
 .cards {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-sm, 32px);
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 1280px;
-  position: absolute;
-  left: 80px;
-  top: 3963px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: var(--spacing-sm, 32px); /* Đặt khoảng cách giữa các mục flex, nếu không có thì dùng 32px */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trên cho hàng) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trái cho hàng) */
+  width: 1280px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 3963px; /* Đặt vị trí bên trên */
 }
 .customer-quote {
-  background: #ffffff;
-  border-radius: 12px;
-  border-style: solid;
-  border-color:#e6e6e6;
-  border-width: 1px;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-  position: relative;
+  background: #ffffff; /* Đặt màu nền là màu trắng */
+  border-radius: 12px; /* Bo tròn các góc của phần tử */
+  border-style: solid; /* Đặt kiểu border là solid */
+  border-color:#e6e6e6; /* Đặt màu border */
+  border-width: 1px; /* Đặt độ rộng border */
+  padding: 32px; /* Thêm padding xung quanh nội dung */
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 48px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  flex: 1; /* Cho phép mục co giãn, phân phối không gian có sẵn */
+  position: relative; /* Đặt ngữ cảnh định vị cho các phần tử con được định vị tuyệt đối */
 }
 .review {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  width: 500px;
-  height: 100px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  width: 500px; /* Đặt chiều rộng cố định */
+  height: 100px; /* Đặt chiều cao cố định */
 
 }
 .avatar {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 16px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  width: 45px; /* Đặt chiều rộng cố định */
+  height: 45px; /* Đặt chiều cao cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .avatar2 {
-  background: linear-gradient(to left, #d9d9d9, #d9d9d9);
-  border-radius: 50%;
-  flex-shrink: 0;
-  width: 45px;
-  height: 45px;
-  position: relative;
-  object-fit: cover;
+  background: linear-gradient(to left, #d9d9d9, #d9d9d9); /* Đặt nền là một gradient tuyến tính */
+  border-radius: 50%; /* Làm cho phần tử trở thành hình tròn hoàn hảo */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  width: 45px; /* Đặt chiều rộng cố định */
+  height: 45px; /* Đặt chiều cao cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  object-fit: cover; /* Thay đổi tỷ lệ hình ảnh để lấp đầy hộp nội dung trong khi vẫn giữ tỷ lệ khung hình */
 }
 .frame-2610301 {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 2px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .name {
-  color: #000000;
-  text-align: left;
-  font-family:  "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family:  "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 16px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .description {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 16px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 
 .navigation-footer {
-  background: #ffffff;
-  height: 264px;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
-  overflow: hidden;
+  background: #ffffff; /* Đặt màu nền là màu trắng */
+  height: 264px; /* Đặt chiều cao cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 0px; /* Đặt vị trí bên phải */
+  left: 0px; /* Đặt vị trí bên trái */
+  bottom: 0px; /* Đặt vị trí dưới cùng */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
 }
 .items {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 517px;
-  top: 48px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 24px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-end; /* Căn chỉnh các mục về phía cuối trục chéo (phải cho cột) */
+  justify-content: center; /* Căn chỉnh các mục vào giữa trục chính (theo chiều dọc cho cột) */
+  width: 187px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 517px; /* Đặt vị trí bên phải */
+  top: 48px; /* Đặt vị trí bên trên */
 }
 .topic {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 16px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .page {
-  color: #454545;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #454545; /* Đặt màu chữ là một màu xám đậm */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 16px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .items2 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 298px;
-  top: 48px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 24px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-end; /* Căn chỉnh các mục về phía cuối trục chéo (phải cho cột) */
+  justify-content: center; /* Căn chỉnh các mục vào giữa trục chính (theo chiều dọc cho cột) */
+  width: 187px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 298px; /* Đặt vị trí bên phải */
+  top: 48px; /* Đặt vị trí bên trên */
 }
 .items3 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 80px;
-  top: 48px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 24px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-end; /* Căn chỉnh các mục về phía cuối trục chéo (phải cho cột) */
+  justify-content: center; /* Căn chỉnh các mục vào giữa trục chính (theo chiều dọc cho cột) */
+  width: 187px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 80px; /* Đặt vị trí bên phải */
+  top: 48px; /* Đặt vị trí bên trên */
 }
 .site-name2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 60px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  left: 80px;
-  top: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 60px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 37px; /* Đặt vị trí bên trên */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .social-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 80px;
-  top: 176px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trên cho hàng) */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 176px; /* Đặt vị trí bên trên */
 }
 .buttons-icon {
-  border-radius: 4px;
-  padding: 8px;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  position: relative;
+  border-radius: 4px; /* Bo tròn các góc của phần tử */
+  padding: 8px; /* Thêm padding xung quanh nội dung */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  width: 40px; /* Đặt chiều rộng cố định */
+  height: 40px; /* Đặt chiều cao cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
-.icon {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
+.icon , .icon2, .icon3, .icon4 {
+  width: 24px; /* Đặt chiều rộng cố định */
+  height: 24px; /* Đặt chiều cao cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 8px; /* Đặt vị trí bên trái */
+  top: 8px; /* Đặt vị trí bên trên */
+  overflow: visible; /* Cho phép nội dung tràn ra khỏi hộp phần tử */
 }
-.icon2 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
-.icon3 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
-.icon4 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
+
 .divider {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #e6e6e6;
-  border-width: 1px 0 0 0;
-  width: 1280px;
-  height: 0px;
-  position: absolute;
-  left: 80px;
-  top: 1px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, 1);
+  margin-top: -1px; /* Điều chỉnh margin trên */
+  border-style: solid; /* Đặt kiểu border là solid */
+  border-color: #e6e6e6; /* Đặt màu border */
+  border-width: 1px 0 0 0; /* Đặt độ rộng border chỉ cho phía trên */
+  width: 1280px; /* Đặt chiều rộng cố định */
+  height: 0px; /* Đặt chiều cao là 0 */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 1px; /* Đặt vị trí bên trên */
+  transform-origin: 0 0; /* Đặt gốc cho các phép biến đổi */
+  transform: rotate(0deg) scale(1, 1); /* Áp dụng một phép biến đổi (không xoay, không thay đổi tỷ lệ) */
 }
 .navigation {
-  background: #ffffff;
-  height: 164px;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  top: 0px;
-  overflow: hidden;
+  background: #ffffff; /* Đặt màu nền là màu trắng */
+  height: 174px; /* Đặt chiều cao cố định */
+  position: fixed; /* Định vị phần tử tương đối so với khung nhìn, giữ nguyên vị trí khi trang cuộn */
+  right: 0px; /* Đặt vị trí bên phải */
+  left: 0px; /* Đặt vị trí bên trái */
+  top: 0px; /* Đặt vị trí bên trên */
+  z-index: 1000; /* Đặt thứ tự xếp chồng của phần tử */
 }
 .items4 {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  right: 80px;
-  top: 56px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 48px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-end; /* Căn chỉnh các mục theo chiều ngang về phía cuối */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 80px; /* Đặt vị trí bên phải */
+  top: 56px; /* Đặt vị trí bên trên */
 }
 .page2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 20px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .button {
-  background: #000000;
-  border-radius: 8px;
-  padding: 14px 24px 14px 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  background: #000000; /* Đặt màu nền là màu đen */
+  border-radius: 8px; /* Bo tròn các góc của phần tử */
+  padding: 14px 24px 14px 24px; /* Thêm padding xung quanh nội dung */
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: center; /* Căn chỉnh các mục theo chiều ngang và dọc vào giữa */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Thêm một box shadow nhẹ */
 }
 .button2 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #ffffff; /* Đặt màu chữ là màu trắng */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 16px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .hero-image {
-  border-radius: 8px;
-  width: 88.89%;
-  height: 640px;
-  position: absolute;
-  right: 5.56%;
-  left: 5.56%;
-  top: calc(50% - 1824.5px);
-  overflow: hidden;
-  object-fit: cover;
+  border-radius: 8px; /* Bo tròn các góc của hình ảnh */
+  width: 88.89%; /* Đặt chiều rộng là phần trăm của container */
+  height: 640px; /* Đặt chiều cao cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 5.56%; /* Đặt vị trí bên phải theo phần trăm */
+  left: 5.56%; /* Đặt vị trí bên trái theo phần trăm */
+  top: calc(50% - 1824.5px); /* Tính toán vị trí bên trên */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
+  object-fit: cover; /* Thay đổi tỷ lệ hình ảnh để lấp đầy hộp nội dung trong khi vẫn giữ tỷ lệ khung hình */
 }
 .section-heading2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 48px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-  position: absolute;
-  left: 80px;
-  top: 1371px;
-  width: 624px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Đặt họ font chữ là Inter-SemiBold, với sans-serif là font dự phòng */
+  font-size: 48px; /* Đặt kích thước font chữ */
+  letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các ký tự */
+  font-weight: 600; /* Đặt độ đậm font chữ là semi-bold */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 1371px; /* Đặt vị trí bên trên */
+  width: 624px; /* Đặt chiều rộng cố định */
 }
 .frame-1321317456 {
-  display: flex;
-  flex-direction: row;
-  gap: 110px;
-  align-items: center;
-  justify-content: flex-start;
-  width: 1279px;
-  position: absolute;
-  left: 200px;
-  top: 1477px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 110px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  width: 1279px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 200px; /* Đặt vị trí bên trái */
+  top: 1477px; /* Đặt vị trí bên trên */
 }
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex: 1;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 24px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  flex: 1; /* Cho phép mục co giãn, phân phối không gian có sẵn */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .image {
-  border-radius: 8px;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 405px;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
+  border-radius: 8px; /* Bo tròn các góc của hình ảnh */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  height: 405px; /* Đặt chiều cao cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
+  object-fit: cover; /* Thay đổi tỷ lệ hình ảnh để lấp đầy hộp nội dung trong khi vẫn giữ tỷ lệ khung hình */
 }
 .copy {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: flex-start;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 381px;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 4px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: center; /* Căn chỉnh các mục vào giữa trục chính (theo chiều dọc cho cột) */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  width: 381px; /* Đặt chiều rộng cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .subheading {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
 }
 .body-text-for-whatever-you-d-like-to-add-more-to-the-subheading {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .body-text-for-whatever-you-d-like-to-expand-on-the-main-point {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .body-text-for-whatever-you-d-like-to-share-more {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .image2 {
-  border-radius: 8px 0px 0px 8px;
-  width: 704px;
-  height: 704px;
-  position: absolute;
-  left: 915px;
-  top: 2198px;
-  overflow: hidden;
-  object-fit: cover;
+  border-radius: 8px 0px 0px 8px; /* Bo tròn các góc trên cùng bên trái, trên cùng bên phải, dưới cùng bên phải và dưới cùng bên trái */
+  width: 704px; /* Đặt chiều rộng cố định */
+  height: 704px; /* Đặt chiều cao cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 915px; /* Đặt vị trí bên trái */
+  top: 2198px; /* Đặt vị trí bên trên */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
+  object-fit: cover; /* Thay đổi tỷ lệ hình ảnh để lấp đầy hộp nội dung trong khi vẫn giữ tỷ lệ khung hình */
 }
 .section-heading3 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 48px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-  position: absolute;
-  left: 80px;
-  top: 3082px;
-  width: 624px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Đặt họ font chữ là Inter-SemiBold, với sans-serif là font dự phòng */
+  font-size: 48px; /* Đặt kích thước font chữ */
+  letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các ký tự */
+  font-weight: 600; /* Đặt độ đậm font chữ là semi-bold */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 3082px; /* Đặt vị trí bên trên */
+  width: 624px; /* Đặt chiều rộng cố định */
 }
 .cards2 {
-  display: flex;
-  flex-direction: row;
-  gap: 250px;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  position: absolute;
-  left: 180px;
-  top: 3188px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 250px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  width: 100%; /* Đặt chiều rộng là phần trăm của container */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 180px; /* Đặt vị trí bên trái */
+  top: 3188px; /* Đặt vị trí bên trên */
 }
 
 
 .image3 {
-  width: 100%;
-  border-radius: 8px;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 341px;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
+  width: 100%; /* Đặt chiều rộng là phần trăm của container */
+  border-radius: 8px; /* Bo tròn các góc của hình ảnh */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  height: 341px; /* Đặt chiều cao cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
+  object-fit: cover; /* Thay đổi tỷ lệ hình ảnh để lấp đầy hộp nội dung trong khi vẫn giữ tỷ lệ khung hình */
 }
 .copy2 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 548.44px;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  width: 548.44px; /* Đặt chiều rộng cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .subheading2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  width: 548px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  width: 548px; /* Đặt chiều rộng cố định */
 }
 .body-text-for-whatever-you-d-like-to-add-more-to-the-subheading2 {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  width: 548px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  width: 548px; /* Đặt chiều rộng cố định */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .copy3 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 547.56px;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  width: 547.56px; /* Đặt chiều rộng cố định */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .body-text-for-whatever-you-d-like-to-expand-on-the-main-point2 {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  width: 548px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  width: 548px; /* Đặt chiều rộng cố định */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .section-heading4 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 48px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-  position: absolute;
-  left: 80px;
-  top: 2198px;
-  width: 624px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Đặt họ font chữ là Inter-SemiBold, với sans-serif là font dự phòng */
+  font-size: 48px; /* Đặt kích thước font chữ */
+  letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các ký tự */
+  font-weight: 600; /* Đặt độ đậm font chữ là semi-bold */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 2198px; /* Đặt vị trí bên trên */
+  width: 624px; /* Đặt chiều rộng cố định */
 }
 .text {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  align-items: flex-end;
-  justify-content: flex-start;
-  width: 516px;
-  position: absolute;
-  left: 79px;
-  top: 2304px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 48px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-end; /* Căn chỉnh các mục về phía cuối trục chéo (phải cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  width: 516px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 79px; /* Đặt vị trí bên trái */
+  top: 2304px; /* Đặt vị trí bên trên */
 }
 .text2 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: center; /* Căn chỉnh các mục vào giữa trục chính (theo chiều dọc cho cột) */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .subheading3 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  width: 515px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  width: 515px; /* Đặt chiều rộng cố định */
 }
 .body-text-for-whatever-you-d-like-to-expand-on-the-main-point3 {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  width: 515px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  width: 515px; /* Đặt chiều rộng cố định */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .body-text-for-whatever-you-d-like-to-say-add-main-takeaway-points-quotes-anecdotes {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  width: 515px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  width: 515px; /* Đặt chiều rộng cố định */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .body-text-for-whatever-you-d-like-to-add-more-to-the-main-point-it-provides-details-explanations-and-context {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #828282; /* Đặt màu chữ là một sắc thái xám */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  align-items: center;
-  justify-content: flex-start;
-  position: absolute;
-  left: 79px;
-  top: 2831px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 16px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 79px; /* Đặt vị trí bên trái */
+  top: 2831px; /* Đặt vị trí bên trên */
 }
 .button3 {
-  background: #000000;
-  border-radius: 8px;
-  padding: 12px 24px 12px 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  background: #000000; /* Đặt màu nền là màu đen */
+  border-radius: 8px; /* Bo tròn các góc của phần tử */
+  padding: 12px 24px 12px 24px; /* Thêm padding xung quanh nội dung */
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Thêm một box shadow nhẹ */
 }
 .button4 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #ffffff; /* Đặt màu chữ là màu trắng */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .button5 {
-  background: #e6e6e6;
-  border-radius: 8px;
-  padding: 12px 24px 12px 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  background: #e6e6e6; /* Đặt màu nền là một màu xám nhạt */
+  border-radius: 8px; /* Bo tròn các góc của phần tử */
+  padding: 12px 24px 12px 24px; /* Thêm padding xung quanh nội dung */
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Thêm một box shadow nhẹ */
 }
 .secondary-button {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .section {
-  background: #f7f7f7;
-  width: 1440px;
-  height: 236px;
-  position: absolute;
-  left: 0px;
-  top: 4311px;
-  overflow: hidden;
+  background: #f7f7f7; /* Đặt màu nền là một màu xám rất nhạt */
+  width: 1440px; /* Đặt chiều rộng cố định */
+  height: 236px; /* Đặt chiều cao cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 0px; /* Đặt vị trí bên trái */
+  top: 4311px; /* Đặt vị trí bên trên */
+  overflow: hidden; /* Ẩn bất kỳ nội dung nào tràn ra khỏi hộp phần tử */
 }
 .buttons2 {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  right: 80px;
-  top: 80px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 24px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-end; /* Căn chỉnh các mục theo chiều ngang về phía cuối */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  right: 80px; /* Đặt vị trí bên phải */
+  top: 80px; /* Đặt vị trí bên trên */
 }
 .button6 {
-  background: #000000;
-  border-radius: 8px;
-  padding: 20px 32px 20px 32px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  background: #000000; /* Đặt màu nền là màu đen */
+  border-radius: 8px; /* Bo tròn các góc của phần tử */
+  padding: 20px 32px 20px 32px; /* Thêm padding xung quanh nội dung */
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Thêm một box shadow nhẹ */
 }
 .button7 {
-  background: #e6e6e6;
-  border-radius: 8px;
-  padding: 20px 32px 20px 32px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  background: #e6e6e6; /* Đặt màu nền là một màu xám nhạt */
+  border-radius: 8px; /* Bo tròn các góc của phần tử */
+  padding: 20px 32px 20px 32px; /* Thêm padding xung quanh nội dung */
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: row; /* Sắp xếp các mục flex theo hàng */
+  gap: 8px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Thêm một box shadow nhẹ */
 }
 .secondary-button2 {
-  color: rgba(0, 0, 0, 0.9);
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: rgba(0, 0, 0, 0.9); /* Đặt màu chữ là màu đen bán trong suốt */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 500; /* Đặt độ đậm font chữ là medium */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }
 .section-heading5 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 48px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-  position: absolute;
-  left: calc(50% - 640px);
-  top: 89px;
-  width: 625px;
+  color: #000000; /* Đặt màu chữ là màu đen */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Đặt họ font chữ là Inter-SemiBold, với sans-serif là font dự phòng */
+  font-size: 48px; /* Đặt kích thước font chữ */
+  letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các ký tự */
+  font-weight: 600; /* Đặt độ đậm font chữ là semi-bold */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: calc(50% - 640px); /* Tính toán vị trí bên trái */
+  top: 89px; /* Đặt vị trí bên trên */
+  width: 625px; /* Đặt chiều rộng cố định */
 }
 .copy4 {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 844px;
-  position: absolute;
-  left: 80px;
-  top: 250px;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 40px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  width: 844px; /* Đặt chiều rộng cố định */
+  position: absolute; /* Định vị phần tử tương đối so với tổ tiên được định vị gần nhất */
+  left: 80px; /* Đặt vị trí bên trái */
+  top: 250px; /* Đặt vị trí bên trên */
 }
 .page-title {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+  display: flex; /* Thiết lập một flex container */
+  flex-direction: column; /* Sắp xếp các mục flex theo cột */
+  gap: 24px; /* Đặt khoảng cách giữa các mục flex */
+  align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trái cho cột) */
+  justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trên cho cột) */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  flex-shrink: 0; /* Ngăn không cho mục co lại */
+  position: relative; /* Đặt ngữ cảnh định vị */
 }
 .subheading-that-sets-up-context-shares-more-info-about-the-website-or-generally-gets-people-psyched-to-keep-scrolling {
-  color: rgba(0, 0, 0, 0.75);
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  color: rgba(0, 0, 0, 0.75); /* Đặt màu chữ là màu đen bán trong suốt */
+  text-align: left; /* Căn chỉnh văn bản sang trái */
+  font-family: "Inter-Regular", sans-serif; /* Đặt họ font chữ là Inter-Regular, với sans-serif là font dự phòng */
+  font-size: 24px; /* Đặt kích thước font chữ */
+  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
+  font-weight: 400; /* Đặt độ đậm font chữ là regular */
+  position: relative; /* Đặt ngữ cảnh định vị */
+  align-self: stretch; /* Cho phép mục kéo dài để lấp đầy container dọc theo trục chéo */
+  display: flex; /* Thiết lập một flex container */
+  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
+  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
 }

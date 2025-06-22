@@ -1,3 +1,4 @@
+/* Đặt lại các giá trị mặc định và áp dụng cho tất cả các phần tử */
 a,
 button,
 input,
@@ -8,121 +9,142 @@ h3,
 h4,
 h5,
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    background: none;
+    box-sizing: border-box; /* Gộp padding và border vào width và height */
+    margin: 0; /* Xóa khoảng cách ngoài mặc định */
+    padding: 0; /* Xóa khoảng cách trong mặc định */
+    border: none; /* Không có đường viền */
+    text-decoration: none; /* Không có gạch chân */
+    background: none; /* Không có nền */
 
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* Làm mịn font chữ trên trình duyệt Webkit */
 }
 
+/* Xóa dấu đầu dòng và khoảng cách mặc định cho danh sách */
 menu, ol, ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: none; /* Không hiển thị dấu đầu dòng */
+    margin: 0; /* Khoảng cách ngoài */ 
+    padding: 0; /* Khoảng cách trong */
    }
+
+/* Đảm bảo tính nhất quán trong mô hình hộp */
 .article,
 .article * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Chiều rộng và chiều cao bao gồm cả nội dung, padding và border */
 }
+
+/* Phần khung chính của trang bài viết */
 .article {
-  background: #ffffff;
-  height: 3603px;
-  position: relative;
-  overflow: hidden;
+  background: #ffffff; /* Nền trắng */
+  height: 3603px; /* Chiều cao */
+  position: relative; /* Vị trí tương đối */
+  overflow: hidden; /* Ẩn phần tràn khỏi khung */
 }
+
+/* Phần tiêu đề các bài viết liên quan */
 .related-articles-or-posts {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 40px;
-  line-height: 110%;
-  font-weight: 600;
-  position: relative;
-  left: 80px;
-  top: 2663px;
-  width: 625px;
+  color: #000000; /* Màu chữ */
+  text-align: left; /* Căn trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Kiểu chữ đậm */
+  font-size: 40px; /* Cỡ chữ */
+  line-height: 110%; /* Chiều cao dòng */
+  font-weight: 600; /* Độ đậm chữ */
+  position: relative; /* Vị trí tương đối */
+  left: 80px; /* Cách trái */
+  top: 2663px; /* Cách trên */ 
+  width: 625px; /* Chiều rộng */
 }
+
+/* Nội dung đoạn văn bài viết */
 .paragraph {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  right: 20.76%;
-  left: 20.76%;
-  width: 58.47%;
-  top: 2273px;
+  color: #000000; /* Màu sắc */
+  text-align: left; /* Căn trái */
+  font-family: "Inter-Medium", sans-serif; /* Kiểu chữ */
+  font-size: 20px; /* Cỡ chữ */
+  line-height: 150%; /* Chiều cao dòng */
+  font-weight: 500; /* Độ đậm chữ */
+  position: absolute; /* Định vị phần tử tuyệt đối */
+  right: 20.76%; /* Cách phải */
+  left: 20.76%; /* Cách trái */
+  width: 58.47%; /* Chiều rộng */
+  top: 2273px; /* Cách trên */
 }
+
+/* Dòng ảnh minh họa ngang */
 .images {
-  display: flex;
-  flex-direction: row;
-  gap: 122px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  top: 1757px;
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: row; /* Xếp hàng ngang */
+  gap: 122px; /* Khoảng cách giữa các ảnh */
+  align-items: flex-start; /* Căn đầu ảnh */
+  justify-content: flex-start; /* Căn trái */
+  position: absolute; /* ĐỊnh vị tuyệt đối */
+  left: 50%; /* Cách trái */
+  translate: -50%; /* Dịch để căn giữa */
+  top: 1757px; /* Cách trên */
 }
+
+/* Kiểu ảnh nhỏ trong hàng ngang*/
 .image {
-  border-radius: 8px;
-  flex-shrink: 0;
-  width: 624px;
-  height: 436px;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
+  border-radius: 8px; /* Bo góc ảnh */
+  flex-shrink: 0; /* Không co lại nếu thiếu chỗ */
+  width: 624px; /* Chiều rộng */
+  height: 436px; /* Chiều cao */
+  position: relative; /* Vị trí tương đối */
+  overflow: hidden; /* Ẩn phần thừa ảnh */
+  object-fit: cover; /* Ảnh phủ khung, không méo */
 }
+
+/* Đoạn văn thứ 2 */
 .paragraph2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  right: 20.76%;
-  left: 20.76%;
-  width: 58.47%;
-  top: 1227px;
+  color: #000000; /* Màu sắc */
+  text-align: left; /* Văn bản căn trái */
+  font-family: "Inter-Medium", sans-serif; /* Kiểu chữ */
+  font-size: 20px; /* Cỡ chữ */
+  line-height: 150%; /* Chiều cao dòng */
+  font-weight: 500; /* Độ đậm chữ */
+  position: absolute; /* Định vị tuyệt đối */
+  right: 20.76%; /* Cách phải */
+  left: 20.76%; /* Cách trái */
+  width: 58.47%; /* Chiều rộng */
+  top: 1227px; /* Cách trên */
 }
+
+/* Ảnh chính bài viết */
 .image2 {
-  border-radius: 8px;
-  width: 88.96%;
-  height: 650px;
-  position: absolute;
-  right: 5.49%;
-  left: 5.56%;
-  top: 497px;
-  overflow: hidden;
-  object-fit: cover;
+  border-radius: 8px; /* Bo góc ảnh */
+  width: 88.96%; /* Chiều rộng */
+  height: 650px; /* Chiều cao */
+  position: absolute; /* Định vị tuyệt đối */
+  right: 5.49%; /* Cách phải */
+  left: 5.56%; /* Cách trái */
+  top: 497px; /* Cách trên */
+  overflow: hidden; /* Ẩn phần tràn */
+  object-fit: cover; /* Ảnh phủ khung */
 }
+
+/* Khối chứa tiêu đề và phụ đề bài viết */
 .article-title {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: center;
-  width: 50.9%;
-  position: absolute;
-  right: 43.54%;
-  left: 5.56%;
-  top: 244px;
+  display: flex; /* Flexbox dọc */
+  flex-direction: column; /* Xếp từ trên xuống */
+  gap: 24px; /* Khoảng cách giữa các phần tử */
+  align-items: flex-start; /* Căn trái */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  width: 50.9%; /* Chiều rộng */
+  position: absolute; /* Định vị tuyệt đối */
+  right: 43.54%; /* Cách phải */
+  left: 5.56%; /* Cách trái */
+  top: 244px; /* Cách trên */
 }
+
+/* Tiêu đề chính */
 .article-or-post-title {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Bold", sans-serif;
-  font-size: 64px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
-  position: relative;
-  align-self: stretch;
+  color: #000000; /* Màu chữ */
+  text-align: left; /* Căn văn bản trái */
+  font-family: "Inter-Bold", sans-serif; /* Kiểu chữ */
+  font-size: 64px; /* Cỡ chữ */ 
+  letter-spacing: -0.02em; /* Giãn chữ */
+  font-weight: 600; /* Độ đậm */
+  position: relative; /* Vị trí tương đối */
+  align-self: stretch; /* Căn dãn chiều dọc */
 }
 .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading {
   color: rgba(0, 0, 0, 0.75);
@@ -139,12 +161,12 @@ menu, ol, ul {
 }
 .navigation {
   background: #ffffff;
-  height: 164px;
-  position: absolute;
+  height: 174px;
+  position: fixed;
   right: 0px;
   left: 0px;
   top: 0px;
-  overflow: hidden;
+  z-index: 1000;
 }
 .items {
   display: flex;
