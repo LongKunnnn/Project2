@@ -219,22 +219,6 @@ button.delete-btn:hover {
 .navigation .page:hover {
   color: #555555;
 }
-
-.navigation .button2 {
-  background: #000000;
-  border-radius: 8px;
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s ease;
-}
-
-.navigation .button2:hover {
-  background-color: #333333;
-}
-
 .navigation .button3 {
   color: #ffffff;
   text-align: left;
@@ -396,9 +380,6 @@ button.delete-btn:hover {
   }
   .navigation .page {
       font-size: 16px;
-  }
-  .navigation .button2 {
-      padding: 8px 16px;
   }
   .navigation-footer {
       padding: 40px 20px;

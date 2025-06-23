@@ -9,25 +9,7 @@
   <title>Giới thiệu</title>
 </head>
 
-<script>
-  function handleSubmit() {
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const emailAddress = document.getElementById('emailAddress').value;
-    const yourMessage = document.getElementById('yourMessage').value;
-
-    if (firstName && lastName && emailAddress && yourMessage) {
-      alert('Yêu cầu hỗ trợ thành công!');
-      // Xóa nội dung các trường sau khi gửi thành công
-      document.getElementById('firstName').value = '';
-      document.getElementById('lastName').value = '';
-      document.getElementById('emailAddress').value = '';
-      document.getElementById('yourMessage').value = '';
-    } else {
-      alert('Vui lòng điền đầy đủ tất cả các thông tin!');
-    }
-  }
-</script>
+<script src="about.js"></script>
 
 <body>
   <div class="about">
@@ -41,13 +23,13 @@
         <h4>Asclepius – Tinh Túy Từ Thiên Nhiên, Vị Ngon Của Sự An Tâm</h4>
         <br>
         <br>
-        Ra đời từ khát khao mang đến nguồn thực phẩm sạch,
+        • Ra đời từ khát khao mang đến nguồn thực phẩm sạch,
         tự nhiên và an toàn tuyệt đối, Asclepius không chỉ
         là nơi bạn tìm thấy những loại trái cây ngon nhất
         mà còn là nơi bạn cảm nhận được sự chỉn chu, sang
         trọng và đẳng cấp trong từng chi tiết.
         <br>
-        Chúng tôi hợp tác với những nông trại hữu cơ chọn lọc,
+        • Chúng tôi hợp tác với những nông trại hữu cơ chọn lọc,
         nơi mỗi quả chín được chăm sóc bằng cả tâm huyết và
         trách nhiệm. Từ quá trình gieo trồng, thu hoạch cho
         đến đóng gói và giao hàng, mọi công đoạn đều được kiểm
@@ -61,9 +43,7 @@
         <a href="../Product_Details/details.html" class="page">Shop</a>
         <a href="../Article/article.html" class="page">Tin tức</a>
         <a href="../Cart/cart.html" class="page">Giỏ hàng</a>
-        <div class="button">
-          <a href="../Landing-scape/landing.html" class="button2">Trang chủ</a>
-        </div>
+        <a href="../Landing-scape/landing.html" class="page">Trang chủ</a>
         <a href="../Login/login.html" class="page" id="loginLogoutLink">Đăng nhập</a>
       </div>
       <a href="../Landing-scape/landing.html" class="site-name"><h2>Asclepius</h2></a>

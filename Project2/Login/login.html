@@ -5,71 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0; /* Đảm bảo không có margin mặc định trên body */
-        }
-        .login-container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng có thể */
-            max-width: 400px; /* Đặt chiều rộng tối đa để không quá lớn trên màn hình rộng */
-            box-sizing: border-box; /* Quan trọng: padding và border được tính vào width/height */
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .input-group {
-            position: relative;
-            margin-bottom: 15px;
-            width: 100%; /* Đảm bảo nhóm input chiếm toàn bộ chiều rộng của cha */
-        }
-        .login-form input[type="text"],
-        .login-form input[type="password"] {
-            width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng của input-group */
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding-right: 40px; /* Tạo không gian cho icon mắt */
-            box-sizing: border-box; /* Quan trọng: padding và border được tính vào width/height */
-        }
-        .password-toggle {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #888;
-        }
-        .login-form button {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%; /* Đảm bảo nút cũng chiếm toàn bộ chiều rộng */
-            box-sizing: border-box;
-        }
-        .login-form button:hover {
-            opacity: 0.9;
-        }
-        .error-message {
-            color: red;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="login_style.css">
 </head>
 <body>
     <div class="login-container">
@@ -87,46 +23,6 @@
         </form>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const passwordInput = document.getElementById('password');
-            const togglePassword = document.getElementById('togglePassword');
-            const errorMessage = document.getElementById('error-message');
-
-            togglePassword.addEventListener('click', function () {
-                // Chuyển đổi giữa type "password" và "text"
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                
-                // Thay đổi icon mắt
-                this.classList.toggle('fa-eye');
-                this.classList.toggle('fa-eye-slash');
-            });
-
-            function handleLogin(event) {
-                event.preventDefault(); // Ngăn chặn form submit mặc định
-
-                const usernameInput = document.getElementById('username').value;
-                const passwordValue = passwordInput.value; // Lấy giá trị từ input
-
-                // Tài khoản và mật khẩu cố định
-                const fixedUsername = "user";
-                const fixedPassword = "password";
-
-                if (usernameInput === fixedUsername && passwordValue === fixedPassword) {
-                    // Đăng nhập thành công
-                    sessionStorage.setItem('loggedIn', 'true');
-                    window.location.href = '../Landing-scape/landing.html'; // Chuyển hướng về trang landing (đảm bảo đúng đường dẫn)
-                } else {
-                    // Đăng nhập thất bại
-                    errorMessage.textContent = "Tài khoản hoặc mật khẩu không đúng.";
-                }
-            }
-
-            // Gắn hàm handleLogin vào sự kiện submit của form
-            const loginForm = document.querySelector('.login-form');
-            loginForm.addEventListener('submit', handleLogin);
-        });
-    </script>
+    <script src="login_script.js"></script>
 </body>
 </html>

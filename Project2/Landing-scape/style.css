@@ -65,7 +65,7 @@ menu, ol, ul {
 .cards {
   display: flex; /* Thiết lập một flex container */
   flex-direction: row; /* Sắp xếp các mục flex theo hàng */
-  gap: var(--spacing-sm, 32px); /* Đặt khoảng cách giữa các mục flex, nếu không có thì dùng 32px */
+  gap: 32px; /* Đặt khoảng cách giữa các mục flex, nếu không có thì dùng 32px */
   align-items: flex-start; /* Căn chỉnh các mục về phía đầu trục chéo (trên cho hàng) */
   justify-content: flex-start; /* Căn chỉnh các mục về phía đầu trục chính (trái cho hàng) */
   width: 1280px; /* Đặt chiều rộng cố định */
@@ -321,18 +321,7 @@ menu, ol, ul {
   position: relative; /* Đặt ngữ cảnh định vị */
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Thêm một box shadow nhẹ */
 }
-.button2 {
-  color: #ffffff; /* Đặt màu chữ là màu trắng */
-  text-align: left; /* Căn chỉnh văn bản sang trái */
-  font-family: "Inter-Medium", sans-serif; /* Đặt họ font chữ là Inter-Medium, với sans-serif là font dự phòng */
-  font-size: 16px; /* Đặt kích thước font chữ */
-  line-height: 150%; /* Đặt chiều cao dòng là 150% kích thước font chữ */
-  font-weight: 500; /* Đặt độ đậm font chữ là medium */
-  position: relative; /* Đặt ngữ cảnh định vị */
-  display: flex; /* Thiết lập một flex container */
-  align-items: center; /* Căn chỉnh các mục theo chiều dọc vào giữa */
-  justify-content: flex-start; /* Căn chỉnh các mục theo chiều ngang về phía đầu */
-}
+
 .hero-image {
   border-radius: 8px; /* Bo tròn các góc của hình ảnh */
   width: 88.89%; /* Đặt chiều rộng là phần trăm của container */
