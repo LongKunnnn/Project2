@@ -1,518 +1,518 @@
-a,
-button,
-input,
-select,
-h1,
-h2,
-h3,
-h4,
-h5,
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    text-decoration: none;
-    background: none;
+a, /* Đặt lại kiểu mặc định cho tất cả các thẻ <a> */
+button, /* Đặt lại kiểu mặc định cho tất cả các thẻ <button> */
+input, /* Đặt lại kiểu mặc định cho tất cả các thẻ <input> */
+select, /* Đặt lại kiểu mặc định cho tất cả các thẻ <select> */
+h1, /* Đặt lại kiểu mặc định cho tất cả các thẻ <h1> */
+h2, /* Đặt lại kiểu mặc định cho tất cả các thẻ <h2> */
+h3, /* Đặt lại kiểu mặc định cho tất cả các thẻ <h3> */
+h4, /* Đặt lại kiểu mặc định cho tất cả các thẻ <h4> */
+h5, /* Đặt lại kiểu mặc định cho tất cả các thẻ <h5> */
+* { /* Áp dụng cho tất cả các phần tử */
+  box-sizing: border-box; /* Kích thước hộp bao gồm padding và border */
+  margin: 0; /* Xóa margin mặc định */
+  padding: 0; /* Xóa padding mặc định */
+  border: none; /* Xóa border mặc định */
+  text-decoration: none; /* Xóa gạch chân cho văn bản */
+  background: none; /* Xóa màu nền mặc định */
 
-    -webkit-font-smoothing: antialiased;
-}
-
-menu, ol, ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.product-detail-page,
-.product-detail-page * {
-  box-sizing: border-box;
-}
-.product-detail-page {
-  background: #ffffff;
-  height: 2400px;
-  position: relative;
-  overflow: hidden;
-}
-.related-products {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 32px;
-  line-height: 150%;
-  font-weight: 600;
-  position: absolute;
-  left: 80px;
-  top: 957px;
-  width: 625px;
-}
-.copy {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: center;
-  width: 35.76%;
-  position: absolute;
-  right: 5.56%;
-  left: 58.68%;
-  top: 275px;
-}
-.product-name {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 40px;
-  line-height: 120%;
-  font-weight: 600;
-  position: relative;
-  align-self: stretch;
-}
-.subheading {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.price {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-}
-.description {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.button {
-  background: #000000;
-  border-radius: 8px;
-  padding: 14px 24px 14px 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
+  -webkit-font-smoothing: antialiased; /* Làm mịn font chữ cho trình duyệt Webkit */
 }
 
-.add-to-cart {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul */
+  list-style-type: none; /* Xóa kiểu danh sách (bullet points/numbers) */
+  margin: 0; /* Xóa margin mặc định */
+  padding: 0; /* Xóa padding mặc định */
 }
-.text-box-for-additional-details-or-fine-print {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.product-detail-page, /* Container chính của trang chi tiết sản phẩm */
+.product-detail-page * { /* Áp dụng cho tất cả các phần tử con bên trong */
+ box-sizing: border-box; /* Kích thước hộp bao gồm padding và border */
 }
-.image {
-  background: linear-gradient(to left, #f7f7f7, #f7f7f7);
-  border-radius: 12px;
-  width: 43.4%;
-  height: 613px;
-  position: absolute;
-  right: 51.04%;
-  left: 5.56%;
-  top: 275px;
-  overflow: hidden;
-  object-fit: cover;
+.product-detail-page { /* Trang chi tiết sản phẩm */
+ background: #ffffff; /* Màu nền trắng */
+ height: 2400px; /* Chiều cao cố định của trang */
+ position: relative; /* Đặt vị trí tương đối cho các phần tử con tuyệt đối */
+ overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
 }
-.navigation {
-  background: #ffffff;
-  height: 174px;
-  position: fixed;
-  right: 0px;
-  left: 0px;
-  top: 0px;
-  z-index: 1000;
+.related-products { /* Tiêu đề "Các sản phẩm của chúng tôi" */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-SemiBold", sans-serif; /* Font chữ Inter SemiBold */
+ font-size: 32px; /* Cỡ chữ 32px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 600; /* Độ đậm font 600 */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 80px; /* Cách lề trái 80px */
+ top: 957px; /* Cách lề trên 957px */
+ width: 625px; /* Chiều rộng 625px */
 }
-.items {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  right: 80px;
-  top: 56px;
+.copy { /* Nhóm chứa thông tin sản phẩm (tên, mô tả, giá) */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: column; /* Sắp xếp các mục theo cột */
+ gap: 24px; /* Khoảng cách giữa các mục 24px */
+ align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+ justify-content: center; /* Căn giữa các mục theo chiều dọc */
+ width: 35.76%; /* Chiều rộng 35.76% */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 5.56%; /* Cách lề phải 5.56% */
+ left: 58.68%; /* Cách lề trái 58.68% */
+ top: 275px; /* Cách lề trên 275px */
 }
-.page {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.product-name { /* Tên sản phẩm */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-SemiBold", sans-serif; /* Font chữ Inter SemiBold */
+ font-size: 40px; /* Cỡ chữ 40px */
+ line-height: 120%; /* Chiều cao dòng 120% */
+ font-weight: 600; /* Độ đậm font 600 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
 }
-.button3 {
-  color: #ffffff;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.subheading { /* Phụ đề (ví dụ: "Nhập khẩu từ Nhật Bản") */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Regular", sans-serif; /* Font chữ Inter Regular */
+ font-size: 24px; /* Cỡ chữ 24px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 400; /* Độ đậm font 400 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
 }
-.site-name {
-   color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 60px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  left: 80px;
-  top: 67px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.price { /* Giá sản phẩm */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 24px; /* Cỡ chữ 24px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
 }
-.navigation-footer {
-  background: #ffffff;
-  height: 264px;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  bottom: 0px;
-  overflow: hidden;
+.description { /* Mô tả sản phẩm */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Regular", sans-serif; /* Font chữ Inter Regular */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 400; /* Độ đậm font 400 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
 }
-.items2 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 517px;
-  top: 48px;
-}
-.topic {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.page2 {
-  color: #454545;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.items3 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 298px;
-  top: 48px;
-}
-.items4 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 80px;
-  top: 48px;
-}
-.site-name2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 60px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  left: 80px;
-  top: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.social-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 80px;
-  top: 176px;
-}
-.buttons-icon {
-  border-radius: 4px;
-  padding: 8px;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  position: relative;
-}
-.icon {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
-.icon2 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
-.icon3 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
-.icon4 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
-}
-.divider {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #e6e6e6;
-  border-width: 1px 0 0 0;
-  width: 1280px;
-  height: 0px;
-  position: absolute;
-  left: 80px;
-  top: 1px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, 1);
-}
-.card-grid {
-  display: flex;
-  flex-direction: row;
-  row-gap: 32px;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  width: 1282px;
-  position: absolute;
-  left: 80px;
-  top: 1090px;
-}
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-  left: 185px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 404px;
-  height: 480px;
-  position: relative;
-}
-.image2 {
-  background: linear-gradient(to left, #f7f7f7, #f7f7f7);
-  border-radius: 8px;
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
-}
-.copy2 {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-}
-.product {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-}
-.description-of-first-product {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-._10-99 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-}
-.description-of-second-product {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.description-of-third-product {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.description-of-fourth-product {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.description-of-fifth-product {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.description-of-sixth-product {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.button { /* Nút (ví dụ: "Thêm vào giỏ hàng") */
+ background: #000000; /* Màu nền đen */
+ border-radius: 8px; /* Bo tròn góc 8px */
+ padding: 14px 24px 14px 24px; /* Đệm 14px trên dưới, 24px trái phải */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: row; /* Sắp xếp các mục theo hàng */
+ gap: 8px; /* Khoảng cách giữa các mục 8px */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: center; /* Căn giữa các mục theo chiều ngang */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ flex-shrink: 0; /* Không co lại */
+ position: relative; /* Vị trí tương đối */
+ box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Đổ bóng */
+ cursor: pointer; /* Thay đổi con trỏ thành biểu tượng bàn tay khi di chuột qua */
 }
 
-.quantity-control {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  gap: 8px;
-  flex-wrap: wrap;
+.add-to-cart { /* Chữ "Thêm vào giỏ hàng" trong nút */
+ color: #ffffff; /* Màu chữ trắng */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 16px; /* Cỡ chữ 16px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.text-box-for-additional-details-or-fine-print { /* Hộp văn bản cho chi tiết bổ sung hoặc chữ nhỏ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 16px; /* Cỡ chữ 16px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.image { /* Ảnh sản phẩm chính */
+ background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
+ border-radius: 12px; /* Bo tròn góc 12px */
+ width: 43.4%; /* Chiều rộng 43.4% */
+ height: 613px; /* Chiều cao 613px */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 51.04%; /* Cách lề phải 51.04% */
+ left: 5.56%; /* Cách lề trái 5.56% */
+ top: 275px; /* Cách lề trên 275px */
+ overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+ object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ đầy container */
+}
+.navigation { /* Thanh điều hướng trên cùng */
+ background: #ffffff; /* Màu nền trắng */
+ height: 174px; /* Chiều cao 174px */
+ position: fixed; /* Vị trí cố định khi cuộn */
+ right: 0px; /* Cách lề phải 0px */
+ left: 0px; /* Cách lề trái 0px */
+ top: 0px; /* Cách lề trên 0px */
+ z-index: 1000; /* Đặt lớp ưu tiên hiển thị cao nhất */
+}
+.items { /* Các mục trong thanh điều hướng */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: row; /* Sắp xếp các mục theo hàng */
+ gap: 48px; /* Khoảng cách giữa các mục 48px */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-end; /* Căn chỉnh các mục ở cuối */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 80px; /* Cách lề phải 80px */
+ top: 56px; /* Cách lề trên 56px */
+}
+.page { /* Liên kết trang trong thanh điều hướng */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.button3 { /* Nút (chưa rõ mục đích cụ thể) */
+ color: #ffffff; /* Màu chữ trắng */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 16px; /* Cỡ chữ 16px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.site-name { /* Tên trang web trong thanh điều hướng */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 60px; /* Cỡ chữ 60px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 80px; /* Cách lề trái 80px */
+ top: 67px; /* Cách lề trên 67px */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.navigation-footer { /* Thanh điều hướng chân trang */
+ background: #ffffff; /* Màu nền trắng */
+ height: 264px; /* Chiều cao 264px */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 0px; /* Cách lề phải 0px */
+ left: 0px; /* Cách lề trái 0px */
+ bottom: 0px; /* Cách lề dưới 0px */
+ overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+}
+.items2 { /* Nhóm mục trong chân trang (Về công ty) */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: column; /* Sắp xếp các mục theo cột */
+ gap: 24px; /* Khoảng cách giữa các mục 24px */
+ align-items: flex-end; /* Căn chỉnh các mục ở cuối */
+ justify-content: center; /* Căn giữa các mục theo chiều dọc */
+ width: 187px; /* Chiều rộng 187px */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 517px; /* Cách lề phải 517px */
+ top: 48px; /* Cách lề trên 48px */
+}
+.topic { /* Tiêu đề chủ đề trong chân trang */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 16px; /* Cỡ chữ 16px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.page2 { /* Liên kết trang trong chân trang */
+ color: #454545; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 16px; /* Cỡ chữ 16px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.items3 { /* Nhóm mục trong chân trang (Liên hệ) */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: column; /* Sắp xếp các mục theo cột */
+ gap: 24px; /* Khoảng cách giữa các mục 24px */
+ align-items: flex-end; /* Căn chỉnh các mục ở cuối */
+ justify-content: center; /* Căn giữa các mục theo chiều dọc */
+ width: 187px; /* Chiều rộng 187px */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 298px; /* Cách lề phải 298px */
+ top: 48px; /* Cách lề trên 48px */
+}
+.items4 { /* Nhóm mục trong chân trang (Chưa rõ mục đích cụ thể) */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: column; /* Sắp xếp các mục theo cột */
+ gap: 24px; /* Khoảng cách giữa các mục 24px */
+ align-items: flex-end; /* Căn chỉnh các mục ở cuối */
+ justify-content: center; /* Căn giữa các mục theo chiều dọc */
+ width: 187px; /* Chiều rộng 187px */
+ position: absolute; /* Vị trí tuyệt đối */
+ right: 80px; /* Cách lề phải 80px */
+ top: 48px; /* Cách lề trên 48px */
+}
+.site-name2 { /* Tên trang web trong chân trang */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 60px; /* Cỡ chữ 60px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 80px; /* Cách lề trái 80px */
+ top: 37px; /* Cách lề trên 37px */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.social-icons { /* Biểu tượng mạng xã hội */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: row; /* Sắp xếp các mục theo hàng */
+ gap: 8px; /* Khoảng cách giữa các mục 8px */
+ align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 80px; /* Cách lề trái 80px */
+ top: 176px; /* Cách lề trên 176px */
+}
+.buttons-icon { /* Nút chứa biểu tượng mạng xã hội */
+ border-radius: 4px; /* Bo tròn góc 4px */
+ padding: 8px; /* Đệm 8px */
+ flex-shrink: 0; /* Không co lại */
+ width: 40px; /* Chiều rộng 40px */
+ height: 40px; /* Chiều cao 40px */
+ position: relative; /* Vị trí tương đối */
+}
+.icon { /* Biểu tượng Facebook */
+ width: 24px; /* Chiều rộng 24px */
+ height: 24px; /* Chiều cao 24px */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 8px; /* Cách lề trái 8px */
+ top: 8px; /* Cách lề trên 8px */
+ overflow: visible; /* Cho phép nội dung tràn ra ngoài */
+}
+.icon2 { /* Biểu tượng X (Twitter) */
+ width: 24px; /* Chiều rộng 24px */
+ height: 24px; /* Chiều cao 24px */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 8px; /* Cách lề trái 8px */
+ top: 8px; /* Cách lề trên 8px */
+ overflow: visible; /* Cho phép nội dung tràn ra ngoài */
+}
+.icon3 { /* Biểu tượng Youtube */
+ width: 24px; /* Chiều rộng 24px */
+ height: 24px; /* Chiều cao 24px */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 8px; /* Cách lề trái 8px */
+ top: 8px; /* Cách lề trên 8px */
+ overflow: visible; /* Cho phép nội dung tràn ra ngoài */
+}
+.icon4 { /* Biểu tượng Instagram */
+ width: 24px; /* Chiều rộng 24px */
+ height: 24px; /* Chiều cao 24px */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 8px; /* Cách lề trái 8px */
+ top: 8px; /* Cách lề trên 8px */
+ overflow: visible; /* Cho phép nội dung tràn ra ngoài */
+}
+.divider { /* Đường phân cách */
+ margin-top: -1px; /* Đẩy lên trên 1px */
+ border-style: solid; /* Kiểu đường viền liền */
+ border-color: #e6e6e6; /* Màu đường viền xám nhạt */
+ border-width: 1px 0 0 0; /* Độ dày đường viền 1px ở trên, các cạnh khác 0 */
+ width: 1280px; /* Chiều rộng 1280px */
+ height: 0px; /* Chiều cao 0px */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 80px; /* Cách lề trái 80px */
+ top: 1px; /* Cách lề trên 1px */
+ transform-origin: 0 0; /* Điểm gốc cho phép biến đổi là góc trên bên trái */
+ transform: rotate(0deg) scale(1, 1); /* Không xoay, không thay đổi tỷ lệ */
+}
+.card-grid { /* Lưới các thẻ sản phẩm */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: row; /* Sắp xếp các mục theo hàng */
+ row-gap: 32px; /* Khoảng cách hàng 32px */
+ align-items: flex-end; /* Căn chỉnh các mục ở cuối */
+ justify-content: space-between; /* Phân bổ khoảng trống đều giữa các mục */
+ flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+ align-content: flex-end; /* Căn chỉnh các hàng ở cuối */
+ width: 1282px; /* Chiều rộng 1282px */
+ position: absolute; /* Vị trí tuyệt đối */
+ left: 80px; /* Cách lề trái 80px */
+ top: 1090px; /* Cách lề trên 1090px */
+}
+.card { /* Thẻ sản phẩm */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: column; /* Sắp xếp các mục theo cột */
+ gap: 34px; /* Khoảng cách giữa các mục 34px */
+ left: 185px; /* Cách lề trái 185px (có thể bị ghi đè bởi card-grid) */
+ align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+ flex-shrink: 0; /* Không co lại */
+ width: 404px; /* Chiều rộng 404px */
+ height: 480px; /* Chiều cao 480px */
+ position: relative; /* Vị trí tương đối */
+}
+.image2 { /* Ảnh sản phẩm trong thẻ */
+ background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
+ border-radius: 8px; /* Bo tròn góc 8px */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ flex: 1; /* Cho phép mở rộng để lấp đầy không gian còn lại */
+ position: relative; /* Vị trí tương đối */
+ overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+ object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ đầy container */
+}
+.copy2 { /* Nhóm chứa thông tin sản phẩm trong thẻ */
+ display: flex; /* Sử dụng flexbox */
+ flex-direction: column; /* Sắp xếp các mục theo cột */
+ gap: 4px; /* Khoảng cách giữa các mục 4px */
+ align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+ justify-content: center; /* Căn giữa các mục theo chiều dọc */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ flex-shrink: 0; /* Không co lại */
+ position: relative; /* Vị trí tương đối */
+}
+.product { /* Tên sản phẩm trong thẻ */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 24px; /* Cỡ chữ 24px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+}
+.description-of-first-product { /* Mô tả sản phẩm thứ nhất trong thẻ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+._10-99 { /* Giá sản phẩm trong thẻ */
+ color: #000000; /* Màu chữ đen */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+}
+.description-of-second-product { /* Mô tả sản phẩm thứ hai trong thẻ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.description-of-third-product { /* Mô tả sản phẩm thứ ba trong thẻ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.description-of-fourth-product { /* Mô tả sản phẩm thứ tư trong thẻ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.description-of-fifth-product { /* Mô tả sản phẩm thứ năm trong thẻ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+}
+.description-of-sixth-product { /* Mô tả sản phẩm thứ sáu trong thẻ */
+ color: #828282; /* Màu chữ xám */
+ text-align: left; /* Căn lề trái */
+ font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium */
+ font-size: 20px; /* Cỡ chữ 20px */
+ line-height: 150%; /* Chiều cao dòng 150% */
+ font-weight: 500; /* Độ đậm font 500 */
+ position: relative; /* Vị trí tương đối */
+ align-self: stretch; /* Kéo dài theo chiều ngang */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
 }
 
-.quantity-btn {
-  background-color: #e0e0e0;
-  padding: 4px 10px;
-  font-size: 18px;
-  border-radius: 4px;
-  cursor: pointer;
+.quantity-control { /* Nhóm điều khiển số lượng */
+ display: flex; /* Sử dụng flexbox */
+ align-items: center; /* Căn giữa các mục theo chiều dọc */
+ margin-top: 10px; /* Khoảng cách trên 10px */
+ gap: 8px; /* Khoảng cách giữa các mục 8px */
+ flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+}
+
+.quantity-btn { /* Nút điều chỉnh số lượng */
+ background-color: #e0e0e0; /* Màu nền xám nhạt */
+ padding: 4px 10px; /* Đệm 4px trên dưới, 10px trái phải */
+ font-size: 18px; /* Cỡ chữ 18px */
+ border-radius: 4px; /* Bo tròn góc 4px */
+ cursor: pointer; /* Thay đổi con trỏ thành biểu tượng bàn tay khi di chuột qua */
 }

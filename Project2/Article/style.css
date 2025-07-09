@@ -1,427 +1,455 @@
 /* Đặt lại các giá trị mặc định và áp dụng cho tất cả các phần tử */
-a,
-button,
-input,
-select,
-h1,
-h2,
-h3,
-h4,
-h5,
-* {
-    box-sizing: border-box; /* Gộp padding và border vào width và height */
-    margin: 0; /* Xóa khoảng cách ngoài mặc định */
-    padding: 0; /* Xóa khoảng cách trong mặc định */
+a, /* Chọn tất cả các thẻ liên kết */
+button, /* Chọn tất cả các thẻ nút */
+input, /* Chọn tất cả các thẻ input */
+select, /* Chọn tất cả các thẻ select */
+h1, /* Chọn tất cả các thẻ tiêu đề cấp 1 */
+h2, /* Chọn tất cả các thẻ tiêu đề cấp 2 */
+h3, /* Chọn tất cả các thẻ tiêu đề cấp 3 */
+h4, /* Chọn tất cả các thẻ tiêu đề cấp 4 */
+h5, /* Chọn tất cả các thẻ tiêu đề cấp 5 */
+* { /* Áp dụng cho tất cả các phần tử trong tài liệu */
+    box-sizing: border-box; /* Gộp padding và border vào width và height để tính kích thước tổng */
+    margin: 0; /* Xóa khoảng cách ngoài (margin) mặc định */
+    padding: 0; /* Xóa khoảng cách trong (padding) mặc định */
     border: none; /* Không có đường viền */
-    text-decoration: none; /* Không có gạch chân */
-    background: none; /* Không có nền */
+    text-decoration: none; /* Xóa gạch chân mặc định cho các liên kết */
+    background: none; /* Xóa nền mặc định */
 
-    -webkit-font-smoothing: antialiased; /* Làm mịn font chữ trên trình duyệt Webkit */
+    -webkit-font-smoothing: antialiased; /* Làm mịn font chữ trên trình duyệt Webkit (Safari, Chrome) */
 }
 
 /* Xóa dấu đầu dòng và khoảng cách mặc định cho danh sách */
-menu, ol, ul {
+menu, /* Chọn tất cả các thẻ menu */
+ol, /* Chọn tất cả các thẻ danh sách có thứ tự (ordered list) */
+ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered list) */
     list-style-type: none; /* Không hiển thị dấu đầu dòng */
-    margin: 0; /* Khoảng cách ngoài */ 
-    padding: 0; /* Khoảng cách trong */
-   }
+    margin: 0; /* Xóa khoảng cách ngoài (margin) mặc định */ 
+    padding: 0; /* Xóa khoảng cách trong (padding) mặc định */
+}
 
 /* Đảm bảo tính nhất quán trong mô hình hộp */
-.article,
-.article * {
-  box-sizing: border-box; /* Chiều rộng và chiều cao bao gồm cả nội dung, padding và border */
+.article, /* Chọn phần tử có class "article" */
+.article * { /* Chọn tất cả các phần tử con bên trong phần tử có class "article" */
+    box-sizing: border-box; /* Chiều rộng và chiều cao bao gồm cả nội dung, padding và border */
 }
 
 /* Phần khung chính của trang bài viết */
 .article {
-  background: #ffffff; /* Nền trắng */
-  height: 3603px; /* Chiều cao */
-  position: relative; /* Vị trí tương đối */
-  overflow: hidden; /* Ẩn phần tràn khỏi khung */
+    background: #ffffff; /* Đặt màu nền là trắng */
+    height: 3603px; /* Đặt chiều cao cố định */
+    position: relative; /* Đặt vị trí tương đối để các phần tử con có thể định vị tuyệt đối */
+    overflow: hidden; /* Ẩn phần nội dung tràn ra khỏi khung */
 }
 
 /* Phần tiêu đề các bài viết liên quan */
 .related-articles-or-posts {
-  color: #000000; /* Màu chữ */
-  text-align: left; /* Căn trái */
-  font-family: "Inter-SemiBold", sans-serif; /* Kiểu chữ đậm */
-  font-size: 40px; /* Cỡ chữ */
-  line-height: 110%; /* Chiều cao dòng */
-  font-weight: 600; /* Độ đậm chữ */
-  position: relative; /* Vị trí tương đối */
-  left: 80px; /* Cách trái */
-  top: 2663px; /* Cách trên */ 
-  width: 625px; /* Chiều rộng */
+    color: #000000; /* Đặt màu chữ là đen */
+    text-align: left; /* Căn văn bản sang trái */
+    font-family: "Inter-SemiBold", sans-serif; /* Đặt kiểu chữ "Inter-SemiBold", nếu không có sẽ dùng font sans-serif mặc định */
+    font-size: 40px; /* Đặt cỡ chữ */
+    line-height: 110%; /* Đặt chiều cao dòng, 110% của font-size */
+    font-weight: 600; /* Đặt độ đậm chữ (semi-bold) */
+    position: relative; /* Đặt vị trí tương đối */
+    left: 80px; /* Cách lề trái 80px */
+    top: 2663px; /* Cách lề trên 2663px */ 
+    width: 625px; /* Đặt chiều rộng cố định */
 }
 
 /* Nội dung đoạn văn bài viết */
 .paragraph {
-  color: #000000; /* Màu sắc */
-  text-align: left; /* Căn trái */
-  font-family: "Inter-Medium", sans-serif; /* Kiểu chữ */
-  font-size: 20px; /* Cỡ chữ */
-  line-height: 150%; /* Chiều cao dòng */
-  font-weight: 500; /* Độ đậm chữ */
-  position: absolute; /* Định vị phần tử tuyệt đối */
-  right: 20.76%; /* Cách phải */
-  left: 20.76%; /* Cách trái */
-  width: 58.47%; /* Chiều rộng */
-  top: 2273px; /* Cách trên */
+    color: #000000; /* Đặt màu chữ là đen */
+    text-align: left; /* Căn văn bản sang trái */
+    font-family: "Inter-Medium", sans-serif; /* Đặt kiểu chữ "Inter-Medium" */
+    font-size: 20px; /* Đặt cỡ chữ */
+    line-height: 150%; /* Đặt chiều cao dòng, 150% của font-size */
+    font-weight: 500; /* Đặt độ đậm chữ (medium) */
+    position: absolute; /* Định vị phần tử tuyệt đối so với phần tử cha có position là relative */
+    right: 20.76%; /* Cách lề phải 20.76% chiều rộng của phần tử cha */
+    left: 20.76%; /* Cách lề trái 20.76% chiều rộng của phần tử cha */
+    width: 58.47%; /* Đặt chiều rộng là 58.47% của phần tử cha */
+    top: 2273px; /* Cách lề trên 2273px */
 }
 
 /* Dòng ảnh minh họa ngang */
 .images {
-  display: flex; /* Sử dụng flexbox */
-  flex-direction: row; /* Xếp hàng ngang */
-  gap: 122px; /* Khoảng cách giữa các ảnh */
-  align-items: flex-start; /* Căn đầu ảnh */
-  justify-content: flex-start; /* Căn trái */
-  position: absolute; /* ĐỊnh vị tuyệt đối */
-  left: 50%; /* Cách trái */
-  translate: -50%; /* Dịch để căn giữa */
-  top: 1757px; /* Cách trên */
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
+    flex-direction: row; /* Xếp các phần tử con theo hàng ngang */
+    gap: 122px; /* Đặt khoảng cách giữa các phần tử con là 122px */
+    align-items: flex-start; /* Căn các phần tử con theo cạnh trên của trục cross-axis (chiều dọc) */
+    justify-content: flex-start; /* Căn các phần tử con theo cạnh trái của trục main-axis (chiều ngang) */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 50%; /* Dịch phần tử sang trái 50% chiều rộng của phần tử cha */
+    translate: -50%; /* Dịch ngược phần tử sang trái 50% chiều rộng của chính nó để căn giữa */
+    top: 1757px; /* Cách lề trên 1757px */
 }
 
 /* Kiểu ảnh nhỏ trong hàng ngang*/
 .image {
-  border-radius: 8px; /* Bo góc ảnh */
-  flex-shrink: 0; /* Không co lại nếu thiếu chỗ */
-  width: 624px; /* Chiều rộng */
-  height: 436px; /* Chiều cao */
-  position: relative; /* Vị trí tương đối */
-  overflow: hidden; /* Ẩn phần thừa ảnh */
-  object-fit: cover; /* Ảnh phủ khung, không méo */
+    border-radius: 8px; /* Bo góc ảnh với bán kính 8px */
+    flex-shrink: 0; /* Ngăn ảnh co lại nếu không gian bị giới hạn */
+    width: 624px; /* Đặt chiều rộng cố định */
+    height: 436px; /* Đặt chiều cao cố định */
+    position: relative; /* Đặt vị trí tương đối */
+    overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
+    object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo, cắt bỏ phần thừa */
 }
 
 /* Đoạn văn thứ 2 */
 .paragraph2 {
-  color: #000000; /* Màu sắc */
-  text-align: left; /* Văn bản căn trái */
-  font-family: "Inter-Medium", sans-serif; /* Kiểu chữ */
-  font-size: 20px; /* Cỡ chữ */
-  line-height: 150%; /* Chiều cao dòng */
-  font-weight: 500; /* Độ đậm chữ */
-  position: absolute; /* Định vị tuyệt đối */
-  right: 20.76%; /* Cách phải */
-  left: 20.76%; /* Cách trái */
-  width: 58.47%; /* Chiều rộng */
-  top: 1227px; /* Cách trên */
+    color: #000000; /* Đặt màu chữ là đen */
+    text-align: left; /* Căn văn bản sang trái */
+    font-family: "Inter-Medium", sans-serif; /* Đặt kiểu chữ "Inter-Medium" */
+    font-size: 20px; /* Đặt cỡ chữ */
+    line-height: 150%; /* Đặt chiều cao dòng, 150% của font-size */
+    font-weight: 500; /* Đặt độ đậm chữ (medium) */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 20.76%; /* Cách lề phải 20.76% */
+    left: 20.76%; /* Cách lề trái 20.76% */
+    width: 58.47%; /* Đặt chiều rộng là 58.47% */
+    top: 1227px; /* Cách lề trên 1227px */
 }
 
 /* Ảnh chính bài viết */
 .image2 {
-  border-radius: 8px; /* Bo góc ảnh */
-  width: 88.96%; /* Chiều rộng */
-  height: 650px; /* Chiều cao */
-  position: absolute; /* Định vị tuyệt đối */
-  right: 5.49%; /* Cách phải */
-  left: 5.56%; /* Cách trái */
-  top: 497px; /* Cách trên */
-  overflow: hidden; /* Ẩn phần tràn */
-  object-fit: cover; /* Ảnh phủ khung */
+    border-radius: 8px; /* Bo góc ảnh với bán kính 8px */
+    width: 88.96%; /* Đặt chiều rộng là 88.96% của phần tử cha */
+    height: 650px; /* Đặt chiều cao cố định */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 5.49%; /* Cách lề phải 5.49% */
+    left: 5.56%; /* Cách lề trái 5.56% */
+    top: 497px; /* Cách lề trên 497px */
+    overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
+    object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo */
 }
 
 /* Khối chứa tiêu đề và phụ đề bài viết */
 .article-title {
-  display: flex; /* Flexbox dọc */
-  flex-direction: column; /* Xếp từ trên xuống */
-  gap: 24px; /* Khoảng cách giữa các phần tử */
-  align-items: flex-start; /* Căn trái */
-  justify-content: center; /* Căn giữa theo chiều dọc */
-  width: 50.9%; /* Chiều rộng */
-  position: absolute; /* Định vị tuyệt đối */
-  right: 43.54%; /* Cách phải */
-  left: 5.56%; /* Cách trái */
-  top: 244px; /* Cách trên */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các phần tử con theo chiều dọc (từ trên xuống) */
+    gap: 24px; /* Đặt khoảng cách giữa các phần tử con là 24px */
+    align-items: flex-start; /* Căn các phần tử con theo cạnh trái của trục cross-axis (chiều ngang) */
+    justify-content: center; /* Căn các phần tử con ở giữa theo trục main-axis (chiều dọc) */
+    width: 50.9%; /* Đặt chiều rộng là 50.9% */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 43.54%; /* Cách lề phải 43.54% */
+    left: 5.56%; /* Cách lề trái 5.56% */
+    top: 244px; /* Cách lề trên 244px */
 }
 
 /* Tiêu đề chính */
 .article-or-post-title {
-  color: #000000; /* Màu chữ */
-  text-align: left; /* Căn văn bản trái */
-  font-family: "Inter-Bold", sans-serif; /* Kiểu chữ */
-  font-size: 64px; /* Cỡ chữ */ 
-  letter-spacing: -0.02em; /* Giãn chữ */
-  font-weight: 600; /* Độ đậm */
-  position: relative; /* Vị trí tương đối */
-  align-self: stretch; /* Căn dãn chiều dọc */
+    color: #000000; /* Đặt màu chữ là đen */
+    text-align: left; /* Căn văn bản sang trái */
+    font-family: "Inter-Bold", sans-serif; /* Đặt kiểu chữ "Inter-Bold" */
+    font-size: 64px; /* Đặt cỡ chữ */ 
+    letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các chữ cái */
+    font-weight: 600; /* Đặt độ đậm chữ (semi-bold) */
+    position: relative; /* Đặt vị trí tương đối */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc để lấp đầy không gian còn lại */
 }
+
 .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading {
-  color: rgba(0, 0, 0, 0.75);
-  text-align: center;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 24px;
-  line-height: 150%;
-  font-weight: 400;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: rgba(0, 0, 0, 0.75); /* Màu chữ đen với độ trong suốt 75% */
+    text-align: center; /* Căn văn bản giữa */
+    font-family: "Inter-Regular", sans-serif; /* Kiểu chữ "Inter-Regular" */
+    font-size: 24px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 400; /* Độ đậm chữ (regular) */
+    position: relative; /* Vị trí tương đối */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
+
 .navigation {
-  background: #ffffff;
-  height: 174px;
-  position: fixed;
-  right: 0px;
-  left: 0px;
-  top: 0px;
-  z-index: 1000;
+    background: #ffffff; /* Nền trắng */
+    height: 174px; /* Chiều cao cố định */
+    position: fixed; /* Định vị cố định trên màn hình, không cuộn theo trang */
+    right: 0px; /* Cách lề phải 0px */
+    left: 0px; /* Cách lề trái 0px */
+    top: 0px; /* Cách lề trên 0px */
+    z-index: 1000; /* Đặt mức độ ưu tiên hiển thị cao hơn các phần tử khác */
 }
+
 .items {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  align-items: center;
-  justify-content: flex-end;
-  position: absolute;
-  right: 80px;
-  top: 56px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: row; /* Xếp các mục theo hàng ngang */
+    gap: 48px; /* Khoảng cách giữa các mục */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-end; /* Căn các mục về phía cuối theo chiều ngang */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 80px; /* Cách lề phải 80px */
+    top: 56px; /* Cách lề trên 56px */
 }
+
 .page {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: #000000; /* Màu chữ đen */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 20px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: relative; /* Vị trí tương đối */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
+
 .button {
-  background: #000000;
-  border-radius: 8px;
-  padding: 14px 24px 14px 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    background: #000000; /* Nền đen */
+    border-radius: 8px; /* Bo góc nút */
+    padding: 14px 24px 14px 24px; /* Khoảng đệm bên trong nút: trên 14px, phải 24px, dưới 14px, trái 24px */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: row; /* Xếp các mục theo hàng ngang */
+    gap: 8px; /* Khoảng cách giữa các mục */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: center; /* Căn giữa các mục theo chiều ngang */
+    flex-shrink: 0; /* Ngăn nút co lại nếu không gian bị giới hạn */
+    position: relative; /* Vị trí tương đối */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Đổ bóng: dịch chuyển theo x=0, y=1px, độ mờ=2px, màu đen với độ trong suốt 5% */
 }
+
 .site-name {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 60px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  left: 80px;
-  top: 67px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: #000000; /* Màu chữ đen */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 60px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 80px; /* Cách lề trái 80px */
+    top: 67px; /* Cách lề trên 67px */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
+
 .navigation-footer {
-  background: #ffffff;
-  height: 264px;
-  position: absolute;
-  right: 1px;
-  left: -1px;
-  top: 3339px;
-  overflow: hidden;
+    background: #ffffff; /* Nền trắng */
+    height: 264px; /* Chiều cao cố định */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 1px; /* Cách lề phải 1px */
+    left: -1px; /* Cách lề trái -1px */
+    top: 3339px; /* Cách lề trên 3339px */
+    overflow: hidden; /* Ẩn phần nội dung tràn ra khỏi khung */
 }
+
 .items2 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 517px;
-  top: 48px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các mục theo chiều dọc */
+    gap: 24px; /* Khoảng cách giữa các mục */
+    align-items: flex-end; /* Căn các mục về phía cuối theo chiều ngang */
+    justify-content: center; /* Căn giữa các mục theo chiều dọc */
+    width: 187px; /* Chiều rộng cố định */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 517px; /* Cách lề phải 517px */
+    top: 48px; /* Cách lề trên 48px */
 }
+
 .topic {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: #000000; /* Màu chữ đen */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 16px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: relative; /* Vị trí tương đối */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
+
 .page2 {
-  color: #454545;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: #454545; /* Màu chữ xám */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 16px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: relative; /* Vị trí tương đối */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
+
 .items3 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 298px;
-  top: 48px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các mục theo chiều dọc */
+    gap: 24px; /* Khoảng cách giữa các mục */
+    align-items: flex-end; /* Căn các mục về phía cuối theo chiều ngang */
+    justify-content: center; /* Căn giữa các mục theo chiều dọc */
+    width: 187px; /* Chiều rộng cố định */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 298px; /* Cách lề phải 298px */
+    top: 48px; /* Cách lề trên 48px */
 }
+
 .items4 {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-end;
-  justify-content: center;
-  width: 187px;
-  position: absolute;
-  right: 80px;
-  top: 48px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các mục theo chiều dọc */
+    gap: 24px; /* Khoảng cách giữa các mục */
+    align-items: flex-end; /* Căn các mục về phía cuối theo chiều ngang */
+    justify-content: center; /* Căn giữa các mục theo chiều dọc */
+    width: 187px; /* Chiều rộng cố định */
+    position: absolute; /* Định vị tuyệt đối */
+    right: 80px; /* Cách lề phải 80px */
+    top: 48px; /* Cách lề trên 48px */
 }
+
 .site-name2 {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 60px;
-  line-height: 150%;
-  font-weight: 500;
-  position: absolute;
-  left: 80px;
-  top: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: #000000; /* Màu chữ đen */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 60px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 80px; /* Cách lề trái 80px */
+    top: 37px; /* Cách lề trên 37px */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
+
 .social-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 80px;
-  top: 176px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: row; /* Xếp các mục theo hàng ngang */
+    gap: 8px; /* Khoảng cách giữa các mục */
+    align-items: flex-start; /* Căn các mục về phía đầu theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 80px; /* Cách lề trái 80px */
+    top: 176px; /* Cách lề trên 176px */
 }
+
 .buttons-icon {
-  border-radius: 4px;
-  padding: 8px;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  position: relative;
+    border-radius: 4px; /* Bo góc nút */
+    padding: 8px; /* Khoảng đệm bên trong nút */
+    flex-shrink: 0; /* Ngăn nút co lại */
+    width: 40px; /* Chiều rộng cố định */
+    height: 40px; /* Chiều cao cố định */
+    position: relative; /* Vị trí tương đối */
 }
+
 .icon {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
+    width: 24px; /* Chiều rộng biểu tượng */
+    height: 24px; /* Chiều cao biểu tượng */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 8px; /* Cách lề trái 8px */
+    top: 8px; /* Cách lề trên 8px */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
 }
+
 .icon2 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
+    width: 24px; /* Chiều rộng biểu tượng */
+    height: 24px; /* Chiều cao biểu tượng */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 8px; /* Cách lề trái 8px */
+    top: 8px; /* Cách lề trên 8px */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
 }
+
 .icon3 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
+    width: 24px; /* Chiều rộng biểu tượng */
+    height: 24px; /* Chiều cao biểu tượng */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 8px; /* Cách lề trái 8px */
+    top: 8px; /* Cách lề trên 8px */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
 }
+
 .icon4 {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  overflow: visible;
+    width: 24px; /* Chiều rộng biểu tượng */
+    height: 24px; /* Chiều cao biểu tượng */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 8px; /* Cách lề trái 8px */
+    top: 8px; /* Cách lề trên 8px */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
 }
+
 .divider {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: #e6e6e6;
-  border-width: 1px 0 0 0;
-  width: 1280px;
-  height: 0px;
-  position: absolute;
-  left: 80px;
-  top: 1px;
-  transform-origin: 0 0;
-  transform: rotate(0deg) scale(1, 1);
+    margin-top: -1px; /* Đẩy đường phân chia lên 1px */
+    border-style: solid; /* Kiểu đường viền liền */
+    border-color: #e6e6e6; /* Màu đường viền */
+    border-width: 1px 0 0 0; /* Độ rộng đường viền: trên 1px, các cạnh còn lại 0 */
+    width: 1280px; /* Chiều rộng cố định */
+    height: 0px; /* Chiều cao 0px (chỉ hiển thị đường viền) */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 80px; /* Cách lề trái 80px */
+    top: 1px; /* Cách lề trên 1px */
+    transform-origin: 0 0; /* Điểm gốc cho phép biến đổi là góc trên bên trái */
+    transform: rotate(0deg) scale(1, 1); /* Không xoay, không thay đổi kích thước */
 }
+
 .cards {
-  display: flex;
-  flex-direction: row;
-  gap: 135px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 210px;
-  top: 2755px;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: row; /* Xếp các thẻ theo hàng ngang */
+    gap: 135px; /* Khoảng cách giữa các thẻ */
+    align-items: flex-start; /* Căn các thẻ về phía đầu theo chiều dọc */
+    justify-content: flex-start; /* Căn các thẻ về phía đầu theo chiều ngang */
+    position: absolute; /* Định vị tuyệt đối */
+    left: 210px; /* Cách lề trái 210px */
+    top: 2755px; /* Cách lề trên 2755px */
 }
+
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 404px;
-  height: 434px;
-  position: relative;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các nội dung trong thẻ theo chiều dọc */
+    gap: 24px; /* Khoảng cách giữa các nội dung */
+    align-items: flex-start; /* Căn các nội dung về phía đầu theo chiều ngang */
+    justify-content: flex-start; /* Căn các nội dung về phía đầu theo chiều dọc */
+    flex-shrink: 0; /* Ngăn thẻ co lại */
+    width: 404px; /* Chiều rộng cố định */
+    height: 434px; /* Chiều cao cố định */
+    position: relative; /* Vị trí tương đối */
 }
+
 .image3 {
-  background: linear-gradient(to left, #f7f7f7, #f7f7f7);
-  border-radius: 8px;
-  align-self: stretch;
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  object-fit: cover;
+    background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Nền gradient từ trái sang phải với màu xám nhạt */
+    border-radius: 8px; /* Bo góc ảnh */
+    align-self: stretch; /* Cho phép ảnh co giãn để lấp đầy không gian chiều dọc */
+    flex: 1; /* Cho phép ảnh chiếm toàn bộ không gian còn lại trong flex container */
+    position: relative; /* Vị trí tương đối */
+    overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
+    object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo */
 }
+
 .copy {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Xếp các nội dung theo chiều dọc */
+    gap: 4px; /* Khoảng cách giữa các nội dung */
+    align-items: flex-start; /* Căn các nội dung về phía đầu theo chiều ngang */
+    justify-content: center; /* Căn giữa các nội dung theo chiều dọc */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
+    flex-shrink: 0; /* Ngăn phần tử co lại */
+    position: relative; /* Vị trí tương đối */
 }
+
 .title {
-  color: #000000;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
+    color: #000000; /* Màu chữ đen */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 20px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: relative; /* Vị trí tương đối */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
 }
+
 .author {
-  color: #828282;
-  text-align: left;
-  font-family: "Inter-Medium", sans-serif;
-  font-size: 20px;
-  line-height: 150%;
-  font-weight: 500;
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    color: #828282; /* Màu chữ xám */
+    text-align: left; /* Căn văn bản trái */
+    font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
+    font-size: 20px; /* Cỡ chữ */
+    line-height: 150%; /* Chiều cao dòng */
+    font-weight: 500; /* Độ đậm chữ (medium) */
+    position: relative; /* Vị trí tương đối */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa các mục theo chiều dọc */
+    justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
