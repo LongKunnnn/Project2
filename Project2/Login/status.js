@@ -1,4 +1,3 @@
-// js/authStatus.js (hoặc authStatus.js nếu ở cùng cấp)
 
 document.addEventListener('DOMContentLoaded', () => {
     // Lấy liên kết đăng nhập/đăng xuất bằng ID
@@ -15,13 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Người dùng đã đăng nhập
             loginLogoutLink.textContent = 'Đăng xuất';
             loginLogoutLink.href = '#'; // Xử lý click Đăng xuất bằng JS
-            loginLogoutLink.classList.add('logout-link'); // Thêm class để dễ định kiểu nếu cần
         } else {
             // Người dùng chưa đăng nhập
             loginLogoutLink.textContent = 'Đăng nhập';
-            // Đảm bảo đường dẫn này đúng từ vị trí của trang HTML hiện tại đến trang login.html
-            // Ví dụ: nếu authStatus.js được nhúng vào landing.html, và login.html ở ../Login/login.html
-            loginLogoutLink.href = '../Login/login.html'; // Điều chỉnh đường dẫn này nếu cần
+            loginLogoutLink.href = '../Login/login.html';
             loginLogoutLink.classList.remove('logout-link');
         }
     }
@@ -39,11 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (confirmLogout) {
                 sessionStorage.removeItem('loggedIn'); // Xóa trạng thái đăng nhập
                 updateLoginLogoutLinkStatus(); // Cập nhật lại giao diện (sẽ hiển thị "Đăng nhập")
-                // Tùy chọn: chuyển hướng về trang chủ hoặc trang đăng nhập sau khi đăng xuất
-                // window.location.href = 'index.html'; // Hoặc bất kỳ trang nào bạn muốn
+                
             }
         }
-        // Nếu đang hiển thị "Đăng nhập", để mặc định link hoạt động (chuyển hướng đến login.html)
     });
 
     // Lắng nghe sự kiện storage để cập nhật trạng thái nếu thay đổi từ tab khác

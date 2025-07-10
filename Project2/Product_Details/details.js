@@ -4,7 +4,7 @@
   const productPrice = firstProductSection.querySelector('.price').textContent.trim();
   const productImage = document.querySelector('.image').getAttribute('src');
 
-  // Tạo controls nếu chưa có
+  // Tạo controls 
   const controlDiv1 = document.createElement('div');
   controlDiv1.className = 'quantity-control';
   controlDiv1.innerHTML = `

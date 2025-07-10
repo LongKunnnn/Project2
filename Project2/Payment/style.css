@@ -452,17 +452,6 @@ h1 { /* Chọn thẻ <h1> */
   background-color: #333333; /* Màu nền khi hover */
 }
 
-@keyframes fadeInScale { /* Định nghĩa animation fadeInScale */
-  from { /* Từ trạng thái ban đầu */
-    opacity: 0; /* Độ mờ 0 */
-    transform: scale(0.9); /* Thu nhỏ 90% */
-  }
-  to { /* Đến trạng thái cuối cùng */
-    opacity: 1; /* Độ mờ 1 */
-    transform: scale(1); /* Kích thước ban đầu */
-  }
-}
-
 /* Media Queries for responsive design */
 @media (max-width: 768px) { /* Áp dụng khi chiều rộng màn hình tối đa 768px */
  h1 { /* Chọn thẻ <h1> */
