@@ -13,7 +13,6 @@
           // Nếu sản phẩm đã tồn tại, cập nhật số lượng và đảm bảo giá khớp
           const existingItem = consolidatedItems.get(item.name);
           existingItem.quantity += item.quantity;
-          // Có thể thêm logic kiểm tra giá ở đây nếu cần, ví dụ: existingItem.price = item.price;
         } else {
           // Nếu sản phẩm chưa tồn tại, thêm vào Map
           // Tạo một bản sao để tránh thay đổi trực tiếp đối tượng trong rawCart

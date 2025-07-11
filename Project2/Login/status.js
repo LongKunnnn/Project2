@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lắng nghe sự kiện storage để cập nhật trạng thái nếu thay đổi từ tab khác
     window.addEventListener('storage', (event) => {
-        // Lắng nghe thay đổi của 'loggedIn' trong sessionStorage (hoặc localStorage)
+        // Lắng nghe thay đổi của 'loggedIn' trong sessionStorage
         if (event.key === 'loggedIn' || event.key === null) { // event.key === null khi clear() được gọi
             updateLoginLogoutLinkStatus();
         }
