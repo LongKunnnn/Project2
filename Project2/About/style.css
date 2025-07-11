@@ -8,20 +8,19 @@ h2, /* Chọn tất cả các thẻ <h2> (tiêu đề cấp 2) */
 h3, /* Chọn tất cả các thẻ <h3> (tiêu đề cấp 3) */
 h4, /* Chọn tất cả các thẻ <h4> (tiêu đề cấp 4) */
 h5, /* Chọn tất cả các thẻ <h5> (tiêu đề cấp 5) */
-* { /* Chọn tất cả các phần tử HTML */
+* {
  box-sizing: border-box; /* Đặt chế độ box model là border-box để tính toán kích thước dễ hơn */
  margin: 0; /* Xóa margin (khoảng cách ngoài) mặc định */
  padding: 0; /* Xóa padding (khoảng cách trong) mặc định */
  border: none; /* Xóa border (viền) mặc định */
  text-decoration: none; /* Xóa gạch chân mặc định cho liên kết */
  background: none; /* Xóa màu nền mặc định */
-
  -webkit-font-smoothing: antialiased; /* Tối ưu hiển thị font chữ trên trình duyệt WebKit (Chrome, Safari) */
 }
 /* Xóa dấu đầu dòng danh sách */
 menu, /* Chọn tất cả các thẻ <menu> */
 ol, /* Chọn tất cả các thẻ <ol> (danh sách có thứ tự) */
-ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
+ul {
  list-style-type: none; /* Xóa dấu đầu dòng (bullet points) của danh sách */
  margin: 0; /* Xóa margin mặc định */
  padding: 0; /* Xóa padding mặc định */
@@ -29,10 +28,10 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 
 /* Layout chính của trang giới thiệu */
 .about, /* Chọn phần tử có class 'about' */
-.about * { /* Chọn tất cả các phần tử con bên trong phần tử có class 'about' */
+.about * {
  box-sizing: border-box; /* Đặt chế độ box model là border-box */
 }
-.about { /* Định nghĩa style cho phần tử có class 'about' */
+.about {
  background: #ffffff; /* Màu nền trắng */
  height: 1788px; /* Chiều cao cố định */
  position: relative; /* Đặt vị trí tương đối để định vị các phần tử con */
@@ -40,7 +39,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Ảnh minh họa bên phải */
-.image { /* Định nghĩa style cho phần tử có class 'image' */
+.image {
  background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Tạo gradient nền màu xám nhạt */
  border-radius: 8px; /* Bo tròn góc 8px */
  width: 508px; /* Chiều rộng cố định */
@@ -53,7 +52,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Phần văn bản giới thiệu bên trái ảnh */
-.copy { /* Định nghĩa style cho phần tử có class 'copy' */
+.copy {
  display: flex; /* Sử dụng Flexbox để bố cục các phần tử con */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
@@ -66,7 +65,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Tiêu đề 'About' */
-.about2 { /* Định nghĩa style cho phần tử có class 'about2' */
+.about2 {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Bold", sans-serif; /* Font chữ Inter Bold, nếu không có thì dùng sans-serif */
@@ -78,7 +77,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Phần phụ đề bên dưới tiêu đề */
-.subheading-for-description-or-instructions { /* Định nghĩa style cho phần tử có class 'subheading-for-description-or-instructions' */
+.subheading-for-description-or-instructions {
  color: #828282; /* Màu chữ xám */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Regular", sans-serif; /* Font chữ Inter Regular, nếu không có thì dùng sans-serif */
@@ -93,7 +92,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Đoạn mô tả nội dung chính */
-.paragraph { /* Định nghĩa style cho phần tử có class 'paragraph' */
+.paragraph {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -105,7 +104,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Thanh điều hướng phía trên cùng */
-.navigation { /* Định nghĩa style cho phần tử có class 'navigation' */
+.navigation {
  background: #ffffff; /* Màu nền trắng */
  height: 174px; /* Chiều cao cố định */
  position: fixed; /* Đặt vị trí cố định trên màn hình (luôn hiển thị dù cuộn trang) */
@@ -116,7 +115,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Các liên kết trang trong navigation */
-.items { /* Định nghĩa style cho phần tử có class 'items' */
+.items {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
  gap: 48px; /* Khoảng cách giữa các phần tử con là 48px */
@@ -128,7 +127,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Style cho từng liên kết trang */
-.page { /* Định nghĩa style cho phần tử có class 'page' */
+.page {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -142,7 +141,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Nút trang chủ màu đen */
-.button { /* Định nghĩa style cho phần tử có class 'button' */
+.button {
  background: #000000; /* Màu nền đen */
  border-radius: 8px; /* Bo tròn góc 8px */
  padding: 14px 24px 14px 24px; /* Đệm trong (trên, phải, dưới, trái) */
@@ -157,7 +156,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Tên thương hiệu bên trái thanh navigation */
-.site-name { /* Định nghĩa style cho phần tử có class 'site-name' */
+.site-name {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -173,7 +172,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Phần footer cuối trang */
-.navigation-footer { /* Định nghĩa style cho phần tử có class 'navigation-footer' */
+.navigation-footer {
  background: #ffffff; /* Màu nền trắng */
  height: 264px; /* Chiều cao cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
@@ -184,7 +183,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Cột 'Về công ty' */
-.items2 { /* Định nghĩa style cho phần tử có class 'items2' */
+.items2 {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
@@ -197,7 +196,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Tên đề mục như 'Về công ty', 'Liên hệ' */
-.topic { /* Định nghĩa style cho phần tử có class 'topic' */
+.topic {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family:"Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -212,7 +211,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Các dòng thông tin phụ */
-.page2 { /* Định nghĩa style cho phần tử có class 'page2' */
+.page2 {
  color: #454545; /* Màu chữ xám đậm */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -227,7 +226,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Cột 'Liên hệ' */
-.items3 { /* Định nghĩa style cho phần tử có class 'items3' */
+.items3 {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
@@ -240,7 +239,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Dự phòng cho cột thứ 3 nếu cần */
-.items4 { /* Định nghĩa style cho phần tử có class 'items4' */
+.items4 {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
@@ -253,7 +252,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Tên thương hiệu ở footer */
-.site-name2 { /* Định nghĩa style cho phần tử có class 'site-name2' */
+.site-name2 {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -269,7 +268,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Nhóm icons mạng xã hội */
-.social-icons { /* Định nghĩa style cho phần tử có class 'social-icons' */
+.social-icons {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
  gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
@@ -281,7 +280,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Nút chứa mỗi icon */
-.buttons-icon { /* Định nghĩa style cho phần tử có class 'buttons-icon' */
+.buttons-icon {
  border-radius: 4px; /* Bo tròn góc 4px */
  padding: 8px; /* Đệm trong 8px */
  flex-shrink: 0; /* Ngăn không cho phần tử co lại */
@@ -291,7 +290,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Kích thước các icons mạng xã hội */
-.icon { /* Định nghĩa style cho phần tử có class 'icon' */
+.icon {
  width: 24px; /* Chiều rộng cố định */
  height: 24px; /* Chiều cao cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
@@ -299,7 +298,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  top: 8px; /* Cách lề trên 8px */
  overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
 }
-.icon2 { /* Định nghĩa style cho phần tử có class 'icon2' */
+.icon2 {
  width: 24px; /* Chiều rộng cố định */
  height: 24px; /* Chiều cao cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
@@ -307,7 +306,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  top: 8px; /* Cách lề trên 8px */
  overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
 }
-.icon3 { /* Định nghĩa style cho phần tử có class 'icon3' */
+.icon3 {
  width: 24px; /* Chiều rộng cố định */
  height: 24px; /* Chiều cao cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
@@ -315,7 +314,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  top: 8px; /* Cách lề trên 8px */
  overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
 }
-.icon4 { /* Định nghĩa style cho phần tử có class 'icon4' */
+.icon4 {
  width: 24px; /* Chiều rộng cố định */
  height: 24px; /* Chiều cao cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
@@ -325,7 +324,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Đường kẻ phân cách */
-.divider { /* Định nghĩa style cho phần tử có class 'divider' */
+.divider {
  margin-top: -1px; /* Đẩy lên trên 1px */
  border-style: solid; /* Kiểu viền liền */
  border-color: #e6e6e6; /* Màu viền xám nhạt */
@@ -340,7 +339,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Layout của form 'Liên hệ' */
-.form { /* Định nghĩa style cho phần tử có class 'form' */
+.form {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
  gap: 32px; /* Khoảng cách giữa các phần tử con là 32px */
@@ -357,7 +356,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Cấu trúc từng ô input */
-.input { /* Định nghĩa style cho phần tử có class 'input' */
+.input {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
@@ -369,7 +368,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  position: relative; /* Đặt vị trí tương đối */
 }
 
-.input2 { /* Định nghĩa style cho phần tử có class 'input2' */
+.input2 {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
@@ -381,7 +380,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  position: relative; /* Đặt vị trí tương đối */
 }
 
-.input3 { /* Định nghĩa style cho phần tử có class 'input3' */
+.input3 {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
@@ -393,7 +392,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  position: relative; /* Đặt vị trí tương đối */
 }
 
-.input4 { /* Định nghĩa style cho phần tử có class 'input4' */
+.input4 {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
@@ -406,7 +405,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Cấu trúc từng ô input */
-.first-name { /* Định nghĩa style cho phần tử có class 'first-name' */
+.first-name {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -417,7 +416,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
-.last-name { /* Định nghĩa style cho phần tử có class 'last-name' */
+.last-name {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -428,7 +427,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
-.email-address { /* Định nghĩa style cho phần tử có class 'email-address' */
+.email-address {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -439,7 +438,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
-.your-message { /* Định nghĩa style cho phần tử có class 'your-message' */
+.your-message {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -451,7 +450,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Hộp nhập dữ liệu */
-.field { /* Định nghĩa style cho phần tử có class 'field' */
+.field {
  background: #ffffff; /* Màu nền trắng */
  border-radius: 8px; /* Bo tròn góc 8px */
  border-style: solid; /* Kiểu viền liền */
@@ -470,7 +469,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 
 /* Style cho input và textarea */
 .field input.label, /* Chọn thẻ <input> có class 'label' bên trong phần tử có class 'field' */
-.field textarea.label { /* Chọn thẻ <textarea> có class 'label' bên trong phần tử có class 'field' */
+.field textarea.label {
  width: 100%; /* Chiều rộng 100% */
  padding: 12px 16px; /* Đệm trong (trên/dưới 12px, trái/phải 16px) */
  border: none; /* Xóa viền */
@@ -486,7 +485,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Nút gửi form */
-.button3 { /* Định nghĩa style cho phần tử có class 'button3' */
+.button3 {
  background: #000000; /* Màu nền đen */
  border-radius: 8px; /* Bo tròn góc 8px */
  padding: 16px 32px 16px 32px; /* Đệm trong (trên, phải, dưới, trái) */
@@ -501,7 +500,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Text trong nút gửi */
-.submit { /* Định nghĩa style cho phần tử có class 'submit' */
+.submit {
  color: #ffffff; /* Màu chữ trắng */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
@@ -515,7 +514,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* Tiêu đề 'Liên hệ' */
-.heading { /* Định nghĩa style cho phần tử có class 'heading' */
+.heading {
  display: flex; /* Sử dụng Flexbox */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
@@ -526,7 +525,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  left: 80px; /* Cách lề trái 80px */
  top: 845px; /* Cách lề trên 845px */
 }
-.contact-me { /* Định nghĩa style cho phần tử có class 'contact-me' */
+.contact-me {
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn chữ về bên trái */
  font-family: "Inter-SemiBold", sans-serif; /* Font chữ Inter SemiBold, nếu không có thì dùng sans-serif */
@@ -538,16 +537,16 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
 }
 
 /* ---------- Responsive MOBILE (≤768px) ---------- */
-@media (max-width: 768px) { /* Áp dụng các style này khi chiều rộng màn hình nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
  /* Tự động giới hạn chiều cao và hiển thị đẹp trên mobile */
- .about { /* Điều chỉnh style cho phần tử có class 'about' trên mobile */
+ .about {
  height: auto; /* Chiều cao tự động */
  min-height: 100vh; /* Chiều cao tối thiểu 100% chiều cao viewport */
  padding-bottom: 24px; /* Đệm dưới 24px */
  overflow: visible; /* Cho phép nội dung tràn ra ngoài */
  }
 
- .image { /* Điều chỉnh style cho phần tử có class 'image' trên mobile */
+ .image {
  position: static; /* Vị trí tĩnh (theo luồng tài liệu bình thường) */
  display: block; /* Hiển thị dưới dạng khối */
  width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
@@ -557,7 +556,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  right: unset; left: unset; top: unset; /* Xóa các thuộc tính định vị tuyệt đối */
  }
 
- .copy { /* Điều chỉnh style cho phần tử có class 'copy' trên mobile */
+ .copy {
  position: static; /* Vị trí tĩnh */
  width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
  min-width: unset; /* Xóa chiều rộng tối thiểu */
@@ -566,25 +565,25 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  gap: 16px; /* Khoảng cách giữa các phần tử con là 16px */
  }
 
- .about2 { /* Điều chỉnh style cho phần tử có class 'about2' trên mobile */
+ .about2 {
  font-size: 36px; /* Kích thước font chữ */
  margin-bottom: 8px; /* Margin dưới 8px */
  }
- .subheading-for-description-or-instructions { /* Điều chỉnh style cho phần tử có class 'subheading-for-description-or-instructions' trên mobile */
+ .subheading-for-description-or-instructions {
  font-size: 18px; /* Kích thước font chữ */
  }
- .paragraph { /* Điều chỉnh style cho phần tử có class 'paragraph' trên mobile */
+ .paragraph {
  font-size: 16px; /* Kích thước font chữ */
  }
 
- .navigation { /* Điều chỉnh style cho phần tử có class 'navigation' trên mobile */
+ .navigation {
  height: auto; /* Chiều cao tự động */
  min-height: 100px; /* Chiều cao tối thiểu 100px */
  position: static; /* Vị trí tĩnh */
  padding-top: 16px; /* Đệm trên 16px */
  padding-bottom: 16px; /* Đệm dưới 16px */
  }
- .items { /* Điều chỉnh style cho phần tử có class 'items' trên mobile */
+ .items {
  position: static; /* Vị trí tĩnh */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
  gap: 10px; /* Khoảng cách giữa các phần tử con là 10px */
@@ -592,14 +591,14 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  margin-top: 12px; /* Margin trên 12px */
  right: unset; left: unset; /* Xóa các thuộc tính định vị tuyệt đối */
  }
- .page { /* Điều chỉnh style cho phần tử có class 'page' trên mobile */
+ .page {
  font-size: 16px; /* Kích thước font chữ */
  margin-bottom: 2px; /* Margin dưới 2px */
  }
- .button { /* Điều chỉnh style cho phần tử có class 'button' trên mobile */
+ .button {
  padding: 10px 16px; /* Đệm trong (trên/dưới 10px, trái/phải 16px) */
  }
- .site-name { /* Điều chỉnh style cho phần tử có class 'site-name' trên mobile */
+ .site-name {
  font-size: 32px; /* Kích thước font chữ */
  top: 12px; /* Cách lề trên 12px */
  left: 20px; /* Cách lề trái 20px */
@@ -607,7 +606,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  margin-bottom: 8px; /* Margin dưới 8px */
  }
 
- .navigation-footer { /* Điều chỉnh style cho phần tử có class 'navigation-footer' trên mobile */
+ .navigation-footer {
  position: static; /* Vị trí tĩnh */
  width: 100vw; /* Chiều rộng 100% chiều rộng viewport */
  padding: 24px 0; /* Đệm trong (trên/dưới 24px, trái/phải 0) */
@@ -618,7 +617,7 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  align-items: center; /* Căn giữa các phần tử theo chiều ngang */
  gap: 16px; /* Khoảng cách giữa các phần tử con là 16px */
  }
- .items2, .items3, .items4 { /* Điều chỉnh style cho các phần tử có class 'items2', 'items3', 'items4' trên mobile */
+ .items2, .items3, .items4 {
  position: static; /* Vị trí tĩnh */
  width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
  flex-direction: column; /* Sắp xếp các phần tử con theo cột */
@@ -630,12 +629,12 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  left: unset; /* Xóa thuộc tính left */
  top: unset; /* Xóa thuộc tính top */
  }
- .site-name2 { /* Điều chỉnh style cho phần tử có class 'site-name2' trên mobile */
+ .site-name2 {
  position: static; /* Vị trí tĩnh */
  margin-top: 8px; /* Margin trên 8px */
  font-size: 28px; /* Kích thước font chữ */
  }
- .social-icons { /* Điều chỉnh style cho phần tử có class 'social-icons' trên mobile */
+ .social-icons {
  position: static; /* Vị trí tĩnh */
  margin: 8px 0 0 0; /* Margin (trên 8px, các cạnh khác 0) */
  left: unset; /* Xóa thuộc tính left */
@@ -645,11 +644,11 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
  }
 
- .divider { /* Điều chỉnh style cho phần tử có class 'divider' trên mobile */
+ .divider {
  display: none; /* Ẩn phần tử */
  }
 
- .form { /* Điều chỉnh style cho phần tử có class 'form' trên mobile */
+ .form {
  position: static; /* Vị trí tĩnh */
  width: 92vw; /* Chiều rộng 92% chiều rộng viewport */
  min-width: unset; /* Xóa chiều rộng tối thiểu */
@@ -658,35 +657,35 @@ ul { /* Chọn tất cả các thẻ <ul> (danh sách không thứ tự) */
  gap: 14px; /* Khoảng cách giữa các phần tử con là 14px */
  margin: 24px auto auto auto; /* Căn giữa theo chiều ngang, margin trên 24px */
  }
- .input, .input2, .input3, .input4 { /* Điều chỉnh style cho các phần tử input trên mobile */
+ .input, .input2, .input3, .input4 {
  width: 100%; /* Chiều rộng 100% */
  min-width: unset; /* Xóa chiều rộng tối thiểu */
  max-width: 100vw; /* Chiều rộng tối đa 100% chiều rộng viewport */
  height: fit-content; /* Chiều cao tự điều chỉnh theo nội dung */
  }
- .field input.label, .field textarea.label { /* Điều chỉnh style cho input và textarea bên trong 'field' trên mobile */
+ .field input.label, .field textarea.label {
  font-size: 15px; /* Kích thước font chữ */
  height: 42px; /* Chiều cao cố định */
  min-height: 32px; /* Chiều cao tối thiểu */
  padding: 10px 10px; /* Đệm trong (trên/dưới 10px, trái/phải 10px) */
  }
- .input4 .field textarea.label { /* Điều chỉnh chiều cao cho textarea cụ thể trong input4 trên mobile */
+ .input4 .field textarea.label {
  height: 80px!important; /* Chiều cao cố định 80px, ưu tiên cao nhất */
  }
- .button3 { /* Điều chỉnh style cho phần tử có class 'button3' trên mobile */
+ .button3 {
  width: 96%; /* Chiều rộng 96% */
  margin: 0 auto; /* Căn giữa theo chiều ngang */
  padding: 12px 0; /* Đệm trong (trên/dưới 12px, trái/phải 0) */
  }
- .submit { /* Điều chỉnh style cho phần tử có class 'submit' trên mobile */
+ .submit {
  font-size: 17px; /* Kích thước font chữ */
  }
- .heading { /* Điều chỉnh style cho phần tử có class 'heading' trên mobile */
+ .heading {
  position: static; /* Vị trí tĩnh */
  width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
  margin: 24px auto 6px auto; /* Căn giữa theo chiều ngang, margin trên 24px, margin dưới 6px */
  }
- .contact-me { /* Điều chỉnh style cho phần tử có class 'contact-me' trên mobile */
+ .contact-me {
  font-size: 22px; /* Kích thước font chữ */
  }
 }
