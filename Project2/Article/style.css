@@ -24,7 +24,7 @@ menu, /* Chọn tất cả các thẻ menu */
 ol, /* Chọn tất cả các thẻ danh sách có thứ tự (ordered list) */
 ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered list) */
     list-style-type: none; /* Không hiển thị dấu đầu dòng */
-    margin: 0; /* Xóa khoảng cách ngoài (margin) mặc định */ 
+    margin: 0; /* Xóa khoảng cách ngoài (margin) mặc định */
     padding: 0; /* Xóa khoảng cách trong (padding) mặc định */
 }
 
@@ -37,51 +37,53 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
 /* Phần khung chính của trang bài viết */
 .article {
     background: #ffffff; /* Đặt màu nền là trắng */
-    height: 3603px; /* Đặt chiều cao cố định */
-    position: relative; /* Đặt vị trí tương đối để các phần tử con có thể định vị tuyệt đối */
-    overflow: hidden; /* Ẩn phần nội dung tràn ra khỏi khung */
+    position: relative; /* Giữ lại position relative cho các phần tử con (nếu có position absolute) */
+    padding-top: 174px; /* Thêm padding-top bằng chiều cao của navigation để nội dung không bị che */
+    padding-bottom: 50px; /* Thêm padding dưới để tạo khoảng trống trước footer */
 }
 
-/* Phần tiêu đề các bài viết liên quan */
+/* Phần tiêu đề các bài viết liên quan (Sản phẩm nổi bật) */
 .related-articles-or-posts {
     color: #000000; /* Đặt màu chữ là đen */
     text-align: left; /* Căn văn bản sang trái */
-    font-family: "Inter-SemiBold", sans-serif; /* Đặt kiểu chữ "Inter-SemiBold", nếu không có sẽ dùng font sans-serif mặc định */
+    font-family: "Inter-SemiBold", sans-serif; /* Đặt kiểu chữ "Inter-SemiBold" */
     font-size: 40px; /* Đặt cỡ chữ */
-    line-height: 110%; /* Đặt chiều cao dòng, 110% của font-size */
-    font-weight: 600; /* Đặt độ đậm chữ (semi-bold) */
-    position: relative; /* Đặt vị trí tương đối */
-    left: 80px; /* Cách lề trái 80px */
-    top: 2663px; /* Cách lề trên 2663px */ 
+    line-height: 110%; /* Đặt chiều cao dòng */
+    font-weight: 600; /* Đặt độ đậm chữ */
+    margin-left: 80px; /* Căn lề trái */
+    margin-top: 100px; /* Khoảng cách từ phần tử phía trên */
     width: 625px; /* Đặt chiều rộng cố định */
 }
 
-/* Nội dung đoạn văn bài viết */
+/* Nội dung đoạn văn bài viết (đoạn cuối) */
 .paragraph {
     color: #000000; /* Đặt màu chữ là đen */
     text-align: left; /* Căn văn bản sang trái */
     font-family: "Inter-Medium", sans-serif; /* Đặt kiểu chữ "Inter-Medium" */
     font-size: 20px; /* Đặt cỡ chữ */
-    line-height: 150%; /* Đặt chiều cao dòng, 150% của font-size */
-    font-weight: 500; /* Đặt độ đậm chữ (medium) */
-    position: absolute; /* Định vị phần tử tuyệt đối so với phần tử cha có position là relative */
-    right: 20.76%; /* Cách lề phải 20.76% chiều rộng của phần tử cha */
-    left: 20.76%; /* Cách lề trái 20.76% chiều rộng của phần tử cha */
+    line-height: 150%; /* Đặt chiều cao dòng */
+    font-weight: 500; /* Đặt độ đậm chữ */
+    margin-left: 20.76%;
+    margin-right: 20.76%;
     width: 58.47%; /* Đặt chiều rộng là 58.47% của phần tử cha */
-    top: 2273px; /* Cách lề trên 2273px */
+    margin-top: 80px; /* Khoảng cách từ phần tử phía trên */
 }
 
-/* Dòng ảnh minh họa ngang */
+/* Dòng ảnh minh họa ngang (image0article và image1article) */
 .images {
     display: flex; /* Sử dụng flexbox để sắp xếp các phần tử con */
     flex-direction: row; /* Xếp các phần tử con theo hàng ngang */
     gap: 122px; /* Đặt khoảng cách giữa các phần tử con là 122px */
     align-items: flex-start; /* Căn các phần tử con theo cạnh trên của trục cross-axis (chiều dọc) */
-    justify-content: flex-start; /* Căn các phần tử con theo cạnh trái của trục main-axis (chiều ngang) */
-    position: absolute; /* Định vị tuyệt đối */
-    left: 50%; /* Dịch phần tử sang trái 50% chiều rộng của phần tử cha */
-    translate: -50%; /* Dịch ngược phần tử sang trái 50% chiều rộng của chính nó để căn giữa */
-    top: 1757px; /* Cách lề trên 1757px */
+    justify-content: center; /* Căn giữa các phần tử con theo trục main-axis (chiều ngang) */
+    margin-top: 80px; /* Khoảng cách từ phần tử phía trên */
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: fit-content; */ /* Có thể gây lỗi nếu nội dung rộng hơn viewport, bỏ đi để trình duyệt xử lý */
+    flex-wrap: nowrap; /* ! QUAN TRỌNG: Ngăn không cho các ảnh xuống dòng */
+    overflow-x: auto; /* ! QUAN TRỌNG: Cho phép cuộn ngang nếu nội dung tràn ra ngoài */
+    -webkit-overflow-scrolling: touch; /* Hỗ trợ cuộn mượt trên iOS */
+    padding: 0 20px; /* Thêm padding ngang để nội dung không chạm rìa trên thiết bị nhỏ */
 }
 
 /* Kiểu ảnh nhỏ trong hàng ngang*/
@@ -93,21 +95,22 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: relative; /* Đặt vị trí tương đối */
     overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
     object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo, cắt bỏ phần thừa */
+    /* max-width: 100%; */ /* Bỏ thuộc tính này ở đây nếu bạn muốn nó không xuống dòng trên desktop.
+                         Nó sẽ được đưa vào media query cho màn hình nhỏ hơn. */
 }
 
-/* Đoạn văn thứ 2 */
+/* Đoạn văn thứ 2 (đoạn đầu tiên) */
 .paragraph2 {
     color: #000000; /* Đặt màu chữ là đen */
     text-align: left; /* Căn văn bản sang trái */
     font-family: "Inter-Medium", sans-serif; /* Đặt kiểu chữ "Inter-Medium" */
     font-size: 20px; /* Đặt cỡ chữ */
-    line-height: 150%; /* Đặt chiều cao dòng, 150% của font-size */
-    font-weight: 500; /* Đặt độ đậm chữ (medium) */
-    position: absolute; /* Định vị tuyệt đối */
-    right: 20.76%; /* Cách lề phải 20.76% */
-    left: 20.76%; /* Cách lề trái 20.76% */
+    line-height: 150%; /* Đặt chiều cao dòng */
+    font-weight: 500; /* Đặt độ đậm chữ */
+    margin-left: 20.76%;
+    margin-right: 20.76%;
     width: 58.47%; /* Đặt chiều rộng là 58.47% */
-    top: 1227px; /* Cách lề trên 1227px */
+    margin-top: 80px; /* Khoảng cách từ phần tử phía trên */
 }
 
 /* Ảnh chính bài viết */
@@ -115,10 +118,10 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     border-radius: 8px; /* Bo góc ảnh với bán kính 8px */
     width: 88.96%; /* Đặt chiều rộng là 88.96% của phần tử cha */
     height: 650px; /* Đặt chiều cao cố định */
-    position: absolute; /* Định vị tuyệt đối */
-    right: 5.49%; /* Cách lề phải 5.49% */
-    left: 5.56%; /* Cách lề trái 5.56% */
-    top: 497px; /* Cách lề trên 497px */
+    display: block; /* Đảm bảo margin auto hoạt động cho chiều ngang */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px; /* Khoảng cách từ phần tử phía trên */
     overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
     object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo */
 }
@@ -126,36 +129,34 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
 /* Khối chứa tiêu đề và phụ đề bài viết */
 .article-title {
     display: flex; /* Sử dụng flexbox */
-    flex-direction: column; /* Xếp các phần tử con theo chiều dọc (từ trên xuống) */
+    flex-direction: column; /* Xếp các phần tử con theo chiều dọc */
     gap: 24px; /* Đặt khoảng cách giữa các phần tử con là 24px */
-    align-items: flex-start; /* Căn các phần tử con theo cạnh trái của trục cross-axis (chiều ngang) */
-    justify-content: center; /* Căn các phần tử con ở giữa theo trục main-axis (chiều dọc) */
+    align-items: flex-start; /* Căn các phần tử con theo cạnh trái của trục cross-axis */
+    justify-content: center; /* Căn các phần tử con ở giữa theo trục main-axis */
     width: 50.9%; /* Đặt chiều rộng là 50.9% */
-    position: absolute; /* Định vị tuyệt đối */
-    right: 43.54%; /* Cách lề phải 43.54% */
-    left: 5.56%; /* Cách lề trái 5.56% */
-    top: 244px; /* Cách lề trên 244px */
+    margin-left: 5.56%; /* Căn lề trái */
+    margin-top: 80px; /* Khoảng cách từ navigation (đã có padding-top trên .article) */
 }
 
 /* Tiêu đề chính */
 .article-or-post-title {
-    color: #000000; /* Đặt màu chữ là đen */
+    color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản sang trái */
     font-family: "Inter-Bold", sans-serif; /* Đặt kiểu chữ "Inter-Bold" */
-    font-size: 64px; /* Đặt cỡ chữ */ 
+    font-size: 64px; /* Đặt cỡ chữ */
     letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các chữ cái */
-    font-weight: 600; /* Đặt độ đậm chữ (semi-bold) */
+    font-weight: 600; /* Đặt độ đậm chữ */
     position: relative; /* Đặt vị trí tương đối */
-    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc để lấp đầy không gian còn lại */
+    align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
 }
 
 .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading {
     color: rgba(0, 0, 0, 0.75); /* Màu chữ đen với độ trong suốt 75% */
-    text-align: center; /* Căn văn bản giữa */
+    text-align: left; /* Căn văn bản trái */
     font-family: "Inter-Regular", sans-serif; /* Kiểu chữ "Inter-Regular" */
     font-size: 24px; /* Cỡ chữ */
     line-height: 150%; /* Chiều cao dòng */
-    font-weight: 400; /* Độ đậm chữ (regular) */
+    font-weight: 400; /* Độ đậm chữ */
     position: relative; /* Vị trí tương đối */
     align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
     display: flex; /* Sử dụng flexbox */
@@ -171,6 +172,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     left: 0px; /* Cách lề trái 0px */
     top: 0px; /* Cách lề trên 0px */
     z-index: 1000; /* Đặt mức độ ưu tiên hiển thị cao hơn các phần tử khác */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Thêm bóng để nổi bật */
 }
 
 .items {
@@ -190,7 +192,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
     font-size: 20px; /* Cỡ chữ */
     line-height: 150%; /* Chiều cao dòng */
-    font-weight: 500; /* Độ đậm chữ (medium) */
+    font-weight: 500; /* Độ đậm chữ */
     position: relative; /* Vị trí tương đối */
     display: flex; /* Sử dụng flexbox */
     align-items: center; /* Căn giữa các mục theo chiều dọc */
@@ -200,15 +202,15 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
 .button {
     background: #000000; /* Nền đen */
     border-radius: 8px; /* Bo góc nút */
-    padding: 14px 24px 14px 24px; /* Khoảng đệm bên trong nút: trên 14px, phải 24px, dưới 14px, trái 24px */
+    padding: 14px 24px 14px 24px; /* Khoảng đệm bên trong nút */
     display: flex; /* Sử dụng flexbox */
     flex-direction: row; /* Xếp các mục theo hàng ngang */
     gap: 8px; /* Khoảng cách giữa các mục */
     align-items: center; /* Căn giữa các mục theo chiều dọc */
     justify-content: center; /* Căn giữa các mục theo chiều ngang */
-    flex-shrink: 0; /* Ngăn nút co lại nếu không gian bị giới hạn */
+    flex-shrink: 0; /* Ngăn nút co lại */
     position: relative; /* Vị trí tương đối */
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Đổ bóng: dịch chuyển theo x=0, y=1px, độ mờ=2px, màu đen với độ trong suốt 5% */
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Đổ bóng */
 }
 
 .site-name {
@@ -217,7 +219,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
     font-size: 60px; /* Cỡ chữ */
     line-height: 150%; /* Chiều cao dòng */
-    font-weight: 500; /* Độ đậm chữ (medium) */
+    font-weight: 500; /* Độ đậm chữ */
     position: absolute; /* Định vị tuyệt đối */
     left: 80px; /* Cách lề trái 80px */
     top: 67px; /* Cách lề trên 67px */
@@ -229,10 +231,8 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
 .navigation-footer {
     background: #ffffff; /* Nền trắng */
     height: 264px; /* Chiều cao cố định */
-    position: absolute; /* Định vị tuyệt đối */
-    right: 1px; /* Cách lề phải 1px */
-    left: -1px; /* Cách lề trái -1px */
-    top: 3339px; /* Cách lề trên 3339px */
+    position: relative; /* Đặt vị trí tương đối để nó nằm trong luồng tài liệu */
+    margin-top: 100px; /* Khoảng cách từ phần tử phía trên (nếu cần) */
     overflow: hidden; /* Ẩn phần nội dung tràn ra khỏi khung */
 }
 
@@ -254,7 +254,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
     font-size: 16px; /* Cỡ chữ */
     line-height: 150%; /* Chiều cao dòng */
-    font-weight: 500; /* Độ đậm chữ (medium) */
+    font-weight: 500; /* Độ đậm chữ */
     position: relative; /* Vị trí tương đối */
     align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
     display: flex; /* Sử dụng flexbox */
@@ -268,7 +268,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
     font-size: 16px; /* Cỡ chữ */
     line-height: 150%; /* Chiều cao dòng */
-    font-weight: 500; /* Độ đậm chữ (medium) */
+    font-weight: 500; /* Độ đậm chữ */
     position: relative; /* Vị trí tương đối */
     align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
     display: flex; /* Sử dụng flexbox */
@@ -306,7 +306,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     font-family: "Inter-Medium", sans-serif; /* Kiểu chữ "Inter-Medium" */
     font-size: 60px; /* Cỡ chữ */
     line-height: 150%; /* Chiều cao dòng */
-    font-weight: 500; /* Độ đậm chữ (medium) */
+    font-weight: 500; /* Độ đậm chữ */
     position: absolute; /* Định vị tuyệt đối */
     left: 80px; /* Cách lề trái 80px */
     top: 37px; /* Cách lề trên 37px */
@@ -341,7 +341,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: absolute; /* Định vị tuyệt đối */
     left: 8px; /* Cách lề trái 8px */
     top: 8px; /* Cách lề trên 8px */
-    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
 .icon2 {
@@ -350,7 +350,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: absolute; /* Định vị tuyệt đối */
     left: 8px; /* Cách lề trái 8px */
     top: 8px; /* Cách lề trên 8px */
-    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
 .icon3 {
@@ -359,7 +359,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: absolute; /* Định vị tuyệt đối */
     left: 8px; /* Cách lề trái 8px */
     top: 8px; /* Cách lề trên 8px */
-    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
 .icon4 {
@@ -368,15 +368,15 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: absolute; /* Định vị tuyệt đối */
     left: 8px; /* Cách lề trái 8px */
     top: 8px; /* Cách lề trên 8px */
-    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung (nếu có) */
+    overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
 .divider {
     margin-top: -1px; /* Đẩy đường phân chia lên 1px */
     border-style: solid; /* Kiểu đường viền liền */
     border-color: #e6e6e6; /* Màu đường viền */
-    border-width: 1px 0 0 0; /* Độ rộng đường viền: trên 1px, các cạnh còn lại 0 */
-    width: 1280px; /* Chiều rộng cố định */
+    border-width: 1px 0 0 0; /* Độ rộng đường viền */
+    width: calc(100% - 160px); /* Chiều rộng linh hoạt, trừ đi padding hai bên */
     height: 0px; /* Chiều cao 0px (chỉ hiển thị đường viền) */
     position: absolute; /* Định vị tuyệt đối */
     left: 80px; /* Cách lề trái 80px */
@@ -385,15 +385,21 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     transform: rotate(0deg) scale(1, 1); /* Không xoay, không thay đổi kích thước */
 }
 
+/* Các thẻ sản phẩm nổi bật (image3, image4, image5) */
 .cards {
     display: flex; /* Sử dụng flexbox */
     flex-direction: row; /* Xếp các thẻ theo hàng ngang */
     gap: 135px; /* Khoảng cách giữa các thẻ */
     align-items: flex-start; /* Căn các thẻ về phía đầu theo chiều dọc */
-    justify-content: flex-start; /* Căn các thẻ về phía đầu theo chiều ngang */
-    position: absolute; /* Định vị tuyệt đối */
-    left: 210px; /* Cách lề trái 210px */
-    top: 2755px; /* Cách lề trên 2755px */
+    justify-content: center; /* Căn giữa các thẻ theo chiều ngang */
+    margin-top: 100px; /* Khoảng cách từ phần tử phía trên */
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: fit-content; */ /* Có thể gây lỗi nếu nội dung rộng hơn viewport, bỏ đi */
+    flex-wrap: nowrap; /* ! QUAN TRỌNG: Ngăn không cho các thẻ xuống dòng */
+    overflow-x: auto; /* ! QUAN TRỌNG: Cho phép cuộn ngang nếu nội dung tràn ra ngoài */
+    -webkit-overflow-scrolling: touch; /* Hỗ trợ cuộn mượt trên iOS */
+    padding: 0 20px; /* Thêm padding ngang để nội dung không chạm rìa trên thiết bị nhỏ */
 }
 
 .card {
@@ -402,10 +408,12 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     gap: 24px; /* Khoảng cách giữa các nội dung */
     align-items: flex-start; /* Căn các nội dung về phía đầu theo chiều ngang */
     justify-content: flex-start; /* Căn các nội dung về phía đầu theo chiều dọc */
-    flex-shrink: 0; /* Ngăn thẻ co lại */
-    width: 404px; /* Chiều rộng cố định */
-    height: 434px; /* Chiều cao cố định */
+    flex-shrink: 0; /* ! QUAN TRỌNG: Ngăn thẻ co lại khi không đủ chỗ */
+    width: 404px; /* Đặt chiều rộng cố định */
+    height: 434px; /* Đặt chiều cao cố định */
     position: relative; /* Vị trí tương đối */
+    /* max-width: 100%; */ /* Bỏ thuộc tính này ở đây nếu bạn muốn nó không xuống dòng trên desktop.
+                         Nó sẽ được đưa vào media query cho màn hình nhỏ hơn. */
 }
 
 .image3 {
@@ -452,4 +460,190 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     display: flex; /* Sử dụng flexbox */
     align-items: center; /* Căn giữa các mục theo chiều dọc */
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
+}
+
+/* Thêm Media Queries để tối ưu trên các kích thước màn hình nhỏ hơn (ví dụ: máy tính bảng) */
+@media (max-width: 1200px) {
+    /* Đảm bảo flex-wrap hoạt động trên màn hình nhỏ */
+    .images, .cards {
+        flex-direction: row; /* Giữ nguyên hàng ngang cho màn hình này */
+        flex-wrap: wrap; /* Cho phép xuống dòng nếu không đủ chỗ */
+        justify-content: center; /* Căn giữa khi xuống dòng */
+        gap: 50px; /* Giảm khoảng cách */
+        padding: 0 20px; /* Đảm bảo padding để tránh chạm rìa */
+    }
+
+    .image, .card {
+        width: 45%; /* Điều chỉnh để 2 ảnh/card trên một hàng trên tablet */
+        height: auto; /* Chiều cao tự động điều chỉnh */
+        max-width: 624px; /* Giới hạn chiều rộng tối đa */
+    }
+    
+    /* Điều chỉnh lại kích thước cho card để nó vẫn xếp được 2 cái trên 1 hàng ở 1200px */
+    .card {
+      width: 45%; /* Ví dụ: để 2 card trên 1 hàng, hoặc 33% cho 3 card */
+    }
+
+
+    .paragraph, .paragraph2 {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .article-title {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 50px; /* Điều chỉnh margin-top cho màn hình nhỏ */
+    }
+
+    .article-or-post-title {
+        font-size: 48px; /* Giảm cỡ chữ */
+    }
+
+    .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading {
+        font-size: 20px; /* Giảm cỡ chữ */
+    }
+
+    .related-articles-or-posts {
+        margin-left: 5%;
+        width: 90%;
+    }
+    .image2 {
+        margin-top: 50px; /* Điều chỉnh margin-top cho màn hình nhỏ */
+    }
+}
+
+@media (max-width: 768px) {
+    .article-or-post-title {
+        font-size: 36px;
+    }
+
+    .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading,
+    .paragraph, .paragraph2, .author, .title {
+        font-size: 18px;
+    }
+
+    .related-articles-or-posts {
+        font-size: 30px;
+        margin-top: 80px; /* Điều chỉnh margin-top */
+    }
+
+    /* Trên màn hình nhỏ hơn, cho phép flex-wrap */
+    .images, .cards {
+        flex-direction: column; /* Chuyển sang xếp dọc */
+        align-items: center; /* Căn giữa theo chiều ngang */
+        gap: 50px; /* Giảm khoảng cách */
+        flex-wrap: wrap; /* Cho phép xuống dòng */
+    }
+
+    .image, .card {
+        width: 95%; /* Chiếm phần lớn chiều rộng màn hình */
+        height: auto; /* Chiều cao tự động điều chỉnh */
+    }
+
+    .image2 {
+        width: 95%;
+    }
+
+    /* Điều chỉnh vị trí footer items để tránh chồng chéo trên màn hình nhỏ */
+    .navigation-footer {
+        height: auto; /* Chiều cao tự động */
+        padding-top: 40px;
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        position: relative; /* Đổi thành relative để không bị chồng chéo nếu content không đủ dài */
+    }
+    
+    .navigation-footer .items2,
+    .navigation-footer .items3,
+    .navigation-footer .items4,
+    .navigation-footer .site-name2,
+    .navigation-footer .social-icons,
+    .navigation-footer .divider {
+        position: static; /* Loại bỏ định vị tuyệt đối */
+        width: auto;
+        margin-left: 80px; /* Đặt lề trái chung */
+        margin-right: 80px; /* Đặt lề phải chung */
+        margin-top: 0; /* Đảm bảo không có margin-top thừa */
+        top: auto; /* Reset top */
+        left: auto; /* Reset left */
+        right: auto; /* Reset right */
+        transform: none; /* Reset transform */
+        flex-direction: column; /* Cho các items trong footer xếp dọc */
+        align-items: flex-start; /* Căn trái các item trong footer */
+    }
+    
+    .navigation-footer .site-name2 {
+      margin-top: 20px; /* Khoảng cách giữa các phần trong footer */
+    }
+
+    .navigation-footer .social-icons {
+      margin-top: 20px;
+    }
+
+    .navigation-footer .divider {
+        width: calc(100% - 160px);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Ẩn các cột footer nếu màn hình quá nhỏ để ưu tiên nội dung chính */
+@media (max-width: 480px) {
+    .navigation-footer .items2,
+    .navigation-footer .items3,
+    .navigation-footer .items4 {
+        display: none;
+    }
+
+    .navigation-footer {
+        padding: 20px 0;
+    }
+
+    .navigation-footer .site-name2,
+    .navigation-footer .social-icons {
+        margin-left: 20px; /* Điều chỉnh lề cho màn hình rất nhỏ */
+        margin-right: 20px;
+    }
+
+    .navigation-footer .divider {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .article-or-post-title {
+        font-size: 28px;
+    }
+    .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading,
+    .paragraph, .paragraph2, .author, .title {
+        font-size: 16px;
+    }
+
+    .related-articles-or-posts {
+        font-size: 24px;
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+    .paragraph, .paragraph2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: calc(100% - 40px);
+    }
+    .article-title {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+    /* Trên màn hình rất nhỏ, cho phép ảnh và card chiếm toàn bộ chiều rộng */
+    .image, .card, .image2 {
+        width: calc(100% - 40px);
+    }
+    .images, .cards {
+        gap: 30px; /* Giảm khoảng cách cho màn hình rất nhỏ */
+    }
 }

@@ -27,35 +27,41 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
 .product-detail-page * { /* Áp dụng cho tất cả các phần tử con bên trong */
  box-sizing: border-box; /* Kích thước hộp bao gồm padding và border */
 }
+
 .product-detail-page { /* Trang chi tiết sản phẩm */
- background: #ffffff; /* Màu nền trắng */
- height: 2400px; /* Chiều cao cố định của trang */
- position: relative; /* Đặt vị trí tương đối cho các phần tử con tuyệt đối */
- overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  background: #ffffff; /* Màu nền trắng */
+  min-height: 2400px; /* Thay đổi height thành min-height để nội dung có thể đẩy trang xuống */
+  position: relative; /* Đặt vị trí tương đối cho các phần tử con tuyệt đối */
+  overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  padding-bottom: 300px; /* Thêm padding dưới để có khoảng trống cho footer */
 }
+
 .related-products { /* Tiêu đề "Các sản phẩm của chúng tôi" */
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn lề trái */
- font-family: "Inter-SemiBold", sans-serif; /* Font chữ Inter SemiBold */
- font-size: 32px; /* Cỡ chữ 32px */
- line-height: 150%; /* Chiều cao dòng 150% */
- font-weight: 600; /* Độ đậm font 600 */
- position: absolute; /* Vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 957px; /* Cách lề trên 957px */
- width: 625px; /* Chiều rộng 625px */
+  color: #000000; /* Màu chữ đen */
+  text-align: left; /* Căn lề trái */
+  font-family: "Inter-SemiBold", sans-serif; /* Font chữ Inter SemiBold */
+  font-size: 32px; /* Cỡ chữ 32px */
+  line-height: 150%; /* Chiều cao dòng 150% */
+  font-weight: 600; /* Độ đậm font 600 */
+  /* Sử dụng margin-top để đẩy phần này xuống sau nội dung chính của sản phẩm */
+  margin-top: 1000px; /* Điều chỉnh giá trị này để nó nằm dưới phần sản phẩm chi tiết */
+  margin-left: 80px; /* Giữ lề trái 80px */
+  width: auto; /* Chiều rộng tự động */
+  position: relative; /* Giữ vị trí tương đối */
+  z-index: 1; /* Đảm bảo nó nằm trên nếu có bất kỳ chồng chéo nào */
 }
+
 .copy { /* Nhóm chứa thông tin sản phẩm (tên, mô tả, giá) */
- display: flex; /* Sử dụng flexbox */
- flex-direction: column; /* Sắp xếp các mục theo cột */
- gap: 24px; /* Khoảng cách giữa các mục 24px */
- align-items: flex-start; /* Căn chỉnh các mục ở đầu */
- justify-content: center; /* Căn giữa các mục theo chiều dọc */
- width: 35.76%; /* Chiều rộng 35.76% */
- position: absolute; /* Vị trí tuyệt đối */
- right: 5.56%; /* Cách lề phải 5.56% */
- left: 58.68%; /* Cách lề trái 58.68% */
- top: 275px; /* Cách lề trên 275px */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Sắp xếp các mục theo cột */
+  gap: 24px; /* Khoảng cách giữa các mục 24px */
+  align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+  justify-content: center; /* Căn giữa các mục theo chiều dọc */
+  width: 35.76%; /* Chiều rộng 35.76% */
+  position: absolute; /* Vị trí tuyệt đối */
+  right: 5.56%; /* Cách lề phải 5.56% */
+  left: 58.68%; /* Cách lề trái 58.68% */
+  top: 275px; /* Cách lề trên 275px */
 }
 .product-name { /* Tên sản phẩm */
  color: #000000; /* Màu chữ đen */
@@ -144,18 +150,20 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
  align-items: center; /* Căn giữa các mục theo chiều dọc */
  justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
 }
+
 .image { /* Ảnh sản phẩm chính */
- background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
- border-radius: 12px; /* Bo tròn góc 12px */
- width: 43.4%; /* Chiều rộng 43.4% */
- height: 613px; /* Chiều cao 613px */
- position: absolute; /* Vị trí tuyệt đối */
- right: 51.04%; /* Cách lề phải 51.04% */
- left: 5.56%; /* Cách lề trái 5.56% */
- top: 275px; /* Cách lề trên 275px */
- overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
- object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ đầy container */
+  background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
+  border-radius: 12px; /* Bo tròn góc 12px */
+  width: 43.4%; /* Chiều rộng 43.4% */
+  height: 613px; /* Chiều cao 613px */
+  position: absolute; /* Vị trí tuyệt đối */
+  right: 51.04%; /* Cách lề phải 51.04% */
+  left: 5.56%; /* Cách lề trái 5.56% */
+  top: 275px; /* Cách lề trên 275px */
+  overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ đầy container */
 }
+
 .navigation { /* Thanh điều hướng trên cùng */
  background: #ffffff; /* Màu nền trắng */
  height: 174px; /* Chiều cao 174px */
@@ -358,50 +366,55 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
  transform-origin: 0 0; /* Điểm gốc cho phép biến đổi là góc trên bên trái */
  transform: rotate(0deg) scale(1, 1); /* Không xoay, không thay đổi tỷ lệ */
 }
+
 .card-grid { /* Lưới các thẻ sản phẩm */
- display: flex; /* Sử dụng flexbox */
- flex-direction: row; /* Sắp xếp các mục theo hàng */
- row-gap: 32px; /* Khoảng cách hàng 32px */
- align-items: flex-end; /* Căn chỉnh các mục ở cuối */
- justify-content: space-between; /* Phân bổ khoảng trống đều giữa các mục */
- flex-wrap: wrap; /* Cho phép các mục xuống dòng */
- align-content: flex-end; /* Căn chỉnh các hàng ở cuối */
- width: 1282px; /* Chiều rộng 1282px */
- position: absolute; /* Vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 1090px; /* Cách lề trên 1090px */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: row; /* Sắp xếp các mục theo hàng */
+  flex-wrap: wrap; /* Cho phép các mục xuống dòng */
+  justify-content: flex-start; /* Căn chỉnh các mục ở đầu container */
+  gap: 20px; /* Khoảng cách giữa các thẻ 20px */
+  margin: 32px 80px 0 80px; /* Đặt margin 32px trên, 80px phải, 0 dưới, 80px trái */
+  width: calc(100% - 160px); /* Chiều rộng tính toán dựa trên lề */
+  position: relative; /* Giữ vị trí tương đối */
+  top: auto; /* Loại bỏ thuộc tính top */
+  left: auto; /* Loại bỏ thuộc tính left */
+  align-content: flex-start; /* Căn chỉnh các hàng ở đầu */
 }
+
 .card { /* Thẻ sản phẩm */
- display: flex; /* Sử dụng flexbox */
- flex-direction: column; /* Sắp xếp các mục theo cột */
- gap: 34px; /* Khoảng cách giữa các mục 34px */
- left: 185px; /* Cách lề trái 185px (có thể bị ghi đè bởi card-grid) */
- align-items: flex-start; /* Căn chỉnh các mục ở đầu */
- justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
- flex-shrink: 0; /* Không co lại */
- width: 404px; /* Chiều rộng 404px */
- height: 480px; /* Chiều cao 480px */
- position: relative; /* Vị trí tương đối */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Sắp xếp các mục theo cột */
+  gap: 16px; /* Giảm khoảng cách giữa các mục trong card */
+  align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+  justify-content: flex-start; /* Căn chỉnh các mục ở đầu */
+  flex-shrink: 0; /* Không co lại */
+  width: calc((100% - 40px) / 3); /* Chia đều 3 cột, trừ đi khoảng cách giữa các cột */
+  height: auto; /* Chiều cao tự động */
+  position: relative; /* Vị trí tương đối */
+  left: auto; /* Loại bỏ thuộc tính left */
 }
+
 .image2 { /* Ảnh sản phẩm trong thẻ */
- background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
- border-radius: 8px; /* Bo tròn góc 8px */
- align-self: stretch; /* Kéo dài theo chiều ngang */
- flex: 1; /* Cho phép mở rộng để lấp đầy không gian còn lại */
- position: relative; /* Vị trí tương đối */
- overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
- object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ đầy container */
+  background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
+  border-radius: 8px; /* Bo tròn góc 8px */
+  align-self: stretch; /* Kéo dài theo chiều ngang */
+  flex: 0 0 200px; /* Chiều cao cố định cho ảnh để các card đều nhau, không co dãn */
+  position: relative; /* Vị trí tương đối */
+  overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+  object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ đầy container */
 }
+
 .copy2 { /* Nhóm chứa thông tin sản phẩm trong thẻ */
- display: flex; /* Sử dụng flexbox */
- flex-direction: column; /* Sắp xếp các mục theo cột */
- gap: 4px; /* Khoảng cách giữa các mục 4px */
- align-items: flex-start; /* Căn chỉnh các mục ở đầu */
- justify-content: center; /* Căn giữa các mục theo chiều dọc */
- align-self: stretch; /* Kéo dài theo chiều ngang */
- flex-shrink: 0; /* Không co lại */
- position: relative; /* Vị trí tương đối */
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Sắp xếp các mục theo cột */
+  gap: 4px; /* Khoảng cách giữa các mục 4px */
+  align-items: flex-start; /* Căn chỉnh các mục ở đầu */
+  justify-content: center; /* Căn giữa các mục theo chiều dọc */
+  align-self: stretch; /* Kéo dài theo chiều ngang */
+  flex-shrink: 0; /* Không co lại */
+  position: relative; /* Vị trí tương đối */
 }
+
 .product { /* Tên sản phẩm trong thẻ */
  color: #000000; /* Màu chữ đen */
  text-align: left; /* Căn lề trái */
@@ -515,4 +528,34 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
  font-size: 18px; /* Cỡ chữ 18px */
  border-radius: 4px; /* Bo tròn góc 4px */
  cursor: pointer; /* Thay đổi con trỏ thành biểu tượng bàn tay khi di chuột qua */
+}
+@media (max-width: 1200px) {
+  .card-grid {
+    margin: 32px 40px 0 40px;
+    width: calc(100% - 80px);
+  }
+  .card {
+    width: calc((100% - 20px) / 2); /* 2 cột trên màn hình nhỏ hơn */
+  }
+}
+
+@media (max-width: 768px) {
+  .related-products {
+    margin-left: 20px;
+    font-size: 28px;
+  }
+  .card-grid {
+    margin: 32px 20px 0 20px;
+    width: calc(100% - 40px);
+    justify-content: center; /* Căn giữa các card khi chỉ có 1 cột */
+  }
+  .card {
+    width: 100%; /* 1 cột trên màn hình di động */
+  }
+}
+
+@media (max-width: 480px) {
+  .related-products {
+    font-size: 24px;
+  }
 }
