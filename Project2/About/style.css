@@ -191,7 +191,7 @@ ul {
  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
  width: 187px; /* Chiều rộng cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
- right: 517px; /* Cách lề phải 517px */
+ right: 298px; /* Cách lề phải 298px */
  top: 48px; /* Cách lề trên 48px */
 }
 
@@ -234,7 +234,7 @@ ul {
  justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
  width: 187px; /* Chiều rộng cố định */
  position: absolute; /* Đặt vị trí tuyệt đối */
- right: 298px; /* Cách lề phải 298px */
+ right: 80px; /* Cách lề phải 80px */
  top: 48px; /* Cách lề trên 48px */
 }
 

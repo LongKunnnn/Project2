@@ -238,7 +238,7 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
  justify-content: center; /* Căn giữa các mục theo chiều dọc */
  width: 187px; /* Chiều rộng 187px */
  position: absolute; /* Vị trí tuyệt đối */
- right: 517px; /* Cách lề phải 517px */
+ right: 298px; /* Cách lề phải 298px */
  top: 48px; /* Cách lề trên 48px */
 }
 .topic { /* Tiêu đề chủ đề trong chân trang */
@@ -275,7 +275,7 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
  justify-content: center; /* Căn giữa các mục theo chiều dọc */
  width: 187px; /* Chiều rộng 187px */
  position: absolute; /* Vị trí tuyệt đối */
- right: 298px; /* Cách lề phải 298px */
+ right: 80px; /* Cách lề phải 80px */
  top: 48px; /* Cách lề trên 48px */
 }
 .items4 { /* Nhóm mục trong chân trang (Chưa rõ mục đích cụ thể) */

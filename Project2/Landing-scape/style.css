@@ -179,7 +179,7 @@ menu, ol, ul {
   justify-content: center;
   width: 187px;
   position: absolute;
-  right: 517px;
+  right: 298px;
   top: 48px;
 }
 .topic {
@@ -216,7 +216,7 @@ menu, ol, ul {
   justify-content: center;
   width: 187px;
   position: absolute;
-  right: 298px;
+  right: 80px;
   top: 48px;
 }
 .items3 {
@@ -813,8 +813,10 @@ menu, ol, ul {
   .navigation-footer .items, .navigation-footer .items2 {
     position: relative; /* Thay đổi vị trí tuyệt đối thành tương đối */
     right: auto;
-    left: 0;
-    align-items: flex-start; /* Căn chỉnh lại các mục */
+    left: auto;
+    margin-left: auto;
+    margin-right: 80px;
+    align-items: flex-end; /* Căn chỉnh lại các mục */
   }
 
   .navigation-footer {
@@ -822,7 +824,7 @@ menu, ol, ul {
     padding-bottom: 20px; /* Thêm padding dưới cùng */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
   }
   .site-name2 {
@@ -939,7 +941,7 @@ menu, ol, ul {
   }
   .navigation-footer .items, .navigation-footer .items2 {
     width: 100%;
-    align-items: flex-start;
+    align-items: flex-end;
   }
   .site-name2 {
     font-size: 40px;

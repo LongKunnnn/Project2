@@ -184,11 +184,10 @@ h1 { /* Chọn thẻ <h1> */
  white-space: nowrap; /* Ngăn không cho chữ xuống dòng */
  /* flex-grow đã được xóa để không đẩy các phần khác */
 }
-
 .navigation-footer .footer-columns-and-social { /* Chọn class .footer-columns-and-social */
   display: flex; /* Dùng flexbox */
   flex-wrap: wrap; /* Cho phép các cột và social icons xuống dòng */
-  justify-content: space-between; /* Đẩy các cột sang trái, social icons sang phải */
+  justify-content: space-between; /* Đẩy các mục ra hai phía */
   width: 100%; /* Chiếm toàn bộ chiều rộng của footer */
   align-items: flex-start; /* Căn đầu các mục con */
 }
@@ -234,7 +233,7 @@ h1 { /* Chọn thẻ <h1> */
  display: flex; /* Dùng flexbox */
  gap: 20px; /* Khoảng cách giữa các icon */
  align-items: center; /* Căn giữa theo chiều dọc */
- margin-left: auto; /* Đẩy các biểu tượng mạng xã hội sang phải */
+ margin-right: 40px; /* Thêm margin phải để tạo khoảng cách với cột tiếp theo */
  margin-bottom: 20px; /* Khoảng cách dưới */
 }
 

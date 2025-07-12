@@ -79,24 +79,21 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     margin-top: 80px; /* Khoảng cách từ phần tử phía trên */
     margin-left: auto;
     margin-right: auto;
-    /* max-width: fit-content; */ /* Có thể gây lỗi nếu nội dung rộng hơn viewport, bỏ đi để trình duyệt xử lý */
-    flex-wrap: nowrap; /* ! QUAN TRỌNG: Ngăn không cho các ảnh xuống dòng */
-    overflow-x: auto; /* ! QUAN TRỌNG: Cho phép cuộn ngang nếu nội dung tràn ra ngoài */
-    -webkit-overflow-scrolling: touch; /* Hỗ trợ cuộn mượt trên iOS */
+    flex-wrap: wrap; /* ! QUAN TRỌNG: Cho phép các ảnh xuống dòng */
+    overflow-x: hidden; /* ! QUAN TRỌNG: Ẩn thanh cuộn ngang nếu nội dung tràn ra ngoài */
     padding: 0 20px; /* Thêm padding ngang để nội dung không chạm rìa trên thiết bị nhỏ */
 }
 
 /* Kiểu ảnh nhỏ trong hàng ngang*/
 .image {
     border-radius: 8px; /* Bo góc ảnh với bán kính 8px */
-    flex-shrink: 0; /* Ngăn ảnh co lại nếu không gian bị giới hạn */
-    width: 624px; /* Đặt chiều rộng cố định */
-    height: 436px; /* Đặt chiều cao cố định */
+    flex-shrink: 1; /* Cho phép ảnh co lại nếu không gian bị giới hạn */
+    width: calc(50% - 61px); /* Đặt chiều rộng là gần 50% trừ đi một nửa khoảng cách */
+    max-width: 624px; /* Giới hạn chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
     position: relative; /* Đặt vị trí tương đối */
     overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
     object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo, cắt bỏ phần thừa */
-    /* max-width: 100%; */ /* Bỏ thuộc tính này ở đây nếu bạn muốn nó không xuống dòng trên desktop.
-                         Nó sẽ được đưa vào media query cho màn hình nhỏ hơn. */
 }
 
 /* Đoạn văn thứ 2 (đoạn đầu tiên) */
@@ -117,7 +114,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
 .image2 {
     border-radius: 8px; /* Bo góc ảnh với bán kính 8px */
     width: 88.96%; /* Đặt chiều rộng là 88.96% của phần tử cha */
-    height: 650px; /* Đặt chiều cao cố định */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
     display: block; /* Đảm bảo margin auto hoạt động cho chiều ngang */
     margin-left: auto;
     margin-right: auto;
@@ -141,7 +138,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
 /* Tiêu đề chính */
 .article-or-post-title {
     color: #000000; /* Màu chữ đen */
-    text-align: left; /* Căn văn bản sang trái */
+    text-align: left; /* Căn văn bản trái */
     font-family: "Inter-Bold", sans-serif; /* Đặt kiểu chữ "Inter-Bold" */
     font-size: 64px; /* Đặt cỡ chữ */
     letter-spacing: -0.02em; /* Điều chỉnh khoảng cách giữa các chữ cái */
@@ -172,7 +169,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     left: 0px; /* Cách lề trái 0px */
     top: 0px; /* Cách lề trên 0px */
     z-index: 1000; /* Đặt mức độ ưu tiên hiển thị cao hơn các phần tử khác */
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Thêm bóng để nổi bật */
+    
 }
 
 .items {
@@ -244,7 +241,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: center; /* Căn giữa các mục theo chiều dọc */
     width: 187px; /* Chiều rộng cố định */
     position: absolute; /* Định vị tuyệt đối */
-    right: 517px; /* Cách lề phải 517px */
+    right: 298px; /* Cách lề phải 298px */
     top: 48px; /* Cách lề trên 48px */
 }
 
@@ -284,7 +281,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: center; /* Căn giữa các mục theo chiều dọc */
     width: 187px; /* Chiều rộng cố định */
     position: absolute; /* Định vị tuyệt đối */
-    right: 298px; /* Cách lề phải 298px */
+    right: 80px; /* Cách lề phải 80px */
     top: 48px; /* Cách lề trên 48px */
 }
 
@@ -395,10 +392,8 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     margin-top: 100px; /* Khoảng cách từ phần tử phía trên */
     margin-left: auto;
     margin-right: auto;
-    /* max-width: fit-content; */ /* Có thể gây lỗi nếu nội dung rộng hơn viewport, bỏ đi */
-    flex-wrap: nowrap; /* ! QUAN TRỌNG: Ngăn không cho các thẻ xuống dòng */
-    overflow-x: auto; /* ! QUAN TRỌNG: Cho phép cuộn ngang nếu nội dung tràn ra ngoài */
-    -webkit-overflow-scrolling: touch; /* Hỗ trợ cuộn mượt trên iOS */
+    flex-wrap: wrap; /* ! QUAN TRỌNG: Cho phép các thẻ xuống dòng */
+    overflow-x: hidden; /* ! QUAN TRỌNG: Ẩn thanh cuộn ngang nếu nội dung tràn ra ngoài */
     padding: 0 20px; /* Thêm padding ngang để nội dung không chạm rìa trên thiết bị nhỏ */
 }
 
@@ -408,12 +403,11 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     gap: 24px; /* Khoảng cách giữa các nội dung */
     align-items: flex-start; /* Căn các nội dung về phía đầu theo chiều ngang */
     justify-content: flex-start; /* Căn các nội dung về phía đầu theo chiều dọc */
-    flex-shrink: 0; /* ! QUAN TRỌNG: Ngăn thẻ co lại khi không đủ chỗ */
-    width: 404px; /* Đặt chiều rộng cố định */
-    height: 434px; /* Đặt chiều cao cố định */
+    flex-shrink: 1; /* ! QUAN TRỌNG: Cho phép thẻ co lại khi không đủ chỗ */
+    width: calc(33.33% - 90px); /* Đặt chiều rộng là gần 33.33% trừ đi khoảng cách */
+    max-width: 404px; /* Giới hạn chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
     position: relative; /* Vị trí tương đối */
-    /* max-width: 100%; */ /* Bỏ thuộc tính này ở đây nếu bạn muốn nó không xuống dòng trên desktop.
-                         Nó sẽ được đưa vào media query cho màn hình nhỏ hơn. */
 }
 
 .image3 {
@@ -424,6 +418,14 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: relative; /* Vị trí tương đối */
     overflow: hidden; /* Ẩn phần nội dung ảnh tràn ra khỏi khung */
     object-fit: cover; /* Điều chỉnh kích thước ảnh để phủ kín khung mà không bị méo */
+    width: 100%; /* Đảm bảo ảnh lấp đầy chiều rộng của .image3 */
+    height: auto; /* Đảm bảo ảnh tự điều chỉnh chiều cao */
+}
+
+.image3 img { /* Thêm quy tắc này để đảm bảo hình ảnh bên trong thẻ image3 cũng responsive */
+    width: 100%;
+    height: auto;
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
 }
 
 .copy {
@@ -473,15 +475,17 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
         padding: 0 20px; /* Đảm bảo padding để tránh chạm rìa */
     }
 
-    .image, .card {
-        width: 45%; /* Điều chỉnh để 2 ảnh/card trên một hàng trên tablet */
+    .image {
+        width: calc(50% - 25px); /* Điều chỉnh để 2 ảnh trên một hàng trên tablet */
         height: auto; /* Chiều cao tự động điều chỉnh */
         max-width: 624px; /* Giới hạn chiều rộng tối đa */
     }
     
     /* Điều chỉnh lại kích thước cho card để nó vẫn xếp được 2 cái trên 1 hàng ở 1200px */
     .card {
-      width: 45%; /* Ví dụ: để 2 card trên 1 hàng, hoặc 33% cho 3 card */
+      width: calc(50% - 25px); /* Ví dụ: để 2 card trên 1 hàng, hoặc 33% cho 3 card */
+      max-width: 404px; /* Giới hạn chiều rộng tối đa */
+      height: auto;
     }
 
 
@@ -541,10 +545,12 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     .image, .card {
         width: 95%; /* Chiếm phần lớn chiều rộng màn hình */
         height: auto; /* Chiều cao tự động điều chỉnh */
+        max-width: none; /* Bỏ giới hạn max-width để nó chiếm 95% */
     }
 
     .image2 {
         width: 95%;
+        height: auto;
     }
 
     /* Điều chỉnh vị trí footer items để tránh chồng chéo trên màn hình nhỏ */
