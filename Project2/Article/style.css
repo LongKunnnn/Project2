@@ -28,7 +28,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     padding: 0; /* Xóa khoảng cách trong (padding) mặc định */
 }
 
-/* Đảm bảo tính nhất quán trong mô hình hộp */
+/* Đảm bảo tính nhất quán trong mô hình hộp cho .article và các phần tử con */
 .article, /* Chọn phần tử có class "article" */
 .article * { /* Chọn tất cả các phần tử con bên trong phần tử có class "article" */
     box-sizing: border-box; /* Chiều rộng và chiều cao bao gồm cả nội dung, padding và border */
@@ -79,12 +79,12 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     margin-top: 80px; /* Khoảng cách từ phần tử phía trên */
     margin-left: auto;
     margin-right: auto;
-    flex-wrap: wrap; /* ! QUAN TRỌNG: Cho phép các ảnh xuống dòng */
-    overflow-x: hidden; /* ! QUAN TRỌNG: Ẩn thanh cuộn ngang nếu nội dung tràn ra ngoài */
+    flex-wrap: wrap; /* Cho phép các ảnh xuống dòng khi không đủ chỗ */
+    overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu nội dung tràn ra ngoài */
     padding: 0 20px; /* Thêm padding ngang để nội dung không chạm rìa trên thiết bị nhỏ */
 }
 
-/* Kiểu ảnh nhỏ trong hàng ngang*/
+/* Kiểu ảnh nhỏ trong hàng ngang */
 .image {
     border-radius: 8px; /* Bo góc ảnh với bán kính 8px */
     flex-shrink: 1; /* Cho phép ảnh co lại nếu không gian bị giới hạn */
@@ -135,7 +135,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     margin-top: 80px; /* Khoảng cách từ navigation (đã có padding-top trên .article) */
 }
 
-/* Tiêu đề chính */
+/* Tiêu đề chính của bài viết */
 .article-or-post-title {
     color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản trái */
@@ -147,6 +147,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
 }
 
+/* Phụ đề bài viết */
 .subheading-that-sets-up-context-shares-more-info-about-the-author-or-generally-gets-people-psyched-to-keep-reading {
     color: rgba(0, 0, 0, 0.75); /* Màu chữ đen với độ trong suốt 75% */
     text-align: left; /* Căn văn bản trái */
@@ -161,6 +162,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
+/* Thanh điều hướng */
 .navigation {
     background: #ffffff; /* Nền trắng */
     height: 174px; /* Chiều cao cố định */
@@ -169,9 +171,9 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     left: 0px; /* Cách lề trái 0px */
     top: 0px; /* Cách lề trên 0px */
     z-index: 1000; /* Đặt mức độ ưu tiên hiển thị cao hơn các phần tử khác */
-    
 }
 
+/* Các mục trong thanh điều hướng */
 .items {
     display: flex; /* Sử dụng flexbox */
     flex-direction: row; /* Xếp các mục theo hàng ngang */
@@ -183,6 +185,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     top: 56px; /* Cách lề trên 56px */
 }
 
+/* Kiểu trang trong thanh điều hướng */
 .page {
     color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản trái */
@@ -196,6 +199,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
+/* Kiểu nút chung */
 .button {
     background: #000000; /* Nền đen */
     border-radius: 8px; /* Bo góc nút */
@@ -210,6 +214,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Đổ bóng */
 }
 
+/* Tên trang web ở thanh điều hướng */
 .site-name {
     color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản trái */
@@ -225,6 +230,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
+/* Phần footer */
 .navigation-footer {
     background: #ffffff; /* Nền trắng */
     height: 264px; /* Chiều cao cố định */
@@ -233,6 +239,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     overflow: hidden; /* Ẩn phần nội dung tràn ra khỏi khung */
 }
 
+/* Các mục trong footer (cột 1) */
 .items2 {
     display: flex; /* Sử dụng flexbox */
     flex-direction: column; /* Xếp các mục theo chiều dọc */
@@ -245,6 +252,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     top: 48px; /* Cách lề trên 48px */
 }
 
+/* Tiêu đề chủ đề trong footer */
 .topic {
     color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản trái */
@@ -259,6 +267,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
+/* Kiểu trang trong footer */
 .page2 {
     color: #454545; /* Màu chữ xám */
     text-align: left; /* Căn văn bản trái */
@@ -273,6 +282,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
+/* Các mục trong footer (cột 2) */
 .items3 {
     display: flex; /* Sử dụng flexbox */
     flex-direction: column; /* Xếp các mục theo chiều dọc */
@@ -285,6 +295,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     top: 48px; /* Cách lề trên 48px */
 }
 
+/* Các mục trong footer (cột 3 - trùng với items3, có thể bỏ nếu không có khác biệt) */
 .items4 {
     display: flex; /* Sử dụng flexbox */
     flex-direction: column; /* Xếp các mục theo chiều dọc */
@@ -297,6 +308,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     top: 48px; /* Cách lề trên 48px */
 }
 
+/* Tên trang web ở footer */
 .site-name2 {
     color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản trái */
@@ -312,6 +324,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
+/* Các biểu tượng mạng xã hội */
 .social-icons {
     display: flex; /* Sử dụng flexbox */
     flex-direction: row; /* Xếp các mục theo hàng ngang */
@@ -323,6 +336,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     top: 176px; /* Cách lề trên 176px */
 }
 
+/* Nút chứa biểu tượng */
 .buttons-icon {
     border-radius: 4px; /* Bo góc nút */
     padding: 8px; /* Khoảng đệm bên trong nút */
@@ -332,6 +346,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: relative; /* Vị trí tương đối */
 }
 
+/* Biểu tượng 1 */
 .icon {
     width: 24px; /* Chiều rộng biểu tượng */
     height: 24px; /* Chiều cao biểu tượng */
@@ -341,6 +356,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
+/* Biểu tượng 2 */
 .icon2 {
     width: 24px; /* Chiều rộng biểu tượng */
     height: 24px; /* Chiều cao biểu tượng */
@@ -350,6 +366,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
+/* Biểu tượng 3 */
 .icon3 {
     width: 24px; /* Chiều rộng biểu tượng */
     height: 24px; /* Chiều cao biểu tượng */
@@ -359,6 +376,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
+/* Biểu tượng 4 */
 .icon4 {
     width: 24px; /* Chiều rộng biểu tượng */
     height: 24px; /* Chiều cao biểu tượng */
@@ -368,11 +386,12 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     overflow: visible; /* Cho phép nội dung tràn ra khỏi khung */
 }
 
+/* Đường phân chia */
 .divider {
     margin-top: -1px; /* Đẩy đường phân chia lên 1px */
     border-style: solid; /* Kiểu đường viền liền */
     border-color: #e6e6e6; /* Màu đường viền */
-    border-width: 1px 0 0 0; /* Độ rộng đường viền */
+    border-width: 1px 0 0 0; /* Độ rộng đường viền (chỉ đường trên) */
     width: calc(100% - 160px); /* Chiều rộng linh hoạt, trừ đi padding hai bên */
     height: 0px; /* Chiều cao 0px (chỉ hiển thị đường viền) */
     position: absolute; /* Định vị tuyệt đối */
@@ -392,26 +411,28 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     margin-top: 100px; /* Khoảng cách từ phần tử phía trên */
     margin-left: auto;
     margin-right: auto;
-    flex-wrap: wrap; /* ! QUAN TRỌNG: Cho phép các thẻ xuống dòng */
-    overflow-x: hidden; /* ! QUAN TRỌNG: Ẩn thanh cuộn ngang nếu nội dung tràn ra ngoài */
+    flex-wrap: wrap; /* Cho phép các thẻ xuống dòng khi không đủ chỗ */
+    overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu nội dung tràn ra ngoài */
     padding: 0 20px; /* Thêm padding ngang để nội dung không chạm rìa trên thiết bị nhỏ */
 }
 
+/* Kiểu thẻ sản phẩm */
 .card {
     display: flex; /* Sử dụng flexbox */
     flex-direction: column; /* Xếp các nội dung trong thẻ theo chiều dọc */
     gap: 24px; /* Khoảng cách giữa các nội dung */
     align-items: flex-start; /* Căn các nội dung về phía đầu theo chiều ngang */
     justify-content: flex-start; /* Căn các nội dung về phía đầu theo chiều dọc */
-    flex-shrink: 1; /* ! QUAN TRỌNG: Cho phép thẻ co lại khi không đủ chỗ */
+    flex-shrink: 1; /* Cho phép thẻ co lại khi không đủ chỗ */
     width: calc(33.33% - 90px); /* Đặt chiều rộng là gần 33.33% trừ đi khoảng cách */
     max-width: 404px; /* Giới hạn chiều rộng tối đa */
     height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ */
     position: relative; /* Vị trí tương đối */
 }
 
+/* Ảnh trong thẻ sản phẩm (image3) */
 .image3 {
-    background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Nền gradient từ trái sang phải với màu xám nhạt */
+    background: #f7f7f7; /* Màu nền */
     border-radius: 8px; /* Bo góc ảnh */
     align-self: stretch; /* Cho phép ảnh co giãn để lấp đầy không gian chiều dọc */
     flex: 1; /* Cho phép ảnh chiếm toàn bộ không gian còn lại trong flex container */
@@ -422,12 +443,14 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     height: auto; /* Đảm bảo ảnh tự điều chỉnh chiều cao */
 }
 
-.image3 img { /* Thêm quy tắc này để đảm bảo hình ảnh bên trong thẻ image3 cũng responsive */
+/* Đảm bảo hình ảnh bên trong thẻ image3 cũng responsive */
+.image3 img {
     width: 100%;
     height: auto;
     display: block; /* Loại bỏ khoảng trắng dưới ảnh */
 }
 
+/* Nội dung văn bản trong thẻ */
 .copy {
     display: flex; /* Sử dụng flexbox */
     flex-direction: column; /* Xếp các nội dung theo chiều dọc */
@@ -439,6 +462,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     position: relative; /* Vị trí tương đối */
 }
 
+/* Tiêu đề trong thẻ */
 .title {
     color: #000000; /* Màu chữ đen */
     text-align: left; /* Căn văn bản trái */
@@ -450,6 +474,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     align-self: stretch; /* Cho phép phần tử co giãn theo chiều dọc */
 }
 
+/* Tên tác giả trong thẻ */
 .author {
     color: #828282; /* Màu chữ xám */
     text-align: left; /* Căn văn bản trái */
@@ -464,7 +489,9 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
     justify-content: flex-start; /* Căn các mục về phía đầu theo chiều ngang */
 }
 
-/* Thêm Media Queries để tối ưu trên các kích thước màn hình nhỏ hơn (ví dụ: máy tính bảng) */
+/* --- Media Queries --- */
+
+/* Tối ưu trên các kích thước màn hình nhỏ hơn (ví dụ: máy tính bảng) */
 @media (max-width: 1200px) {
     /* Đảm bảo flex-wrap hoạt động trên màn hình nhỏ */
     .images, .cards {
@@ -480,14 +507,13 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
         height: auto; /* Chiều cao tự động điều chỉnh */
         max-width: 624px; /* Giới hạn chiều rộng tối đa */
     }
-    
+
     /* Điều chỉnh lại kích thước cho card để nó vẫn xếp được 2 cái trên 1 hàng ở 1200px */
     .card {
-      width: calc(50% - 25px); /* Ví dụ: để 2 card trên 1 hàng, hoặc 33% cho 3 card */
-      max-width: 404px; /* Giới hạn chiều rộng tối đa */
-      height: auto;
+        width: calc(50% - 25px); /* Ví dụ: để 2 card trên 1 hàng, hoặc 33% cho 3 card */
+        max-width: 404px; /* Giới hạn chiều rộng tối đa */
+        height: auto;
     }
-
 
     .paragraph, .paragraph2 {
         width: 90%;
@@ -564,7 +590,7 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
         gap: 30px;
         position: relative; /* Đổi thành relative để không bị chồng chéo nếu content không đủ dài */
     }
-    
+
     .navigation-footer .items2,
     .navigation-footer .items3,
     .navigation-footer .items4,
@@ -583,13 +609,13 @@ ul { /* Chọn tất cả các thẻ danh sách không thứ tự (unordered lis
         flex-direction: column; /* Cho các items trong footer xếp dọc */
         align-items: flex-start; /* Căn trái các item trong footer */
     }
-    
+
     .navigation-footer .site-name2 {
-      margin-top: 20px; /* Khoảng cách giữa các phần trong footer */
+        margin-top: 20px; /* Khoảng cách giữa các phần trong footer */
     }
 
     .navigation-footer .social-icons {
-      margin-top: 20px;
+        margin-top: 20px;
     }
 
     .navigation-footer .divider {

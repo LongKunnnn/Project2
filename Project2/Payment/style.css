@@ -50,11 +50,11 @@ h1 { /* Chọn thẻ <h1> */
  text-align: left; /* Căn trái */
  margin-bottom: 40px; /* Khoảng cách dưới */
  color: #000000; /* Màu chữ */
- font-family: "Inter-SemiBold", sans-serif; /* Font style tương tự details.html */
+ font-family: "Inter-SemiBold", sans-serif; /* Font style */
  font-size: 32px; /* Kích thước tương tự tiêu đề */
  line-height: 150%; /* Chiều cao dòng */
  font-weight: 600; /* Độ đậm font */
- padding-left: 80px; /* Thụt lề giống các phần khác trên details.html */
+ padding-left: 80px; /* Thụt lề */
 }
 
 /* Checkout Button (reused from style.css) */
@@ -182,7 +182,6 @@ h1 { /* Chọn thẻ <h1> */
  line-height: 150%; /* Chiều cao dòng */
  font-weight: 700; /* Độ đậm font */
  white-space: nowrap; /* Ngăn không cho chữ xuống dòng */
- /* flex-grow đã được xóa để không đẩy các phần khác */
 }
 .navigation-footer .footer-columns-and-social { /* Chọn class .footer-columns-and-social */
   display: flex; /* Dùng flexbox */
@@ -270,7 +269,7 @@ h1 { /* Chọn thẻ <h1> */
   border-radius: 10px; /* Bo góc */
   box-shadow: 0 6px 20px rgba(0,0,0,0.07); /* Đổ bóng */
   padding: 30px; /* Padding */
-  margin: 0 80px 40px; /* Khoảng cách dưới */
+  margin: 0 80px 40px; /* Đặt margin: 0px trên, 80px trái/phải, 40px dưới */
 }
 
 .payment-summary h2 { /* Chọn thẻ <h2> bên trong .payment-summary */

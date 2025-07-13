@@ -152,7 +152,7 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
 }
 
 .image { /* Ảnh sản phẩm chính */
-  background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
+  background: #f7f7f7; /* Màu nền */
   border-radius: 12px; /* Bo tròn góc 12px */
   width: 43.4%; /* Chiều rộng 43.4% */
   height: 613px; /* Chiều cao 613px */
@@ -395,7 +395,7 @@ menu, ol, ul { /* Đặt lại kiểu mặc định cho các thẻ menu, ol, ul 
 }
 
 .image2 { /* Ảnh sản phẩm trong thẻ */
-  background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Màu nền chuyển sắc */
+  background: #f7f7f7; /* Màu nền */
   border-radius: 8px; /* Bo tròn góc 8px */
   align-self: stretch; /* Kéo dài theo chiều ngang */
   flex: 0 0 200px; /* Chiều cao cố định cho ảnh để các card đều nhau, không co dãn */

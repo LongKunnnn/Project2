@@ -9,683 +9,672 @@ h3, /* Chọn tất cả các thẻ <h3> (tiêu đề cấp 3) */
 h4, /* Chọn tất cả các thẻ <h4> (tiêu đề cấp 4) */
 h5, /* Chọn tất cả các thẻ <h5> (tiêu đề cấp 5) */
 * {
- box-sizing: border-box; /* Đặt chế độ box model là border-box để tính toán kích thước dễ hơn */
- margin: 0; /* Xóa margin (khoảng cách ngoài) mặc định */
- padding: 0; /* Xóa padding (khoảng cách trong) mặc định */
- border: none; /* Xóa border (viền) mặc định */
- text-decoration: none; /* Xóa gạch chân mặc định cho liên kết */
- background: none; /* Xóa màu nền mặc định */
- -webkit-font-smoothing: antialiased; /* Tối ưu hiển thị font chữ trên trình duyệt WebKit (Chrome, Safari) */
+box-sizing: border-box; /* Đặt chế độ box model là border-box để tính toán kích thước bao gồm padding và border */
+margin: 0; /* Xóa margin (khoảng cách ngoài) mặc định */
+padding: 0; /* Xóa padding (khoảng cách trong) mặc định */
+border: none; /* Xóa border (viền) mặc định */
+text-decoration: none; /* Xóa gạch chân mặc định cho liên kết */
+background: none; /* Xóa màu nền mặc định */
+-webkit-font-smoothing: antialiased; /* Tối ưu hiển thị font chữ trên trình duyệt WebKit (Chrome, Safari) để font mượt mà hơn */
 }
 /* Xóa dấu đầu dòng danh sách */
 menu, /* Chọn tất cả các thẻ <menu> */
 ol, /* Chọn tất cả các thẻ <ol> (danh sách có thứ tự) */
 ul {
- list-style-type: none; /* Xóa dấu đầu dòng (bullet points) của danh sách */
- margin: 0; /* Xóa margin mặc định */
- padding: 0; /* Xóa padding mặc định */
+list-style-type: none; /* Xóa dấu đầu dòng (bullet points) của danh sách */
+margin: 0; /* Xóa margin mặc định */
+padding: 0; /* Xóa padding mặc định */
 }
 
 /* Layout chính của trang giới thiệu */
 .about, /* Chọn phần tử có class 'about' */
 .about * {
- box-sizing: border-box; /* Đặt chế độ box model là border-box */
+box-sizing: border-box; /* Đặt chế độ box model là border-box */
 }
 .about {
- background: #ffffff; /* Màu nền trắng */
- height: 1788px; /* Chiều cao cố định */
- position: relative; /* Đặt vị trí tương đối để định vị các phần tử con */
- overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+background: #ffffff; /* Đặt màu nền trắng cho phần tử */
+height: 1788px; /* Đặt chiều cao cố định là 1788px */
+position: relative; /* Đặt vị trí tương đối để định vị các phần tử con bên trong */
+overflow: hidden; /* Ẩn nội dung tràn ra ngoài giới hạn của phần tử */
 }
 
 /* Ảnh minh họa bên phải */
 .image {
- background: linear-gradient(to left, #f7f7f7, #f7f7f7); /* Tạo gradient nền màu xám nhạt */
- border-radius: 8px; /* Bo tròn góc 8px */
- width: 508px; /* Chiều rộng cố định */
- height: 657px; /* Chiều cao cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 85px; /* Cách lề phải 85px */
- top: 244px; /* Cách lề trên 244px */
- overflow: hidden; /* Ẩn nội dung ảnh tràn ra ngoài */
- object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+background: #f7f7f7; /* Màu nền */
+border-radius: 8px; /* Bo tròn góc 8px */
+width: 508px; /* Đặt chiều rộng cố định là 508px */
+height: 657px; /* Đặt chiều cao cố định là 657px */
+position: absolute; /* Đặt vị trí tuyệt đối so với phần tử cha có position là relative */
+right: 85px; /* Cách lề phải 85px */
+top: 244px; /* Cách lề trên 244px */
+overflow: hidden; /* Ẩn nội dung ảnh tràn ra ngoài */
+object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo, cắt bớt phần thừa nếu cần */
 }
 
 /* Phần văn bản giới thiệu bên trái ảnh */
 .copy {
- display: flex; /* Sử dụng Flexbox để bố cục các phần tử con */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử con từ trên xuống */
- width: 624px; /* Chiều rộng cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 244px; /* Cách lề trên 244px */
+display: flex; /* Sử dụng Flexbox để bố cục các phần tử con */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái của container */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử con từ trên xuống */
+width: 624px; /* Đặt chiều rộng cố định là 624px */
+position: absolute; /* Đặt vị trí tuyệt đối so với phần tử cha */
+left: 80px; /* Cách lề trái 80px */
+top: 244px; /* Cách lề trên 244px */
 }
 
 /* Tiêu đề 'About' */
 .about2 {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Bold", sans-serif; /* Font chữ Inter Bold, nếu không có thì dùng sans-serif */
- font-size: 64px; /* Kích thước font chữ */
- letter-spacing: -0.02em; /* Khoảng cách giữa các ký tự */
- font-weight: 700; /* Độ đậm của font (Bold) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn trong flex container */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Bold", sans-serif; /* Sử dụng font Inter Bold, nếu không có thì dùng sans-serif */
+font-size: 64px; /* Kích thước font chữ là 64px */
+letter-spacing: -0.02em; /* Khoảng cách giữa các ký tự giảm 0.02em */
+font-weight: 700; /* Độ đậm của font (Bold) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn trong flex container theo chiều ngang */
 }
 
 /* Phần phụ đề bên dưới tiêu đề */
 .subheading-for-description-or-instructions {
- color: #828282; /* Màu chữ xám */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Regular", sans-serif; /* Font chữ Inter Regular, nếu không có thì dùng sans-serif */
- font-size: 24px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 400; /* Độ đậm của font (Regular) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #828282; /* Đặt màu chữ xám */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Regular", sans-serif; /* Sử dụng font Inter Regular, nếu không có thì dùng sans-serif */
+font-size: 24px; /* Kích thước font chữ là 24px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 400; /* Độ đậm của font (Regular) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn theo chiều ngang */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Đoạn mô tả nội dung chính */
 .paragraph {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 20px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 20px; /* Kích thước font chữ là 20px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
 /* Thanh điều hướng phía trên cùng */
 .navigation {
- background: #ffffff; /* Màu nền trắng */
- height: 174px; /* Chiều cao cố định */
- position: fixed; /* Đặt vị trí cố định trên màn hình (luôn hiển thị dù cuộn trang) */
- right: 0px; /* Cách lề phải 0px */
- left: 0px; /* Cách lề trái 0px */
- top: 0px; /* Cách lề trên 0px */
- z-index: 1000; /* Đặt thứ tự hiển thị cao hơn các phần tử khác */
+background: #ffffff; /* Đặt màu nền trắng */
+height: 174px; /* Đặt chiều cao cố định là 174px */
+position: fixed; /* Đặt vị trí cố định trên màn hình (luôn hiển thị dù cuộn trang) */
+right: 0px; /* Cách lề phải 0px */
+left: 0px; /* Cách lề trái 0px */
+top: 0px; /* Cách lề trên 0px */
+z-index: 1000; /* Đặt thứ tự hiển thị cao hơn các phần tử khác (giá trị càng cao, càng nằm trên) */
 }
 
 /* Các liên kết trang trong navigation */
 .items {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
- gap: 48px; /* Khoảng cách giữa các phần tử con là 48px */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-end; /* Căn chỉnh các phần tử con về bên phải */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 80px; /* Cách lề phải 80px */
- top: 56px; /* Cách lề trên 56px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
+gap: 48px; /* Khoảng cách giữa các phần tử con là 48px */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-end; /* Căn chỉnh các phần tử con về bên phải của container */
+position: absolute; /* Đặt vị trí tuyệt đối */
+right: 80px; /* Cách lề phải 80px */
+top: 56px; /* Cách lề trên 56px */
 }
 
 /* Style cho từng liên kết trang */
 .page {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 20px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 20px; /* Kích thước font chữ là 20px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Nút trang chủ màu đen */
 .button {
- background: #000000; /* Màu nền đen */
- border-radius: 8px; /* Bo tròn góc 8px */
- padding: 14px 24px 14px 24px; /* Đệm trong (trên, phải, dưới, trái) */
- display: flex; /* Sử dụng Flexbox */
- flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
- flex-shrink: 0; /* Ngăn không cho phần tử co lại */
- position: relative; /* Đặt vị trí tương đối */
- box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Tạo đổ bóng nhẹ */
+background: #000000; /* Đặt màu nền đen */
+border-radius: 8px; /* Bo tròn góc 8px */
+padding: 14px 24px 14px 24px; /* Đệm trong: trên 14px, phải 24px, dưới 14px, trái 24px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+flex-shrink: 0; /* Ngăn không cho phần tử co lại khi không đủ không gian */
+position: relative; /* Đặt vị trí tương đối */
+box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Tạo đổ bóng nhẹ: dịch ngang 0px, dịch dọc 1px, mờ 2px, màu đen với độ trong suốt 5% */
 }
 
 /* Tên thương hiệu bên trái thanh navigation */
 .site-name {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 60px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 67px; /* Cách lề trên 67px */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 60px; /* Kích thước font chữ là 60px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 80px; /* Cách lề trái 80px */
+top: 67px; /* Cách lề trên 67px */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Phần footer cuối trang */
 .navigation-footer {
- background: #ffffff; /* Màu nền trắng */
- height: 264px; /* Chiều cao cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 0px; /* Cách lề phải 0px */
- left: 0px; /* Cách lề trái 0px */
- bottom: 0px; /* Cách lề dưới 0px */
- overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
+background: #ffffff; /* Đặt màu nền trắng */
+height: 264px; /* Đặt chiều cao cố định là 264px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+right: 0px; /* Cách lề phải 0px */
+left: 0px; /* Cách lề trái 0px */
+bottom: 0px; /* Cách lề dưới 0px */
+overflow: hidden; /* Ẩn nội dung tràn ra ngoài */
 }
 
 /* Cột 'Về công ty' */
 .items2 {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
- align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải */
- justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
- width: 187px; /* Chiều rộng cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 298px; /* Cách lề phải 298px */
- top: 48px; /* Cách lề trên 48px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
+align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải của container */
+justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+width: 187px; /* Đặt chiều rộng cố định là 187px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+right: 298px; /* Cách lề phải 298px */
+top: 48px; /* Cách lề trên 48px */
 }
 
 /* Tên đề mục như 'Về công ty', 'Liên hệ' */
 .topic {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family:"Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family:"Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Các dòng thông tin phụ */
 .page2 {
- color: #454545; /* Màu chữ xám đậm */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #454545; /* Đặt màu chữ xám đậm */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Cột 'Liên hệ' */
 .items3 {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
- align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải */
- justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
- width: 187px; /* Chiều rộng cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 80px; /* Cách lề phải 80px */
- top: 48px; /* Cách lề trên 48px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
+align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải của container */
+justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+width: 187px; /* Đặt chiều rộng cố định là 187px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+right: 80px; /* Cách lề phải 80px */
+top: 48px; /* Cách lề trên 48px */
 }
 
 /* Dự phòng cho cột thứ 3 nếu cần */
 .items4 {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
- align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải */
- justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
- width: 187px; /* Chiều rộng cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 80px; /* Cách lề phải 80px */
- top: 48px; /* Cách lề trên 48px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
+align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải của container */
+justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+width: 187px; /* Đặt chiều rộng cố định là 187px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+right: 80px; /* Cách lề phải 80px */
+top: 48px; /* Cách lề trên 48px */
 }
 
 /* Tên thương hiệu ở footer */
 .site-name2 {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 60px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 37px; /* Cách lề trên 37px */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 60px; /* Kích thước font chữ là 60px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 80px; /* Cách lề trái 80px */
+top: 37px; /* Cách lề trên 37px */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Nhóm icons mạng xã hội */
 .social-icons {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trên */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 176px; /* Cách lề trên 176px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trên của container */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 80px; /* Cách lề trái 80px */
+top: 176px; /* Cách lề trên 176px */
 }
 
 /* Nút chứa mỗi icon */
 .buttons-icon {
- border-radius: 4px; /* Bo tròn góc 4px */
- padding: 8px; /* Đệm trong 8px */
- flex-shrink: 0; /* Ngăn không cho phần tử co lại */
- width: 40px; /* Chiều rộng cố định */
- height: 40px; /* Chiều cao cố định */
- position: relative; /* Đặt vị trí tương đối */
+border-radius: 4px; /* Bo tròn góc 4px */
+padding: 8px; /* Đệm trong 8px xung quanh nội dung */
+flex-shrink: 0; /* Ngăn không cho phần tử co lại */
+width: 40px; /* Chiều rộng cố định là 40px */
+height: 40px; /* Chiều cao cố định là 40px */
+position: relative; /* Đặt vị trí tương đối */
 }
 
 /* Kích thước các icons mạng xã hội */
 .icon {
- width: 24px; /* Chiều rộng cố định */
- height: 24px; /* Chiều cao cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 8px; /* Cách lề trái 8px */
- top: 8px; /* Cách lề trên 8px */
- overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
+width: 24px; /* Chiều rộng cố định là 24px */
+height: 24px; /* Chiều cao cố định là 24px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 8px; /* Cách lề trái 8px */
+top: 8px; /* Cách lề trên 8px */
+overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có (mặc định cho icon) */
 }
 .icon2 {
- width: 24px; /* Chiều rộng cố định */
- height: 24px; /* Chiều cao cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 8px; /* Cách lề trái 8px */
- top: 8px; /* Cách lề trên 8px */
- overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
+width: 24px; /* Chiều rộng cố định là 24px */
+height: 24px; /* Chiều cao cố định là 24px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 8px; /* Cách lề trái 8px */
+top: 8px; /* Cách lề trên 8px */
+overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
 }
 .icon3 {
- width: 24px; /* Chiều rộng cố định */
- height: 24px; /* Chiều cao cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 8px; /* Cách lề trái 8px */
- top: 8px; /* Cách lề trên 8px */
- overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
+width: 24px; /* Chiều rộng cố định là 24px */
+height: 24px; /* Chiều cao cố định là 24px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 8px; /* Cách lề trái 8px */
+top: 8px; /* Cách lề trên 8px */
+overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
 }
 .icon4 {
- width: 24px; /* Chiều rộng cố định */
- height: 24px; /* Chiều cao cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 8px; /* Cách lề trái 8px */
- top: 8px; /* Cách lề trên 8px */
- overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
+width: 24px; /* Chiều rộng cố định là 24px */
+height: 24px; /* Chiều cao cố định là 24px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 8px; /* Cách lề trái 8px */
+top: 8px; /* Cách lề trên 8px */
+overflow: visible; /* Cho phép nội dung tràn ra ngoài nếu có */
 }
 
 /* Đường kẻ phân cách */
 .divider {
- margin-top: -1px; /* Đẩy lên trên 1px */
- border-style: solid; /* Kiểu viền liền */
- border-color: #e6e6e6; /* Màu viền xám nhạt */
- border-width: 1px 0 0 0; /* Chiều rộng viền (trên 1px, các cạnh khác 0) */
- width: 1280px; /* Chiều rộng cố định */
- height: 0px; /* Chiều cao bằng 0 (chỉ hiển thị viền) */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 1px; /* Cách lề trên 1px */
- transform-origin: 0 0; /* Điểm gốc cho phép biến đổi */
- transform: rotate(0deg) scale(1, 1); /* Không xoay, không thay đổi tỷ lệ */
+margin-top: -1px; /* Đẩy lên trên 1px */
+border-style: solid; /* Kiểu viền liền */
+border-color: #e6e6e6; /* Màu viền xám nhạt */
+border-width: 1px 0 0 0; /* Chiều rộng viền: trên 1px, các cạnh khác 0 */
+width: 1280px; /* Chiều rộng cố định là 1280px */
+height: 0px; /* Chiều cao bằng 0 (chỉ hiển thị viền) */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 80px; /* Cách lề trái 80px */
+top: 1px; /* Cách lề trên 1px */
+transform-origin: 0 0; /* Điểm gốc cho phép biến đổi là góc trên bên trái */
+transform: rotate(0deg) scale(1, 1); /* Không xoay, không thay đổi tỷ lệ (mặc định) */
 }
 
 /* Layout của form 'Liên hệ' */
 .form {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
- gap: 32px; /* Khoảng cách giữa các phần tử con là 32px */
- row-gap: 24px; /* Khoảng cách giữa các hàng là 24px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trên */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
- flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng khi không đủ chỗ */
- align-content: flex-start; /* Bắt đầu sắp xếp các hàng từ trên xuống */
- width: 43.47%; /* Chiều rộng theo phần trăm */
- position: absolute; /* Đặt vị trí tuyệt đối */
- right: 50.97%; /* Cách lề phải theo phần trăm */
- left: 5.56%; /* Cách lề trái theo phần trăm */
- top: 925px; /* Cách lề trên 925px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
+gap: 32px; /* Khoảng cách giữa các phần tử con là 32px */
+row-gap: 24px; /* Khoảng cách giữa các hàng là 24px (khi flex-wrap) */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trên của container */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng khi không đủ chỗ */
+align-content: flex-start; /* Bắt đầu sắp xếp các hàng từ trên xuống */
+width: 43.47%; /* Chiều rộng theo phần trăm của phần tử cha */
+position: absolute; /* Đặt vị trí tuyệt đối */
+right: 50.97%; /* Cách lề phải theo phần trăm của phần tử cha */
+left: 5.56%; /* Cách lề trái theo phần trăm của phần tử cha */
+top: 925px; /* Cách lề trên 925px */
 }
 
 /* Cấu trúc từng ô input */
 .input {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
- flex-shrink: 0; /* Ngăn không cho phần tử co lại */
- width: 295px; /* Chiều rộng cố định */
- height: 80px; /* Chiều cao cố định */
- position: relative; /* Đặt vị trí tương đối */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
+flex-shrink: 0; /* Ngăn không cho phần tử co lại */
+width: 295px; /* Chiều rộng cố định là 295px */
+height: 80px; /* Chiều cao cố định là 80px */
+position: relative; /* Đặt vị trí tương đối */
 }
 
 .input2 {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
- flex-shrink: 0; /* Ngăn không cho phần tử co lại */
- width: 297px; /* Chiều rộng cố định */
- height: 80px; /* Chiều cao cố định */
- position: relative; /* Đặt vị trí tương đối */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
+flex-shrink: 0; /* Ngăn không cho phần tử co lại */
+width: 297px; /* Chiều rộng cố định là 297px */
+height: 80px; /* Chiều cao cố định là 80px */
+position: relative; /* Đặt vị trí tương đối */
 }
 
 .input3 {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
- flex-shrink: 0; /* Ngăn không cho phần tử co lại */
- width: 626px; /* Chiều rộng cố định */
- height: 80px; /* Chiều cao cố định */
- position: relative; /* Đặt vị trí tương đối */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
+flex-shrink: 0; /* Ngăn không cho phần tử co lại */
+width: 626px; /* Chiều rộng cố định là 626px */
+height: 80px; /* Chiều cao cố định là 80px */
+position: relative; /* Đặt vị trí tương đối */
 }
 
 .input4 {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
- flex-shrink: 0; /* Ngăn không cho phần tử co lại */
- width: 626px; /* Chiều rộng cố định */
- height: 194px; /* Chiều cao cố định */
- position: relative; /* Đặt vị trí tương đối */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
+flex-shrink: 0; /* Ngăn không cho phần tử co lại */
+width: 626px; /* Chiều rộng cố định là 626px */
+height: 194px; /* Chiều cao cố định là 194px */
+position: relative; /* Đặt vị trí tương đối */
 }
 
 /* Cấu trúc từng ô input */
 .first-name {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
 .last-name {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
 .email-address {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
 .your-message {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
 /* Hộp nhập dữ liệu */
 .field {
- background: #ffffff; /* Màu nền trắng */
- border-radius: 8px; /* Bo tròn góc 8px */
- border-style: solid; /* Kiểu viền liền */
- border-color: #e0e0e0; /* Màu viền xám nhạt */
- border-width: 1px; /* Chiều rộng viền 1px */
- padding: 0; /* Đặt padding về 0 ở đây */
- display: flex; /* Sử dụng Flexbox */
- flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
- position: relative; /* Đặt vị trí tương đối */
- box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Tạo đổ bóng nhẹ */
+background: #ffffff; /* Đặt màu nền trắng */
+border-radius: 8px; /* Bo tròn góc 8px */
+border-style: solid; /* Kiểu viền liền */
+border-color: #e0e0e0; /* Màu viền xám nhạt */
+border-width: 1px; /* Chiều rộng viền 1px */
+padding: 0; /* Đặt padding về 0 ở đây */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+position: relative; /* Đặt vị trí tương đối */
+box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Tạo đổ bóng nhẹ: dịch ngang 0px, dịch dọc 1px, mờ 2px, màu đen với độ trong suốt 5% */
 }
 
 /* Style cho input và textarea */
 .field input.label, /* Chọn thẻ <input> có class 'label' bên trong phần tử có class 'field' */
 .field textarea.label {
- width: 100%; /* Chiều rộng 100% */
- padding: 12px 16px; /* Đệm trong (trên/dưới 12px, trái/phải 16px) */
- border: none; /* Xóa viền */
- background: none; /* Xóa màu nền */
- color: #828282; /* Màu chữ xám */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 16px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- box-sizing: border-box; /* Đặt chế độ box model là border-box */
- height: 60px; /* Chiều cao cố định cho input */
+width: 100%; /* Chiều rộng 100% của phần tử cha */
+padding: 12px 16px; /* Đệm trong: trên/dưới 12px, trái/phải 16px */
+border: none; /* Xóa viền */
+background: none; /* Xóa màu nền */
+color: #828282; /* Đặt màu chữ xám */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 16px; /* Kích thước font chữ là 16px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+box-sizing: border-box; /* Đặt chế độ box model là border-box */
+height: 60px; /* Chiều cao cố định cho input */
 }
 
 /* Nút gửi form */
 .button3 {
- background: #000000; /* Màu nền đen */
- border-radius: 8px; /* Bo tròn góc 8px */
- padding: 16px 32px 16px 32px; /* Đệm trong (trên, phải, dưới, trái) */
- display: flex; /* Sử dụng Flexbox */
- flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
- flex: 1; /* Cho phép phần tử co giãn để lấp đầy không gian */
- position: relative; /* Đặt vị trí tương đối */
- box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Tạo đổ bóng nhẹ */
+background: #000000; /* Đặt màu nền đen */
+border-radius: 8px; /* Bo tròn góc 8px */
+padding: 16px 32px 16px 32px; /* Đệm trong: trên 16px, phải 32px, dưới 16px, trái 32px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: row; /* Sắp xếp các phần tử con theo hàng ngang */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: center; /* Căn giữa các phần tử theo chiều ngang */
+flex: 1; /* Cho phép phần tử co giãn để lấp đầy không gian còn lại trong flex container */
+position: relative; /* Đặt vị trí tương đối */
+box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05); /* Tạo đổ bóng nhẹ: dịch ngang 0px, dịch dọc 1px, mờ 2px, màu đen với độ trong suốt 5% */
 }
 
 /* Text trong nút gửi */
 .submit {
- color: #ffffff; /* Màu chữ trắng */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-Medium", sans-serif; /* Font chữ Inter Medium, nếu không có thì dùng sans-serif */
- font-size: 20px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 500; /* Độ đậm của font (Medium) */
- position: relative; /* Đặt vị trí tương đối */
- display: flex; /* Sử dụng Flexbox */
- align-items: center; /* Căn giữa các phần tử theo chiều dọc */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+color: #ffffff; /* Đặt màu chữ trắng */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-Medium", sans-serif; /* Sử dụng font Inter Medium, nếu không có thì dùng sans-serif */
+font-size: 20px; /* Kích thước font chữ là 20px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 500; /* Độ đậm của font (Medium) */
+position: relative; /* Đặt vị trí tương đối */
+display: flex; /* Sử dụng Flexbox */
+align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
 }
 
 /* Tiêu đề 'Liên hệ' */
 .heading {
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
- width: 624px; /* Chiều rộng cố định */
- position: absolute; /* Đặt vị trí tuyệt đối */
- left: 80px; /* Cách lề trái 80px */
- top: 845px; /* Cách lề trên 845px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 24px; /* Khoảng cách giữa các phần tử con là 24px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ trên xuống */
+width: 624px; /* Chiều rộng cố định là 624px */
+position: absolute; /* Đặt vị trí tuyệt đối */
+left: 80px; /* Cách lề trái 80px */
+top: 845px; /* Cách lề trên 845px */
 }
 .contact-me {
- color: #000000; /* Màu chữ đen */
- text-align: left; /* Căn chữ về bên trái */
- font-family: "Inter-SemiBold", sans-serif; /* Font chữ Inter SemiBold, nếu không có thì dùng sans-serif */
- font-size: 32px; /* Kích thước font chữ */
- line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
- font-weight: 600; /* Độ đậm của font (SemiBold) */
- position: relative; /* Đặt vị trí tương đối */
- align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
+color: #000000; /* Đặt màu chữ đen */
+text-align: left; /* Căn chữ về bên trái */
+font-family: "Inter-SemiBold", sans-serif; /* Sử dụng font Inter SemiBold, nếu không có thì dùng sans-serif */
+font-size: 32px; /* Kích thước font chữ là 32px */
+line-height: 150%; /* Chiều cao dòng (1.5 lần kích thước font) */
+font-weight: 600; /* Độ đậm của font (SemiBold) */
+position: relative; /* Đặt vị trí tương đối */
+align-self: stretch; /* Kéo dài phần tử để lấp đầy không gian có sẵn */
 }
 
 /* ---------- Responsive MOBILE (≤768px) ---------- */
 @media (max-width: 768px) {
- /* Tự động giới hạn chiều cao và hiển thị đẹp trên mobile */
- .about {
- height: auto; /* Chiều cao tự động */
- min-height: 100vh; /* Chiều cao tối thiểu 100% chiều cao viewport */
- padding-bottom: 24px; /* Đệm dưới 24px */
- overflow: visible; /* Cho phép nội dung tràn ra ngoài */
- }
+/* Tự động giới hạn chiều cao và hiển thị đẹp trên mobile */
+.about {
+height: auto; /* Chiều cao tự động điều chỉnh theo nội dung */
+min-height: 100vh; /* Chiều cao tối thiểu 100% chiều cao của viewport (màn hình) */
+padding-bottom: 24px; /* Đệm dưới 24px */
+overflow: visible; /* Cho phép nội dung tràn ra ngoài (không bị cắt) */
+}
 
- .image {
- position: static; /* Vị trí tĩnh (theo luồng tài liệu bình thường) */
- display: block; /* Hiển thị dưới dạng khối */
- width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
- max-width: 340px; /* Chiều rộng tối đa 340px */
- height: auto; /* Chiều cao tự động */
- margin: 0 auto 24px auto; /* Căn giữa theo chiều ngang, margin dưới 24px */
- right: unset; left: unset; top: unset; /* Xóa các thuộc tính định vị tuyệt đối */
- }
+.image {
+position: static; /* Vị trí tĩnh (theo luồng tài liệu bình thường), bỏ qua các thuộc tính top, right, bottom, left */
+display: block; /* Hiển thị dưới dạng khối (chiếm toàn bộ chiều rộng) */
+width: 90vw; /* Chiều rộng 90% chiều rộng của viewport */
+max-width: 340px; /* Chiều rộng tối đa 340px */
+height: auto; /* Chiều cao tự động điều chỉnh theo tỷ lệ ảnh */
+margin: 0 auto 24px auto; /* Căn giữa theo chiều ngang (margin left/right auto), margin dưới 24px */
+}
 
- .copy {
- position: static; /* Vị trí tĩnh */
- width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
- min-width: unset; /* Xóa chiều rộng tối thiểu */
- max-width: 100%; /* Chiều rộng tối đa 100% */
- margin: 24px auto 0 auto; /* Căn giữa theo chiều ngang, margin trên 24px */
- gap: 16px; /* Khoảng cách giữa các phần tử con là 16px */
- }
+.copy {
+position: static; /* Vị trí tĩnh */
+width: 90vw; /* Chiều rộng 90% chiều rộng của viewport */
+max-width: 100%; /* Chiều rộng tối đa 100% của phần tử cha */
+margin: 24px auto 0 auto; /* Căn giữa theo chiều ngang, margin trên 24px */
+gap: 16px; /* Khoảng cách giữa các phần tử con là 16px */
+}
 
- .about2 {
- font-size: 36px; /* Kích thước font chữ */
- margin-bottom: 8px; /* Margin dưới 8px */
- }
- .subheading-for-description-or-instructions {
- font-size: 18px; /* Kích thước font chữ */
- }
- .paragraph {
- font-size: 16px; /* Kích thước font chữ */
- }
+.about2 {
+font-size: 36px; /* Kích thước font chữ là 36px */
+margin-bottom: 8px; /* Margin dưới 8px */
+}
+.subheading-for-description-or-instructions {
+font-size: 18px; /* Kích thước font chữ là 18px */
+}
+.paragraph {
+font-size: 16px; /* Kích thước font chữ là 16px */
+}
 
- .navigation {
- height: auto; /* Chiều cao tự động */
- min-height: 100px; /* Chiều cao tối thiểu 100px */
- position: static; /* Vị trí tĩnh */
- padding-top: 16px; /* Đệm trên 16px */
- padding-bottom: 16px; /* Đệm dưới 16px */
- }
- .items {
- position: static; /* Vị trí tĩnh */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 10px; /* Khoảng cách giữa các phần tử con là 10px */
- align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải */
- margin-top: 12px; /* Margin trên 12px */
- right: unset; left: unset; /* Xóa các thuộc tính định vị tuyệt đối */
- }
- .page {
- font-size: 16px; /* Kích thước font chữ */
- margin-bottom: 2px; /* Margin dưới 2px */
- }
- .button {
- padding: 10px 16px; /* Đệm trong (trên/dưới 10px, trái/phải 16px) */
- }
- .site-name {
- font-size: 32px; /* Kích thước font chữ */
- top: 12px; /* Cách lề trên 12px */
- left: 20px; /* Cách lề trái 20px */
- position: static; /* Vị trí tĩnh */
- margin-bottom: 8px; /* Margin dưới 8px */
- }
+.navigation {
+height: auto; /* Chiều cao tự động điều chỉnh theo nội dung */
+min-height: 100px; /* Chiều cao tối thiểu 100px */
+position: static; /* Vị trí tĩnh */
+padding-top: 16px; /* Đệm trên 16px */
+padding-bottom: 16px; /* Đệm dưới 16px */
+}
+.items {
+position: static; /* Vị trí tĩnh */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 10px; /* Khoảng cách giữa các phần tử con là 10px */
+align-items: flex-end; /* Căn chỉnh các phần tử con về bên phải */
+margin-top: 12px; /* Margin trên 12px */
+}
+.page {
+font-size: 16px; /* Kích thước font chữ là 16px */
+margin-bottom: 2px; /* Margin dưới 2px */
+}
+.button {
+padding: 10px 16px; /* Đệm trong: trên/dưới 10px, trái/phải 16px */
+}
+.site-name {
+font-size: 32px; /* Kích thước font chữ là 32px */
+top: 12px; /* Cách lề trên 12px */
+left: 20px; /* Cách lề trái 20px */
+position: static; /* Vị trí tĩnh */
+margin-bottom: 8px; /* Margin dưới 8px */
+}
 
- .navigation-footer {
- position: static; /* Vị trí tĩnh */
- width: 100vw; /* Chiều rộng 100% chiều rộng viewport */
- padding: 24px 0; /* Đệm trong (trên/dưới 24px, trái/phải 0) */
- height: auto; /* Chiều cao tự động */
- min-height: 180px; /* Chiều cao tối thiểu 180px */
- display: flex; /* Sử dụng Flexbox */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- align-items: center; /* Căn giữa các phần tử theo chiều ngang */
- gap: 16px; /* Khoảng cách giữa các phần tử con là 16px */
- }
- .items2, .items3, .items4 {
- position: static; /* Vị trí tĩnh */
- width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
- margin-bottom: 6px; /* Margin dưới 6px */
- min-width: unset; /* Xóa chiều rộng tối thiểu */
- right: unset; /* Xóa thuộc tính right */
- left: unset; /* Xóa thuộc tính left */
- top: unset; /* Xóa thuộc tính top */
- }
- .site-name2 {
- position: static; /* Vị trí tĩnh */
- margin-top: 8px; /* Margin trên 8px */
- font-size: 28px; /* Kích thước font chữ */
- }
- .social-icons {
- position: static; /* Vị trí tĩnh */
- margin: 8px 0 0 0; /* Margin (trên 8px, các cạnh khác 0) */
- left: unset; /* Xóa thuộc tính left */
- top: unset; /* Xóa thuộc tính top */
- gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
- flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng khi không đủ chỗ */
- justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
- }
+.navigation-footer {
+position: static; /* Vị trí tĩnh */
+width: 100vw; /* Chiều rộng 100% chiều rộng của viewport */
+padding: 24px 0; /* Đệm trong: trên/dưới 24px, trái/phải 0 */
+height: auto; /* Chiều cao tự động điều chỉnh theo nội dung */
+min-height: 180px; /* Chiều cao tối thiểu 180px */
+display: flex; /* Sử dụng Flexbox */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+gap: 16px; /* Khoảng cách giữa các phần tử con là 16px */
+}
+.items2, .items3, .items4 {
+position: static; /* Vị trí tĩnh */
+width: 90vw; /* Chiều rộng 90% chiều rộng của viewport */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+align-items: flex-start; /* Căn chỉnh các phần tử con theo lề trái */
+margin-bottom: 6px; /* Margin dưới 6px */
+}
+.site-name2 {
+position: static; /* Vị trí tĩnh */
+margin-top: 8px; /* Margin trên 8px */
+font-size: 28px; /* Kích thước font chữ là 28px */
+}
+.social-icons {
+position: static; /* Vị trí tĩnh */
+margin: 8px 0 0 0; /* Margin: trên 8px, các cạnh khác 0 */
+gap: 8px; /* Khoảng cách giữa các phần tử con là 8px */
+flex-wrap: wrap; /* Cho phép các phần tử con xuống dòng khi không đủ chỗ */
+justify-content: flex-start; /* Bắt đầu sắp xếp các phần tử từ bên trái */
+}
 
- .divider {
- display: none; /* Ẩn phần tử */
- }
+.divider {
+display: none; /* Ẩn phần tử (không hiển thị đường kẻ) */
+}
 
- .form {
- position: static; /* Vị trí tĩnh */
- width: 92vw; /* Chiều rộng 92% chiều rộng viewport */
- min-width: unset; /* Xóa chiều rộng tối thiểu */
- max-width: 99vw; /* Chiều rộng tối đa 99% chiều rộng viewport */
- flex-direction: column; /* Sắp xếp các phần tử con theo cột */
- gap: 14px; /* Khoảng cách giữa các phần tử con là 14px */
- margin: 24px auto auto auto; /* Căn giữa theo chiều ngang, margin trên 24px */
- }
- .input, .input2, .input3, .input4 {
- width: 100%; /* Chiều rộng 100% */
- min-width: unset; /* Xóa chiều rộng tối thiểu */
- max-width: 100vw; /* Chiều rộng tối đa 100% chiều rộng viewport */
- height: fit-content; /* Chiều cao tự điều chỉnh theo nội dung */
- }
- .field input.label, .field textarea.label {
- font-size: 15px; /* Kích thước font chữ */
- height: 42px; /* Chiều cao cố định */
- min-height: 32px; /* Chiều cao tối thiểu */
- padding: 10px 10px; /* Đệm trong (trên/dưới 10px, trái/phải 10px) */
- }
- .input4 .field textarea.label {
- height: 80px!important; /* Chiều cao cố định 80px, ưu tiên cao nhất */
- }
- .button3 {
- width: 96%; /* Chiều rộng 96% */
- margin: 0 auto; /* Căn giữa theo chiều ngang */
- padding: 12px 0; /* Đệm trong (trên/dưới 12px, trái/phải 0) */
- }
- .submit {
- font-size: 17px; /* Kích thước font chữ */
- }
- .heading {
- position: static; /* Vị trí tĩnh */
- width: 90vw; /* Chiều rộng 90% chiều rộng viewport */
- margin: 24px auto 6px auto; /* Căn giữa theo chiều ngang, margin trên 24px, margin dưới 6px */
- }
- .contact-me {
- font-size: 22px; /* Kích thước font chữ */
- }
+.form {
+position: static; /* Vị trí tĩnh */
+width: 92vw; /* Chiều rộng 92% chiều rộng của viewport */
+max-width: 99vw; /* Chiều rộng tối đa 99% chiều rộng của viewport */
+flex-direction: column; /* Sắp xếp các phần tử con theo cột */
+gap: 14px; /* Khoảng cách giữa các phần tử con là 14px */
+margin: 24px auto auto auto; /* Căn giữa theo chiều ngang, margin trên 24px */
+}
+.input, .input2, .input3, .input4 {
+width: 100%; /* Chiều rộng 100% của phần tử cha */
+max-width: 100vw; /* Chiều rộng tối đa 100% chiều rộng của viewport */
+height: fit-content; /* Chiều cao tự điều chỉnh theo nội dung */
+}
+.field input.label, .field textarea.label {
+font-size: 15px; /* Kích thước font chữ là 15px */
+height: 42px; /* Chiều cao cố định là 42px */
+min-height: 32px; /* Chiều cao tối thiểu 32px */
+padding: 10px 10px; /* Đệm trong: trên/dưới 10px, trái/phải 10px */
+}
+.input4 .field textarea.label {
+height: 80px!important; /* Chiều cao cố định 80px, sử dụng !important để ưu tiên cao nhất */
+}
+.button3 {
+width: 96%; /* Chiều rộng 96% của phần tử cha */
+margin: 0 auto; /* Căn giữa theo chiều ngang */
+padding: 12px 0; /* Đệm trong: trên/dưới 12px, trái/phải 0 */
+}
+.submit {
+font-size: 17px; /* Kích thước font chữ là 17px */
+}
+.heading {
+position: static; /* Vị trí tĩnh */
+width: 90vw; /* Chiều rộng 90% chiều rộng của viewport */
+margin: 24px auto 6px auto; /* Căn giữa theo chiều ngang, margin trên 24px, margin dưới 6px */
+}
+.contact-me {
+font-size: 22px; /* Kích thước font chữ là 22px */
+}
 }
